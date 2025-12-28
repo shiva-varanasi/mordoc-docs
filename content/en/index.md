@@ -1,5 +1,5 @@
 ---
-title: Mordoc Documentation
+title: Overview
 description: Create powerful documentation websites with Mordoc - an open-source tool that lets you write in markdown and deploy anywhere.
 ---
 
