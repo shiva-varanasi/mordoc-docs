@@ -1,0 +1,59 @@
+- label: Overview
+  path: /
+
+- label: Prerequisites
+  children:
+    - label: Code Editor
+      path: /prerequisites/code-editor
+    - label: Node.js
+      path: /prerequisites/nodejs
+    - label: Git
+      path: /prerequisites/git
+
+- label: Get Started
+  children:
+    - label: Creating Your First Project
+      path: /get-started/creating-project
+    - label: Understanding Project Structure
+      path: /get-started/project-structure
+
+- label: Syntax & Components
+  children:
+    - label: Headings
+      path: /syntax-components/headings
+    - label: Links
+      path: /syntax-components/links
+    - label: Images
+      path: /syntax-components/images
+    - label: Lists
+      path: /syntax-components/lists
+    - label: Tables
+      path: /syntax-components/tables
+    - label: Code Blocks
+      path: /syntax-components/code-blocks
+    - label: Callouts
+      path: /syntax-components/callouts
+    - label: Cards & Card Grid
+      path: /syntax-components/cards
+
+- label: Configuration
+  children:
+    - label: Side Navigation
+      path: /configuration/sidenav
+    - label: Table of Contents
+      path: /configuration/toc
+    - label: Search
+      path: /configuration/search
+    - label: Branding
+      path: /configuration/branding
+
+- label: Deployment
+  children:
+    - label: Building Your Site
+      path: /deployment/build
+    - label: Preview & Test
+      path: /deployment/preview
+    - label: Version Control
+      path: /deployment/version-control
+    - label: Launch
+      path: /deployment/launch
