@@ -1,15 +1,13 @@
 ---
-title: Understanding Project Structure
+title: Understand Project Structure
 description: Learn about the files and folders in your Mordoc project and how they work together to create your documentation site.
 ---
 
-# Understanding Project Structure
-
 A Mordoc project has a clear, organized structure that separates content, configuration, and assets. Understanding this structure helps you efficiently manage and customize your documentation.
 
-## Project Overview
+# Project overview
 
-```
+```Structure
 my-docs/
 ├── config/
 │   ├── favicon.ico
@@ -34,77 +32,94 @@ my-docs/
 └── package-lock.json
 ```
 
-## Directory Breakdown
+## Directory breakdown
 
-### `config/` - Configuration Files
+### config
 
-The `config/` directory contains all configuration for your documentation site.
+The `config/` directory contains all configuration related to your documentation site. This is where you define global settings, control navigation, and add branding assets such as logos and styles.
 
-#### Site Configuration
+In most cases, this is the only place where you will customize how your documentation looks and behaves.
 
-**`site.json`** - Global site settings:
+#### Branding assets
 
-```json
-{
-  "title": "My Documentation",
-  "description": "Documentation for my project",
-  "baseUrl": "https://docs.example.com",
-  "language": "en",
-  "defaultLocale": "en"
-}
-```
+- **`logo.png`**: Logo displayed top left section of the header. Supported formats: `.jpg`, `.jpeg`, `.png`, `.svg`.
+- **`logo-dark.png`**: Logo displayed in dark mode. This is optional. When not present, `logo.png` is used for dark mode as well. Supported formats: `.jpg`, `.jpeg`, `.png`, `.svg`.
+- **`favicon.ico`**: Icon that shows up on the browser tab. File name must be exactly `favicon.ico`
 
-| Field | Description |
-|---|---|
-| `title` | Site title (appears in browser tab) |
-| `description` | Meta description for SEO |
-| `baseUrl` | Production URL for your documentation |
-| `language` | Primary language code (e.g., "en") |
+Replace these files with your own branding assets. Make sure the filenames remain unchanged.
 
-#### Navigation Configuration
-
-**`sidenav.yaml`** - Defines your site's navigation structure. See [Side Navigation](/configuration/sidenav) for details.
-
-#### Branding Assets
-
-- **`logo.png`**: Logo displayed in light mode
-- **`logo-dark.png`**: Logo displayed in dark mode
-- **`favicon.ico`**: Browser tab icon
-
-#### Styling Configuration
-
-**`styles/main.json`** - Theme colors and component styles:
-
-```json
-{
-  "colors": {
-    "primary": "#3b82f6",
-    "secondary": "#8b5cf6",
-    "background": "#ffffff",
-    "text": "#1f2937"
-  }
-}
-```
-
-**`styles/typography.json`** - Font settings and text styles:
-
-```json
-{
-  "fontFamily": {
-    "body": "Inter, sans-serif",
-    "heading": "Inter, sans-serif",
-    "code": "Monaco, monospace"
-  }
-}
-```
-
-{% callout type="note" %}
-See the [Configuration](/configuration/branding) section for detailed customization options.
+{% callout type="note" title="Tip" %}
+If the development server is running, stop it and run `npm run build` followed by `npm run dev` again to preview your changes.
 {% /callout %}
 
-### `content/` - Documentation Content
+#### site.json
 
-The `content/` directory contains all your markdown documentation files, organized by language.
+**`site.json`** - The site.json file defines the identity of your documentation site. It controls global settings such as the site title, description, and metadata that apply across the entire site.
+
+```json
+{
+  "title": "Photoniuum Flight Notes",
+  "description": "Fantasy documentation for lightspeed travel, photonic engines, and the etiquette of outrunning causality.",
+  "keywords": [
+    "photoniuum",
+    "lightspeed",
+    "ftl",
+    "photonic drive",
+    "navigation",
+    "field manual",
+    "fictional docs"
+  ],
+  "baseUrl": "docs.photoniuum.com"
+}
+```
+
+{% table %}
+* Field
+* Description
+---
+* `title`
+* The site-wide title that appears in browser tabs and search results. Combined with individual page titles to create unique page titles.
+---
+* `description`
+* Default description for your documentation site. Used when individual pages don't specify their own description. Helps with Search Engine Optimization (SEO) and provides context about your site's purpose.
+---
+* `keywords`
+* Site-wide keywords array used for SEO.
+---
+* `baseUrl`
+* The root URL of your site. Used to generate absolute URLs for canonical links and social media sharing metadata.
+{% /table %}
+
+Update this file to match the identity and purpose of your documentation site.
+
+#### sidenav.yaml
+
+The `sidenav.yaml` file defines the structure of your site’s side navigation.
+
+This file controls how pages are grouped and ordered in the sidebar. In most cases, it’s best to update this file after your content is in place, so the navigation reflects the structure of your documentation.
+
+You’ll learn how to configure this file in detail in the [Side Navigation](/configuration/sidenav) section.
+
+#### styles
+
+The `styles/` directory contains all styling-related configuration for your documentation site.
+
+Mordoc comes with a default styling setup that provides a clean and usable starting point for most documentation sites.
+
+For many projects, this default styling is sufficient for an initial version. As your documentation evolves, you can further customize the look and feel to match your brand.
+
+Styling in Mordoc is configured at the component level. You’ll learn how to customize styles for individual components in the [Syntax & Components](/syntax-components/headings) section.
+
+
+### content
+
+The `content/` directory contains all of your documentation content, organized by language. Currently, only `en` (English) is supported. This directory is the heart of your documentation site.
+
+This is where most of your day-to-day writing will happen.
+
+Content in a Mordoc-powered documentation site is written primarily in [Markdown](https://en.wikipedia.org/wiki/Markdown). Mordoc inherits the full Markdown syntax and extends it with additional features.
+
+Because Mordoc is built on top of [Markdoc](https://markdoc.dev/), it also supports the standard Markdoc syntax out of the box. The syntax for the most commonly used documentation components is described in the [Syntax & Components](/syntax-components/headings) section.
 
 #### Structure
 
@@ -112,226 +127,92 @@ The `content/` directory contains all your markdown documentation files, organiz
 content/
 └── en/                 # Language directory
     ├── index.md        # Homepage
-    ├── guides/         # Section folder
-    │   ├── intro.md
-    │   └── advanced.md
-    └── api/
-        └── reference.md
+    ├── field-manual/         # Section directory
+    │   ├── engines.md
+    │   └── relativity.md
+    └── ship-systems/
+        └── flux-sails.md
 ```
 
-#### Content Organization Rules
+#### Content organization rules
 
-1. **Language Folders**: Each language gets its own folder (e.g., `en/`, `es/`, `fr/`)
+1. **Language Directories**: Each language gets its own directory (e.g., `en/`, `es/`, `fr/`)
 2. **Homepage**: `index.md` in the language root is your site's homepage
-3. **Nested Folders**: Create subdirectories to organize related content
+3. **Nested Directories**: Create subdirectories to organize related content
 4. **URL Mapping**: File paths become URLs:
-   - `content/en/guides/intro.md` → `/guides/intro`
-   - `content/en/api/reference.md` → `/api/reference`
+   - `content/en/field-manual/engines.md` → `/field-manual/engines`
+   - `content/en/ship-systems/flux-sails.md` → `/ship-systems/flux-sails`
 
-#### Parent Pages
+This structure makes it easy to grow your documentation without reorganizing content later.
 
-For parent pages with children (like "Guides" that contains multiple sub-pages):
+#### Typical content file
 
-**Option 1: Parent with Content**
-```
-content/en/
-├── guides.md          # Parent page with content
-└── guides/
-    ├── intro.md       # Child page
-    └── advanced.md    # Child page
-```
+A typical content file in Mordoc is a Markdown file with two main parts:
 
-**Option 2: Parent as Label Only**
-```
-content/en/
-└── guides/
-    ├── intro.md       # First child
-    └── advanced.md    # Second child
-```
+1. **Front matter** at the top of the file, used to define the page title and description
+2. **Markdown content** below it, which makes up the body of the page
 
-In your `sidenav.yaml`, parent-only labels don't have a `path` field.
-
-### `public/` - Static Assets
-
-The `public/` directory holds static files that are copied directly to the build output.
-
-```
-public/
-├── images/
-│   ├── diagram.png
-│   └── screenshot.jpg
-├── icons/
-│   ├── feature-1.svg
-│   └── feature-2.svg
-└── downloads/
-    └── guide.pdf
-```
-
-#### Referencing Public Assets
-
-In your markdown, reference these files from the root:
+Here is a simple example:
 
 ```markdown
-![Architecture Diagram](/images/diagram.png)
+---
+title: Photonic Core
+description: A deeper look at Photoniuum’s core: channels, limiters, and the “choir” effect.
+---
 
-{% card icon="/icons/feature-1.svg" %}
-Feature description
-{% /card %}
+# Photonic Core
 
-Download the [PDF guide](/downloads/guide.pdf)
+This is where the main content of the page goes.
+
+You can write paragraphs, lists, code blocks, and use documentation components as needed.
 ```
 
-{% callout type="warning" %}
-Do not put configuration files or logos in `public/`. Branding assets belong in `config/`.
+In Mordoc, the front matter is part of the content itself:
+
+* title is rendered as the main page heading
+
+* description appears directly below the title as the page introduction
+
+Everything below the front matter is rendered as the page body.
+
+You’ll learn about available syntax and components in detail in the [Syntax & Components](/syntax-components/headings) section.
+
+### public
+
+The `public/` directory contains static assets such as images and icons that are used within your documentation content.
+
+Files placed in this directory are served as-is and can be referenced directly from your Markdown files. 
+
+### node_modules
+
+The `node_modules/` directory is automatically created during project setup. It contains all the dependencies required to run your Mordoc project.
+
+Although this directory is essential for the project to work, you generally do not need to look inside it or modify anything there. It is managed entirely by npm.
+
+This directory should not be committed to version control.
+
+### dist
+
+The `dist/` directory is automatically generated when you run `npm run build`. It contains the compiled static version of your documentation site, ready to be deployed.
+
+This directory includes the final HTML, CSS, JavaScript, and assets generated from your content and configuration.
+
+{% callout % type="danger" title "Important"}
+Never edit files in `dist/` manually. They're regenerated on each build.
 {% /callout %}
 
-### `dist/` - Build Output
+This directory should not be committed to version control.
 
-The `dist/` directory is auto-generated when you run `npm run build`. It contains the compiled static site ready for deployment.
-
-```
-dist/
-├── index.html
-├── guides/
-│   └── intro/
-│       └── index.html
-├── assets/
-│   ├── styles.css
-│   └── main.js
-└── images/
-```
-
-**Important**: Never edit files in `dist/` manually. They're regenerated on each build.
-
-### `node_modules/` - Dependencies
-
-Auto-generated folder containing npm packages. Don't modify or commit this to version control.
-
-### Configuration Files
-
-#### `package.json`
+### package.json
 
 Defines your project metadata and dependencies:
 
-```json
-{
-  "name": "my-docs",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "mordoc dev",
-    "build": "mordoc build",
-    "preview": "mordoc preview"
-  },
-  "dependencies": {
-    "mordoc": "^1.0.0"
-  }
-}
-```
+### package-lock.json
 
-#### `package-lock.json`
+Locks dependency versions for consistent installations.
 
-Locks dependency versions for consistent installations. Commit this file to version control.
+### .gitignore
 
-## File Naming Conventions
+The `.gitignore` file tells Git which files and directories should not be tracked in version control.
 
-### Markdown Files
-
-- Use lowercase letters
-- Separate words with hyphens: `getting-started.md`
-- Avoid spaces and special characters
-- Use descriptive names: `installation-guide.md` (not `guide1.md`)
-
-### Asset Files
-
-- Use descriptive names: `hero-banner.png`
-- Keep names URL-friendly
-- Group related assets in subdirectories
-
-## Best Practices
-
-### Content Organization
-
-1. **Group Related Content**: Use folders to organize topics
-2. **Flat Structure**: Avoid deeply nested folders (max 2-3 levels)
-3. **Consistent Naming**: Use a consistent naming pattern across files
-4. **Logical Hierarchy**: Mirror your navigation structure in folders
-
-### Version Control
-
-Add a `.gitignore` file to exclude build artifacts:
-
-```gitignore
-node_modules/
-dist/
-.DS_Store
-*.log
-```
-
-### Multi-Language Support
-
-For multilingual documentation:
-
-```
-content/
-├── en/
-│   ├── index.md
-│   └── guides/
-├── es/
-│   ├── index.md
-│   └── guides/
-└── fr/
-    ├── index.md
-    └── guides/
-```
-
-Each language should have identical folder structures for consistency.
-
-## Common Workflows
-
-### Adding a New Page
-
-1. Create markdown file in `content/en/`
-2. Add frontmatter with title and description
-3. Write your content
-4. Update `config/sidenav.yaml` to add navigation link
-5. Save and view in development server
-
-### Adding New Assets
-
-1. Place files in appropriate `public/` subdirectory
-2. Reference with absolute path from root: `/images/file.png`
-3. Build will automatically copy to `dist/`
-
-### Updating Styles
-
-1. Edit `config/styles/main.json` or `typography.json`
-2. Save and view changes in development server
-3. Build when satisfied with results
-
-{% callout type="note" title="Next Steps" %}
-Now that you understand the structure, explore [Syntax & Components](/syntax-components/headings) to learn how to write rich documentation content.
-{% /callout %}
-
-## Troubleshooting
-
-### Page Not Appearing
-
-- Check file is in `content/en/` directory
-- Verify file has `.md` extension
-- Ensure page is added to `sidenav.yaml`
-- Check for syntax errors in frontmatter
-
-### Assets Not Loading
-
-- Verify file exists in `public/` directory
-- Check path starts with `/` (e.g., `/images/file.png`)
-- Ensure filename matches exactly (case-sensitive on some platforms)
-- Rebuild the site: `npm run build`
-
-### Build Errors
-
-- Check all markdown files have valid frontmatter
-- Verify `sidenav.yaml` syntax is correct
-- Ensure no circular references in navigation
-- Clear `dist/` and rebuild
 

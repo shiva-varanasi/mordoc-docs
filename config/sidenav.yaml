@@ -1,20 +1,20 @@
-- label: Overview
+- label: Introduction
   path: /
 
 - label: Prerequisites
   children:
-    - label: Code Editor
+    - label: Install a Code Editor
       path: /prerequisites/code-editor
-    - label: Node.js
+    - label: Install Node.js
       path: /prerequisites/nodejs
-    - label: Git
+    - label: Install Git
       path: /prerequisites/git
 
 - label: Get Started
   children:
-    - label: Creating Your First Project
-      path: /get-started/creating-project
-    - label: Understanding Project Structure
+    - label: Create Your First Project
+      path: /get-started/create-project
+    - label: Understand Project Structure
       path: /get-started/project-structure
 
 - label: Syntax & Components

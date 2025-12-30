@@ -1,76 +1,84 @@
 ---
-title: Overview
-description: Create powerful documentation websites with Mordoc - an open-source tool that lets you write in markdown and deploy anywhere.
+title: Introduction
+description: Build elegant and highly usable documentation websites using Mordoc.
 ---
 
-Mordoc is an **open-source documentation generator** that transforms markdown into beautiful, functional documentation websites using Markdoc.
+Mordoc is a documentation framework built on [Markdoc](https://markdoc.dev/), that transforms your content into clean, elegant, and highly usable documentation websites.
 
-Write your content in markdown. Deploy to any infrastructure. No vendor lock-in.
-
-> **Freedom to Deploy:** Mordoc generates static sites that work anywhere — your servers, cloud platforms, or edge networks. You own your deployment.
+You write content using simple, easy-to-learn syntax, and Mordoc takes care of the rest by handling navigation, layouts, styling, and structure, turning your content into a fully-functional documentation site that feels professional out of the box.
 
 # Why Mordoc?
 
-{% cardGrid cols="3" %}
-{% card title="Write in Markdown" href="/syntax-components/headings" %}
-Use familiar markdown syntax with powerful Markdoc extensions for rich content like callouts, cards, and interactive components.
-{% /card %}
+There are plenty of great documentation tools out there, and many of them already do an excellent job. So… why another one?
 
-{% card title="Deploy Anywhere" href="/deployment/launch" %}
-Generate static HTML that works on any hosting platform. No proprietary infrastructure required.
-{% /card %}
+Many documentation tools offer rich content writing experiences, but they often come bundled with hosted platforms, proprietary editors, or rigid workflows. Others provide powerful foundations, but expect teams to assemble everything themselves. Every organization is different, and these approaches do not always fit.
 
-{% card title="Customizable Styling" href="/configuration/branding" %}
-Modern, responsive design with customizable colors, typography, and component styles through JSON configuration.
-{% /card %}
-{% /cardGrid %}
+Mordoc takes a different approach. It provides an open source documentation framework that allows teams to maintain content as code and deploy it to any infrastructure they choose. With all documentation components built in, content writers can start writing immediately using simple, easy-to-learn syntax.
 
-# Key Features
-
-- **Markdoc-Based**: Built on Markdoc for powerful markdown extensions
-- **Infrastructure Independent**: Deploy to any static hosting platform
-- **Customizable Components**: Style cards, navigation, links, and more with JSON config
-- **Auto-Generated Features**: Built-in search with Pagefind, table of contents, and navigation
-- **Developer-Friendly**: Simple CLI tools and familiar workflows
-- **Dark Mode Support**: Automatic dark mode with customizable colors
-
----
-
-# Quick Start
-
-Get started with Mordoc in minutes:
-
-```bash
-npx create-mordoc-app my-docs
-cd my-docs
-npm run dev
-```
-
-Your documentation site will be running at `http://localhost:3000`.
-
-# What You'll Build
-
-With Mordoc, you can create documentation that includes:
-
-| Feature | Description |
-|---|---|
-| Rich Navigation | Multi-level side navigation with parent-child relationships |
-| Search | Auto-generated Pagefind search functionality |
-| Code Blocks | Syntax-highlighted code examples via Markdoc |
-| Callouts | Styled note, warning, and danger boxes |
-| Cards & Grids | Visual card components for feature showcases |
-| Custom Branding | Logo, favicon, and customizable colors |
-
-# Next Steps
-
-{% callout type="note" title="New to Mordoc?" %}
-Follow the **Get Started** guide to create your first documentation project and understand the project structure.
+{% callout type="note" title="Takeaway" %}
+You do what you do best, writing content, and let Mordoc take care of the rest.
 {% /callout %}
 
-Ready to build your documentation? Start with the prerequisites:
+Here’s what that looks like in practice.
 
-1. [Install a code editor](/prerequisites/code-editor)
+## Content‑first, component‑driven
+
+Mordoc ships with all documentation components built in, so there is nothing to assemble before you start writing. Once installed, those components can be reused everywhere through clear, readable syntax.
+
+That means:
+
+* Content writers focus on structure and clarity, not implementation details
+* Rich components like cards, callouts, codeblocks, tables, etc are easy to use and hard to misuse
+* Documentation stays consistent across pages and contributors
+
+The syntax is intentionally limited and predictable. It is designed to be easy to learn, easy to read, and easy to maintain over time.
+
+## Content as code
+
+Mordoc treats content as code without forcing authors to think like developers.
+
+Because your content lives in files:
+
+* Changes are tracked and reviewable
+* Version history is explicit
+* Collaboration scales naturally with your team
+
+You get the benefits of modern change management while keeping the writing experience lightweight and focused.
+
+## No vendor lock‑in
+
+Your documentation belongs to you.
+
+* Host it anywhere
+* Deploy on any infrastructure
+* Move away anytime without rewriting content
+
+Mordoc generates documentation websites. It doesn’t trap your content inside a platform.
+
+## Built for collaboration
+
+Mordoc is designed so that:
+
+* Content creators focus on writing and structure
+* Developers focus on system design and infrastructure (only when needed)
+
+This separation of concerns makes documentation easier to scale and easier to maintain.
+
+## Open source by design
+
+Mordoc is open source and transparent.
+
+* No black boxes
+* No hidden behavior
+* Community‑driven improvements
+
+You can inspect it, extend it, and adapt it to your needs.
+
+Curious to see how it works? Let’s get started. 🚀
+
+# Next steps
+
+1. [Install a code editor](/prerequisites/code-editor). It’s a helpful tool, and you won’t be doing any coding.
 2. [Install Node.js](/prerequisites/nodejs)
 3. [Install Git](/prerequisites/git)
 4. [Create your first project](/get-started/creating-project)
-

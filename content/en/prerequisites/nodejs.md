@@ -3,136 +3,83 @@ title: Install Node.js
 description: Install Node.js and npm to run Mordoc and build your documentation site.
 ---
 
+Before you can run Mordoc, you need **Node.js** installed on your system. Don’t worry if this sounds technical at first. You don’t need to know how Node.js works internally to use Mordoc.
+
+This page explains what Node.js and npm are in simple terms, and then walks you through installing them.
+
+# What is Node.js?
+
+Node.js is a tool that lets you run JavaScript programs on your computer.
+
+In the context of Mordoc, Node.js is simply the runtime that allows Mordoc to:
+
+* Run locally on your machine
+* Generate your documentation website
+* Manage dependencies and tooling behind the scenes
+
+You won’t be writing JavaScript or building applications. Node.js is just something Mordoc needs in order to work.
+
+
+# What is npm?
+
+**npm** stands for *Node Package Manager*.
+
+It comes bundled with Node.js and is used to:
+
+* Install tools and packages (like Mordoc)
+* Run predefined commands
+* Keep dependencies up to date
+
+You don’t need to install npm separately. If Node.js is installed, npm is already included.
+
+# Download Node.js
+
+1. Visit the official Node.js website: [https://nodejs.org](https://nodejs.org)
+2. Download the **LTS (Long Term Support)** version. This is the recommended and most stable option.
+
+Choose the installer for your operating system:
+
+* **Windows**: Download the Windows installer
+* **macOS**: Download the macOS installer
+* **Linux**: Use the official package for your distribution or follow the Linux installation instructions on the website
+
 # Install Node.js
 
-Mordoc requires Node.js to build and preview your documentation. Node.js includes npm (Node Package Manager), which you'll use to install and run Mordoc.
+Run the installer and follow the recommended options in the installation wizard.
 
-## System Requirements
+For most users, the default settings are correct. You do not need to customize anything.
 
-- **Node.js version**: 18.0.0 or higher
-- **npm version**: 9.0.0 or higher (included with Node.js)
+# Verify the installation
 
-## Download Node.js
+After installation is complete, verify that Node.js is installed correctly.
 
-Visit the official Node.js website:
+1. Open your code editor
+2. Open the built-in terminal
 
-[nodejs.org](https://nodejs.org/)
-
-You'll see two versions available:
-
-- **LTS (Long Term Support)**: Recommended for most users
-- **Current**: Latest features, less stable
-
-{% callout type="note" title="Recommendation" %}
-Download the **LTS version** for maximum stability and compatibility with Mordoc.
-{% /callout %}
-
-## Installation Instructions
-
-### Windows
-
-1. Download the Windows Installer (.msi) from nodejs.org
-2. Run the installer
-3. Follow the installation wizard:
-   - Accept the license agreement
-   - Choose installation location (default is fine)
-   - Keep default features selected
-   - Check "Automatically install necessary tools" if prompted
-4. Click "Install"
-5. Restart your terminal after installation
-
-### macOS
-
-**Option 1: Official Installer**
-1. Download the macOS Installer (.pkg) from nodejs.org
-2. Run the installer
-3. Follow the installation wizard
-4. Restart your terminal
-
-**Option 2: Using Homebrew**
-```bash
-brew install node
-```
-
-### Linux
-
-**Ubuntu/Debian:**
-```bash
-# Using NodeSource repository
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
-
-**Fedora/RHEL:**
-```bash
-sudo dnf install nodejs
-```
-
-**Arch Linux:**
-```bash
-sudo pacman -S nodejs npm
-```
-
-## Verify Installation
-
-After installation, verify that Node.js and npm are installed correctly:
+   * In VS Code, you can open it from the menu: **Terminal → New Terminal**
+3. Run the following command:
 
 ```bash
-node --version
+node -v
 ```
 
-Expected output: `v18.x.x` or higher
+If Node.js is installed correctly, you should see a version number printed to the screen.
+
+You can also verify npm by running:
 
 ```bash
-npm --version
+npm -v
 ```
 
-Expected output: `9.x.x` or higher
+# If the command is not found
 
-{% callout type="warning" %}
-If the commands are not recognized, you may need to restart your terminal or add Node.js to your system PATH.
-{% /callout %}
+If you see a message like `command not found` or `node is not recognized`, it usually means Node.js is not available in your system’s PATH.
 
-## Update npm (Optional)
+* On **Windows**, restarting your computer often resolves this
+* On **macOS** and **Linux**, this is rare when using the official installer
 
-To update npm to the latest version:
+If the issue persists, reinstall Node.js using the official installer and make sure you accept the default options.
 
-```bash
-npm install -g npm@latest
-```
+# Next steps
 
-## Troubleshooting
-
-### Command Not Found
-
-If you get a "command not found" error:
-
-1. Restart your terminal completely
-2. Verify Node.js is in your PATH:
-   ```bash
-   # Windows (PowerShell)
-   $env:Path -split ';' | Select-String node
-   
-   # macOS/Linux
-   echo $PATH | grep node
-   ```
-
-### Permission Issues (macOS/Linux)
-
-If you encounter permission errors when installing packages globally:
-
-```bash
-# Fix npm permissions
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
-echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.profile
-source ~/.profile
-```
-
-## Next Steps
-
-With Node.js installed, you're ready to:
-
-- [Install Git](/prerequisites/git) - Set up version control
-- [Create your first project](/get-started/creating-project) - Start building with Mordoc
-
+- [Install Git](/prerequisites/git)
