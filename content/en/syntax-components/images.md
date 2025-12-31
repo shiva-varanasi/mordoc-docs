@@ -42,8 +42,8 @@ Images should be stored in the public/ directory and referenced using absolute p
 ```
 public/
 ├── images/
-    ├── cesky-krumlov.jpg
-    ├── flux-sail.png
+    ├── artwork.png
+    ├── flux-sail.jpg
     └── diagram.svg
 ```
 
