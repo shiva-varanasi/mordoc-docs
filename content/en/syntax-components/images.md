@@ -29,9 +29,9 @@ Alt text describes the image and is important for accessibility and clarity.
 ---
 * 
    ```markdown
-   ![Cesky Krumlov](/images/artwork.png)
+   ![Artwork](/images/artwork.png)
    ```
-* ![Cesky Krumlov](/images/artwork.png)
+* ![Artwork](/images/artwork.png)
 ---
 {% /table %}
 

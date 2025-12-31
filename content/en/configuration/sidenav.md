@@ -1,6 +1,6 @@
 ---
 title: Side Navigation
-description: Configure the side navigation menu for your Mordoc documentation site using sidenav.yaml.
+description: Configure the side navigation menu for your documentation site using sidenav.yaml.
 ---
 
 The side navigation provides the primary navigation structure for your documentation site. Configure it using the `config/sidenav.yaml` file to create a hierarchical menu with parent pages and child pages.
