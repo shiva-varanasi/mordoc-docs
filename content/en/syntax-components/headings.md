@@ -5,85 +5,52 @@ description: Use markdown heading syntax to structure your documentation with si
 
 Headings create the structure and hierarchy of your documentation. Mordoc supports six levels of headings using standard markdown syntax.
 
-# Basic Syntax
+# Syntax
 
 Use hash symbols (`#`) to create headings. The number of hashes determines the heading level:
 
-```markdown
-# Heading Level 1
-## Heading Level 2
-### Heading Level 3
-#### Heading Level 4
-##### Heading Level 5
-###### Heading Level 6
-```
+{% table %}
+* Syntax
+* Result
+---
+*
+  ```markdown
+  # Heading 1
 
-# Heading Hierarchy
+  ## Heading 2
 
-## Level 1: Main Heading
+  ### Heading 3
 
-Use a single `#` for the main heading. 
+  #### Heading 4
 
-```markdown
-# Getting Started with Mordoc
-```
+  ##### Heading 5
 
-# Getting Started with Mordoc
+  ###### Heading 6
+  ```
+* # Heading 1
 
-## Level 2: Major Sections
+  ## Heading 2
 
-Use `##` for major sections within your page.
+  ### Heading 3
 
-```markdown
-## Installation
-## Configuration
-## Usage
-```
+  #### Heading 4
 
-## Installation
-## Configuration
-## Usage
+  ##### Heading 5
 
-## Level 3: Subsections
+  ###### Heading 6
+---
+{% /table %}
 
-Use `###` for subsections under major sections.
-
-```markdown
-### System Requirements
-### Download Instructions
-```
-
-### System Requirements
-### Download Instructions
-
-### Level 4-6: Detailed Hierarchy
-
-Use `####`, `#####`, and `######` for more detailed hierarchical structures.
-
-```markdown
-#### Step-by-Step Guide
-##### Prerequisites Check
-###### Verify Node Version
-```
-
-#### Step-by-Step Guide
-##### Prerequisites Check
-###### Verify Node Version
-
-# Best Practices
-
-### Heading Structure Guidelines
+# Best practices
 
 1. **Start with Level 1** - Every page should begin with a single `#` heading
 2. **Don't Skip Levels** - Go from `##` to `###`, not `##` to `####`
-3. **Be Consistent** - Use parallel structure for headings at the same level
-4. **Keep It Short** - Headings should be concise and descriptive
-5. **Use Sentence Case** - Capitalize like a sentence, not every word
+3. **Keep It Short** - Headings should be concise and descriptive
 
-## Next Steps
+## Next steps
 
 Learn about other content elements:
 
-- [Links](/syntax-components/links) - Create hyperlinks and cross-references
-- [Images](/syntax-components/images) - Embed images in your documentation
-- [Lists](/syntax-components/lists) - Use ordered and unordered lists
+* [Links](/syntax-components/links) - Create hyperlinks and cross-references
+* [Images](/syntax-components/images) - Embed images in your documentation
+* [Lists](/syntax-components/lists) - Use ordered and unordered lists

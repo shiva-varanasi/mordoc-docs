@@ -3,9 +3,9 @@ title: Search
 description: Learn about the automatically generated search functionality powered by Pagefind in Mordoc.
 ---
 
-Mordoc provides automatic client-side search functionality powered by **Pagefind**. Search is generated during the build process with no configuration required.
+Mordoc provides automatic client-side search functionality powered by [Pagefind](https://pagefind.app/). Search is generated during the build process with no configuration required.
 
-# How Search Works
+# How search works
 
 Search functionality is completely automatic in Mordoc:
 
@@ -14,107 +14,45 @@ Search functionality is completely automatic in Mordoc:
 3. **Zero Configuration**: No setup or configuration files required
 4. **Fast & Lightweight**: Optimized for performance with minimal bundle size
 
-{% callout type="note" %}
-Mordoc uses Pagefind for search, which creates a lightweight, static search index during the build process. This provides instant search without servers or external services.
-{% /callout %}
+# Styling searchbar
 
-# Using Search
+Mordoc provides sensible default styles for searchbar. If you want to make subtle changes to searchbar colors to better match your brand, you can do so by adding a `header.json` file under the `config/styles/` directory.
 
-## Accessing Search
+This file allows you to control how searchbar appears in both light and dark modes.
 
-The search bar appears automatically in the site header:
-
-- **Desktop**: Top navigation bar
-- **Mobile**: Accessible via hamburger menu
-
-## Keyboard Shortcuts
+## Available style variables
 
 {% table %}
-* Shortcut
-* Action
+* Variable
+* Description
+* Example HEX value
 ---
-* `/`
-* Open search
+* `searchHoverBorderColor`
+* Searchbar border color on hover in light mode
+* `#171717`
 ---
-* `Esc`
-* Close search
+* `searchHoverBorderColorDark`
+* Link color in dark mode
+* `#fafafa`
 ---
-* `↑` / `↓`
-* Navigate results
----
-* `Enter`
-* Go to selected result
 {% /table %}
 
-## Search Features
+## Example configurations
 
-Pagefind automatically searches:
+**Blue borders:**
 
-- **Page titles** - Highest relevance weight
-- **Headings** - High relevance weight
-- **Body content** - Standard relevance weight
-- **Custom frontmatter** - Included in search
-
-# Search Capabilities
-
-## Full-Text Search
-
-Search queries work across all content:
-
-```
-installation
+```json
+{
+  "searchHoverBorderColor": "#0665c4",
+  "searchHoverBorderColorDark": "#61b1f2"
+}
 ```
 
-Finds all pages containing "installation".
+**Green links:**
 
-## Multi-Word Search
-
-Multiple words are treated as an AND query:
-
+```json
+{
+  "searchHoverBorderColor": "#059669",
+  "searchHoverBorderColorDark": "#10b981"
+}
 ```
-api authentication
-```
-
-Finds pages containing both "api" AND "authentication".
-
-## Phrase Search
-
-Use quotes for exact phrases:
-
-```
-"getting started"
-```
-
-Finds the exact phrase "getting started".
-
-# What Gets Indexed
-
-By default, Pagefind indexes:
-
-- ✅ All markdown content
-- ✅ Page titles and headings
-- ✅ Paragraph text
-- ✅ List items
-- ❌ Code blocks (excluded by default)
-- ❌ Navigation menus
-- ❌ Headers and footers
-
-{% callout type="note" %}
-Pagefind automatically excludes navigation, headers, and other non-content elements from the search index.
-{% /callout %}
-
-# Updating Search Index
-
-The search index is generated at build time. To update search results:
-
-```bash
-npm run build
-```
-
-Changes to content files require a rebuild for search to reflect updates.
-
-# Next Steps
-
-- [Branding](/configuration/branding) - Customize your site's appearance
-- [Build](/deployment/build) - Build your site with search enabled
-- [Preview](/deployment/preview) - Test search locally before deploying

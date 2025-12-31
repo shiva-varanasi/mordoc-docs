@@ -1,11 +1,11 @@
 ---
 title: Links
-description: Create hyperlinks, cross-references, and external links in your Mordoc documentation with markdown syntax.
+description: Create hyperlinks, cross-references, and external links in your documentation.
 ---
 
 Links connect your documentation pages together and point to external resources. Mordoc supports standard markdown link syntax with automatic handling of external links.
 
-## Basic Link Syntax
+# Syntax
 
 Create links using markdown bracket notation:
 
@@ -13,140 +13,110 @@ Create links using markdown bracket notation:
 [Link Text](URL)
 ```
 
-### Example
+## Example
 
-```markdown
-[Visit our website](https://example.com)
-```
+{% table %}
+* Syntax
+* Result
+---
+* 
+  ```markdown
+  [Mordoc docs](https://mordoc.dev)
+  ```
+* [Mordoc docs](https://mordoc.dev)
+---
+{% /table %}
 
-Result: [Visit our website](https://example.com)
+# Link types
 
-## Link Types
-
-### External Links
+## External links
 
 Link to websites outside your documentation:
 
-```markdown
-[Node.js Official Site](https://nodejs.org)
-[GitHub](https://github.com)
-```
+{% table %}
+* Syntax
+* Result
+---
+* 
+  ```markdown
+  [Node.js Official Site](https://nodejs.org)
+  [GitHub](https://github.com)
+  ```
+* [Node.js Official Site](https://nodejs.org)
 
-External links:
-- [Node.js Official Site](https://nodejs.org)
-- [GitHub](https://github.com)
+  [GitHub](https://github.com)
+---
+{% /table %}
 
-{% callout type="note" %}
-External links automatically open in a new tab. This is hardcoded behavior and cannot be changed.
-{% /callout %}
-
-### Internal Links
+## Internal links
 
 Link to other pages within your documentation using paths:
 
-```markdown
-[Getting Started](/get-started/creating-project)
-[Configuration Guide](/configuration/sidenav)
-```
-
-Internal links:
-- [Getting Started](/get-started/creating-project)
-- [Configuration Guide](/configuration/sidenav)
-
-#### Internal Link Path Rules
-
-- Start with `/` for absolute paths from site root
-- Match the file path without the `.md` extension
-- Use lowercase and hyphens
-
 {% table %}
-* File Path
-* Link Path
+* Syntax
+* Result
 ---
-* `content/en/guides/intro.md`
-* `/guides/intro`
+* 
+  ```markdown
+  [Create your first project](/get-started/creating-project)
+  [Install Git](/prerequisites/git)
+  ```
+* [Create your first project](/get-started/creating-project)
+
+  [Install Git](/prerequisites/git)
 ---
-* `content/en/api/reference.md`
-* `/api/reference`
----
-* `content/en/index.md`
-* `/`
 {% /table %}
 
-### Anchor Links
-
-Link to specific sections within a page using heading IDs:
-
-```markdown
-[Jump to Installation](#installation)
-[See Prerequisites](/get-started/creating-project#prerequisites)
-```
-
-Anchor links:
-- [Jump to Link Types](#link-types)
-- [Jump to Styling](#styling-links)
-
-Heading IDs are automatically generated from heading text:
-- Converted to lowercase
-- Spaces become hyphens
-- Special characters removed
-
-### Email Links
+## Email links
 
 Create mailto links:
 
-```markdown
-[Contact Support](mailto:support@example.com)
-```
+{% table %}
+* Syntax
+* Result
+---
+* 
+  ```markdown
+  [Contact Support](mailto:support@example.com)
+  ```
+* [Contact Support](mailto:support@example.com)
+---
+{% /table %}
 
-Result: [Contact Support](mailto:support@example.com)
+# Styling links
 
-## Styling Links
+Mordoc provides sensible default styles for links. If you want to customize link colors to better match your brand, you can do so by adding a `typography.json` file under the `config/styles/` directory.
 
-Customize link colors through the typography configuration file.
+This file allows you to control how links appear in both light and dark modes.
 
-Edit `config/styles/typography.json`:
-
-```json
-{
-  "linkColor": "#0665c4",
-  "linkColorDark": "#0665c4",
-  "linkHoverColor": "#0a0b66",
-  "linkHoverColorDark": "#61b1f2"
-}
-```
-
-### Available Style Variables
+## Available style variables
 
 {% table %}
 * Variable
 * Description
-* Default
+* Example HEX value
 ---
 * `linkColor`
-* Link color (light mode)
+* Link color in light mode
 * `#171717`
 ---
 * `linkColorDark`
-* Link color (dark mode)
+* Link color in dark mode
 * `#fafafa`
 ---
 * `linkHoverColor`
-* Link hover color (light mode)
+* Link color on hover in light mode
 * `#000000`
 ---
 * `linkHoverColorDark`
-* Link hover color (dark mode)
+* Link color on hover in dark mode
 * `#FFFFFF`
+---
 {% /table %}
 
-{% callout type="note" %}
-These are the ONLY customizable properties for links. Other aspects (underlines, font weight, transitions) are controlled by the design system to ensure consistency.
-{% /callout %}
+## Example configurations
 
-### Example Configurations
-
-**Blue Links:**
+**Blue links:**
 
 ```json
 {
@@ -157,18 +127,7 @@ These are the ONLY customizable properties for links. Other aspects (underlines,
 }
 ```
 
-**Subtle Links:**
-
-```json
-{
-  "linkColor": "#525252",
-  "linkColorDark": "#b3b3b3",
-  "linkHoverColor": "#171717",
-  "linkHoverColorDark": "#fafafa"
-}
-```
-
-**Green Links:**
+**Green links:**
 
 ```json
 {
@@ -179,8 +138,8 @@ These are the ONLY customizable properties for links. Other aspects (underlines,
 }
 ```
 
-## Next Steps
+# Next steps
 
-- [Images](/syntax-components/images) - Embed images in your documentation
-- [Lists](/syntax-components/lists) - Create ordered and unordered lists
-- [Code Blocks](/syntax-components/code-blocks) - Add syntax-highlighted code examples
+* [Images](/syntax-components/images) - Embed images in your documentation
+* [Lists](/syntax-components/lists) - Create ordered and unordered lists
+* [Code Blocks](/syntax-components/code-blocks) - Add syntax-highlighted code examples

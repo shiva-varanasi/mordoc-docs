@@ -44,8 +44,6 @@
       path: /configuration/toc
     - label: Search
       path: /configuration/search
-    - label: Branding
-      path: /configuration/branding
 
 - label: Deployment
   children:

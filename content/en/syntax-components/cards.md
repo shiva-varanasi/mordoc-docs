@@ -1,67 +1,23 @@
 ---
 title: Cards & Card Grid
-description: Create visual card layouts and responsive grid systems in your Mordoc documentation.
+description: Create visual card layouts and responsive grid systems in your documentation.
 ---
 
-Cards are versatile components for displaying content in visually appealing, self-contained boxes. Use them for features, navigation, resources, or any content that benefits from visual separation.
+Cards are visually appealing, self-contained boxes that you can use for navigation within your documentation.
 
-# Single Card
+# Basic card syntax
 
-Create a standalone card using Markdoc tag syntax:
-
-```markdown
-{% card title="Getting Started" %}
-Learn how to create your first documentation site with Mordoc.
-{% /card %}
-```
-
-Result:
-
-{% card title="Getting Started" %}
-Learn how to create your first documentation site with Mordoc.
-{% /card %}
-
-# Card with Link
-
-Make cards clickable by adding an `href` attribute:
+A card is created using the `card` tag. At minimum, a card requires a `title` and some content.
 
 ```markdown
-{% card title="Installation Guide" href="/get-started/creating-project" %}
+{% card title="Installation Guide" %}
 Step-by-step instructions for installing and setting up Mordoc.
 {% /card %}
 ```
 
-Result:
+This defines the structure of a card. Additional attributes can be added to control its behavior and appearance.
 
-{% card title="Installation Guide" href="/get-started/creating-project" %}
-Step-by-step instructions for installing and setting up Mordoc.
-{% /card %}
-
-When a card has an `href`, the entire card becomes clickable and interactive.
-
-# Card with Icon
-
-Add visual interest with icons:
-
-```markdown
-{% card title="Fast Performance" icon="/icons/speed.svg" %}
-Optimized build system for quick documentation generation.
-{% /card %}
-```
-
-Icon images should be placed in your project's `public/` directory and referenced with an absolute path.
-
-# Complete Card Example
-
-Combine title, icon, link, and description:
-
-```markdown
-{% card title="Configuration" href="/configuration/sidenav" icon="/icons/settings.svg" %}
-Customize navigation, themes, and site settings to match your brand.
-{% /card %}
-```
-
-# Card Attributes
+# Card attributes
 
 {% table %}
 * Attribute
@@ -72,46 +28,113 @@ Customize navigation, themes, and site settings to match your brand.
 * `title`
 * string
 * Yes
-* Card heading
+* Card heading text
 ---
 * `href`
 * string
 * No
-* Makes card clickable, links to this URL
+* Makes the card clickable and links to the specified URL
 ---
 * `icon`
 * string
 * No
-* Path to icon image (SVG, PNG, JPG)
+* Path to an icon image
+---
 {% /table %}
 
-# Card Grid
+# Card with link
 
-Display multiple cards in a responsive grid layout:
+To use a card for navigation, add an `href` attribute. When an `href` is present, the entire card becomes clickable.
+
+**Syntax:**
+
+```markdown
+{% card title="Installation Guide" href="/get-started/create-project" %}
+Step-by-step instructions for installing and setting up Mordoc.
+{% /card %}
+```
+
+**Result:**
+
+{% card title="Installation Guide" href="/get-started/create-project" %}
+Step-by-step instructions for installing and setting up Mordoc.
+{% /card %}
+
+# Card with icon
+
+You can optionally add an icon to visually reinforce the purpose of a card.
+
+**Syntax:**
+
+```markdown
+{% card
+  title="Project structure"
+  href="/get-started/project-structure"
+  icon="/icons/structure.svg"
+%}
+Understand the project structure.
+{% /card %}
+```
+
+**Result:**
+
+{% card
+  title="Project structure"
+  href="/get-started/project-structure"
+  icon="/icons/structure.svg"
+%}
+Understand the project structure.
+{% /card %}
+
+{% callout type="note" title="Note" %}
+Icon images should be placed in the `public/` directory and referenced using an absolute path.
+{% /callout %}
+
+# Card grid
+
+Use a card grid to display multiple navigation cards in a responsive layout.
+
+**Syntax:**
 
 ```markdown
 {% cardGrid cols="3" %}
-{% card title="Write" icon="/icons/edit.svg" %}
-Write documentation in markdown with extended syntax support.
+{% card title="Write" href="/get-started/create-project" icon="/icons/get-started.svg" %}
+Write documentation using simple Markdown syntax.
 {% /card %}
 
-{% card title="Build" icon="/icons/build.svg" %}
-Generate a static site optimized for performance and SEO.
+{% card title="Build" href="/get-started/syntax" icon="/icons/syntax.svg" %}
+Generate a static site optimized for performance.
 {% /card %}
 
-{% card title="Deploy" icon="/icons/deploy.svg" %}
-Deploy anywhere - your infrastructure, your choice.
+{% card title="Deploy" href="/deployment/build" icon="/icons/deployment.svg" %}
+Deploy anywhere using your preferred infrastructure.
 {% /card %}
 {% /cardGrid %}
 ```
 
-## Grid Column Options
+**Result:**
 
-Control the number of columns with the `cols` attribute:
+{% cardGrid cols="3" %}
+{% card title="Write" href="/get-started/create-project" icon="/icons/get-started.svg" %}
+Write documentation using simple Markdown syntax.
+{% /card %}
+
+{% card title="Build" href="/get-started/syntax" icon="/icons/syntax.svg" %}
+Generate a static site optimized for performance.
+{% /card %}
+
+{% card title="Deploy" href="/deployment/build" icon="/icons/deployment.svg" %}
+Deploy anywhere using your preferred infrastructure.
+{% /card %}
+{% /cardGrid %}
+
+## Grid column options
+
+Control the number of columns using the `cols` attribute:
 
 {% table %}
 * Columns
-* Use Case
+* Use case
 ---
 * `cols="2"`
 * Two-column layouts
@@ -121,104 +144,55 @@ Control the number of columns with the `cols` attribute:
 ---
 * `cols="4"`
 * Four-column layouts
+---
 {% /table %}
 
-**Responsive Behavior:**
+## Responsive behavior
 
-The grid automatically adjusts for smaller screens:
-- **Mobile** (< 640px): Always 1 column
-- **Tablet** (640px - 1024px): Adapts to available space
-- **Desktop** (> 1024px): Uses specified `cols` value
+The card grid automatically adapts to available screen space. Cards stack on smaller screens and expand into multiple columns as more space becomes available.
 
-## Card Grid Patterns
 
-## Feature Showcase
+# Styling cards
 
-```markdown
-{% cardGrid cols="3" %}
-{% card title="Markdown-First" icon="/icons/markdown.svg" %}
-Write in clean, simple markdown. No complex syntax to learn.
-{% /card %}
+Mordoc provides sensible default styles for cards. If you want to customize card colors to better match your brand, you can do so by adding a `card.json` file under the `config/styles/` directory.
 
-{% card title="Infrastructure Independent" icon="/icons/cloud.svg" %}
-Deploy to any platform. No vendor lock-in or proprietary hosting.
-{% /card %}
+This file allows you to control how cards appear in both light and dark modes.
 
-{% card title="Fully Customizable" icon="/icons/customize.svg" %}
-Control every aspect of design with configuration files.
-{% /card %}
-{% /cardGrid %}
-```
-
-# Styling Cards
-
-Customize card colors through configuration.
-
-Edit `config/styles/main.json`:
-
-```json
-{
-  "cardBorderColor": "#E6E6E6",
-  "cardBorderColorDark": "#262626",
-  "cardTitleColor": "#171717",
-  "cardTitleColorDark": "#FAFAFA",
-  "cardArrowColor": "#525252",
-  "cardArrowColorDark": "#B3B3B3"
-}
-```
-
-## Available Style Variables
+## Available style variables
 
 {% table %}
 * Variable
 * Description
-* Default
+* Example HEX value
 ---
 * `cardBorderColor`
-* Card border (light mode)
+* Card border color in light mode
 * `#E6E6E6`
 ---
 * `cardBorderColorDark`
-* Card border (dark mode)
+* Card border color in dark mode
 * `#262626`
 ---
 * `cardTitleColor`
-* Title color (light mode)
+* Card title color in light mode
 * `#171717`
 ---
 * `cardTitleColorDark`
-* Title color (dark mode)
+* Card title color in dark mode
 * `#FAFAFA`
 ---
 * `cardArrowColor`
-* Arrow icon color (light mode)
+* Arrow icon color in light mode
 * `#525252`
 ---
 * `cardArrowColorDark`
-* Arrow icon color (dark mode)
+* Arrow icon color in dark mode
 * `#B3B3B3`
 {% /table %}
 
-{% callout type="note" %}
-These are the ONLY customizable properties for cards. Other aspects (padding, border radius, hover effects, etc.) are controlled by the design system to ensure consistency.
-{% /callout %}
+## Example configurations
 
-## Example Configurations
-
-**Subtle Gray Cards:**
-
-```json
-{
-  "cardBorderColor": "#E5E7EB",
-  "cardBorderColorDark": "#374151",
-  "cardTitleColor": "#111827",
-  "cardTitleColorDark": "#F9FAFB",
-  "cardArrowColor": "#6B7280",
-  "cardArrowColorDark": "#9CA3AF"
-}
-```
-
-**Blue Accent Cards:**
+**Blue accent cards:**
 
 ```json
 {
@@ -231,7 +205,7 @@ These are the ONLY customizable properties for cards. Other aspects (padding, bo
 }
 ```
 
-**Green Accent Cards:**
+**Green accent cards:**
 
 ```json
 {
@@ -243,9 +217,3 @@ These are the ONLY customizable properties for cards. Other aspects (padding, bo
   "cardArrowColorDark": "#34D399"
 }
 ```
-
-## Next Steps
-
-- [Side Navigation](/configuration/sidenav) - Configure your site's navigation
-- [Branding](/configuration/branding) - Add your logo and customize appearance
-- [Build](/deployment/build) - Build your site for production

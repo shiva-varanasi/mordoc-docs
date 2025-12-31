@@ -149,7 +149,7 @@ This structure makes it easy to grow your documentation without reorganizing con
 
 A typical content file in Mordoc is a Markdown file with two main parts:
 
-1. **Front matter** at the top of the file, used to define the page title and description
+1. **Frontmatter** at the top of the file, used to define the page title and description
 2. **Markdown content** below it, which makes up the body of the page
 
 Here is a simple example:
@@ -167,7 +167,7 @@ This is where the main content of the page goes.
 You can write paragraphs, lists, code blocks, and use documentation components as needed.
 ```
 
-In Mordoc, the front matter is part of the content itself:
+In Mordoc, the frontmatter is part of the content itself:
 
 * title is rendered as the main page heading
 

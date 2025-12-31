@@ -1,102 +1,55 @@
 ---
 title: Images
-description: Embed images in your Mordoc documentation using markdown syntax.
+description: Embed images in your documentation using markdown syntax.
 ---
-
-# Images
 
 Images enhance your documentation by providing visual context, diagrams, screenshots, and illustrations. Mordoc supports standard markdown image syntax.
 
-## Basic Image Syntax
+# Syntax
 
 Embed images using markdown notation:
 
 ```markdown
-![Alt Text](/path/to/image.png)
+![Alt Text](image URL)
 ```
 
-### Example
+**Alt Text:**
 
-```markdown
-![Architecture Diagram](/images/architecture.png)
-```
+Alt text describes the image and is important for accessibility and clarity.
 
-Result: The image will be displayed inline in your documentation.
+* Shown if the image cannot be loaded.
+* Read by screen readers for accessibility.
+* Used by search engines to understand the image.
 
-## Image Components
+# Example
 
-### Required: Alt Text
+{% table %}
+* Syntax
+* Result
+---
+* 
+   ```markdown
+   ![Cesky Krumlov](/images/artwork.png)
+   ```
+* ![Cesky Krumlov](/images/artwork.png)
+---
+{% /table %}
 
-Alt text describes the image for accessibility and appears when the image fails to load:
+# Image paths
 
-```markdown
-![User Dashboard Screenshot](/images/dashboard.png)
-```
-
-The text between `[` and `]` is the alt text. Always provide descriptive alt text.
-
-### Optional: Title
-
-Add a title that appears as a tooltip on hover:
-
-```markdown
-![Dashboard](/images/dashboard.png "Main user dashboard interface")
-```
-
-The text in quotes after the URL is the title attribute.
-
-## Image Paths
-
-### Public Directory Images
-
-Store images in the `public/` directory and reference them with absolute paths:
+Images should be stored in the public/ directory and referenced using absolute paths, as shown in the example above.
 
 ```
 public/
 ├── images/
-│   ├── logo.png
-│   ├── screenshot.jpg
-│   └── diagram.svg
-└── icons/
-    └── feature.svg
+    ├── cesky-krumlov.jpg
+    ├── flux-sail.png
+    └── diagram.svg
 ```
 
-Reference in markdown:
+# Next steps
 
-```markdown
-![Logo](/images/logo.png)
-![Screenshot](/images/screenshot.jpg)
-![Diagram](/images/diagram.svg)
-![Icon](/icons/feature.svg)
-```
-
-### Path Rules
-
-- Start paths with `/` for absolute paths from site root
-- Paths are case-sensitive on some platforms
-- Use web-friendly formats: PNG, JPG, SVG, GIF, WebP
-
-| File Location | Markdown Path |
-|---|---|
-| `public/images/hero.png` | `/images/hero.png` |
-| `public/icons/check.svg` | `/icons/check.svg` |
-| `public/screenshots/app.jpg` | `/screenshots/app.jpg` |
-
-## Supported Image Formats
-
-Mordoc supports all standard web image formats:
-
-| Format | Extension | Best For | Notes |
-|---|---|---|---|
-| **PNG** | `.png` | Screenshots, graphics with transparency | Lossless, larger file size |
-| **JPEG** | `.jpg`, `.jpeg` | Photos, complex images | Lossy compression, smaller files |
-| **SVG** | `.svg` | Icons, logos, diagrams | Vector format, scalable |
-| **GIF** | `.gif` | Simple animations | Limited colors, larger files |
-| **WebP** | `.webp` | Modern web images | Best compression, not universally supported in older browsers |
-
-## Next Steps
-
-- [Lists](/syntax-components/lists) - Create ordered and unordered lists
-- [Tables](/syntax-components/tables) - Display structured data
-- [Code Blocks](/syntax-components/code-blocks) - Add syntax-highlighted code
+* [Lists](/syntax-components/lists) - Create ordered and unordered lists
+* [Tables](/syntax-components/tables) - Display structured data
+* [Code Blocks](/syntax-components/code-blocks) - Add syntax-highlighted code
 
