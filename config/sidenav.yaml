@@ -35,23 +35,25 @@
       path: /syntax-components/callouts
     - label: Cards & Card Grid
       path: /syntax-components/cards
-
-- label: Configuration
-  children:
     - label: Side Navigation
-      path: /configuration/sidenav
+      path: /syntax-components/sidenav
     - label: Table of Contents
-      path: /configuration/toc
+      path: /syntax-components/toc
     - label: Search
-      path: /configuration/search
+      path: /syntax-components/search
 
 - label: Deployment
   children:
-    - label: Building Your Site
+    - label: Build Your Site
       path: /deployment/build
     - label: Preview & Test
       path: /deployment/preview
     - label: Version Control
       path: /deployment/version-control
-    - label: Launch
-      path: /deployment/launch
+    - label: Deploy
+      path: /deployment/Deploy
+
+- label: References
+  children: 
+    - label: Source Repositories
+      path: /references/github-repo

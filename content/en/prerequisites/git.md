@@ -50,5 +50,5 @@ If Git is installed correctly, you should see a version number printed to the sc
 
 With Git installed, you're ready to:
 
-- [Create your first project](/get-started/creating-project)
+- [Create your first project](/get-started/create-project)
 

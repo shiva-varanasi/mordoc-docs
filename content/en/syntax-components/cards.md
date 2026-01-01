@@ -217,3 +217,9 @@ This file allows you to control how cards appear in both light and dark modes.
   "cardArrowColorDark": "#34D399"
 }
 ```
+
+# Next steps
+
+With your content in place, the next step is to structure it using the side navigation.
+
+* [Side Navigation](/syntax-components/sidenav)

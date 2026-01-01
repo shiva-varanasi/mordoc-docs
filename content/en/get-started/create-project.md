@@ -68,4 +68,4 @@ At this point, all that’s left is to update the content and branding to match 
 
 # Next steps
 
-- [Understand the Project structure](/get-started/project-structure)
+* [Understand the Project structure](/get-started/project-structure)

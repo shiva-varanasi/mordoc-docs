@@ -1,63 +1,55 @@
 ---
-title: Building Your Site
-description: Learn how to build your Mordoc documentation site for production deployment.
+title: Build Your Site
+description: Learn what building means in Mordoc and how your documentation is prepared for publishing.
 ---
 
-Building your Mordoc documentation site compiles your markdown content into optimized static HTML files ready for deployment.
+Before your documentation can be published, Mordoc needs to convert your content into a production‑ready format. This process is called **building**.
 
-# Build Command
+# Build command
 
-Build your documentation site:
+To build your documentation site, run:
 
 ```bash
 npm run build
 ```
 
-This command:
-1. Processes all markdown files
-2. Generates HTML pages
-3. Compiles and minifies CSS/JavaScript
-4. Optimizes images
-5. Creates search index
-6. Outputs to `dist/` directory
+This command prepares your documentation for previewing and deployment.
 
-## Build Output
+# What does Build mean?
 
-```bash
-$ npm run build
+When you build your site, Mordoc takes everything you have written and configured and transforms it into a finished website made of static files.
 
-> mordoc build
+During the build process, Mordoc:
 
-✓ Processing markdown files...
-✓ Generating pages...
-✓ Building search index...
-✓ Optimizing assets...
-✓ Build complete!
+* Reads markdown files from the `content/` directory
+* Applies your navigation structure from `config/sidenav.yaml`
+* Converts markdown into static HTML pages
+* Bundles and optimizes styles and browser-side JavaScript
+* Processes images and other assets
+* Generates files required for search
+* Produces a complete version of your site ready to be served
 
-Output: dist/
-Pages: 24
-Build time: 2.4s
-```
+The result is a static website where pages are served directly as files, without any server‑side code running.
 
-# Output Directory
+# Build output
 
-The build generates a `dist/` directory containing your complete static site:
+After the build completes, Mordoc generates a directory named `dist/`.
 
-```
-dist/
-├── index.html
-├── get-started/
-│   ├── index.html
-│   └── creating-project/
-│       └── index.html
-├── assets/
-│   ├── styles.css
-│   ├── main.js
-│   └── fonts/
-├── images/
-├── icons/
-├── pagefind/           # Search index
-│   ├── pagefind.js
-│   └── ...
-└── config.json
-```
+This directory contains:
+
+* HTML files for every documentation page
+* Optimized CSS and JavaScript files
+* Images, fonts, and icons
+* Search index files
+
+The `dist/` directory represents your finished documentation website.
+
+{% callout type="note" %}
+The build process does not publish your site. It only prepares the files needed for previewing and deployment.
+{% /callout %}
+
+# Next steps
+
+* [Preview & Test](/deployment/preview)
+* [Version Control with Git](/deployment/version-control)
+* [Deploy](/deployment/deploy)

@@ -32,7 +32,7 @@ This file allows you to control how searchbar appears in both light and dark mod
 * `#171717`
 ---
 * `searchHoverBorderColorDark`
-* Link color in dark mode
+* Searchbar border color on hover in dark mode
 * `#fafafa`
 ---
 {% /table %}

@@ -9,9 +9,9 @@ This page explains what Node.js and npm are in simple terms, and then walks you 
 
 # What is Node.js?
 
-Node.js is a tool that lets you run JavaScript programs on your computer.
+Node.js is a runtime environment that lets you run JavaScript programs on your computer.
 
-In the context of Mordoc, Node.js is simply the runtime that allows Mordoc to:
+It allows Mordoc to:
 
 * Run locally on your machine
 * Generate your documentation website

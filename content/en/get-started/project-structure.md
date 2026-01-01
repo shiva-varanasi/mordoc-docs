@@ -98,7 +98,7 @@ The `sidenav.yaml` file defines the structure of your site’s side navigation.
 
 This file controls how pages are grouped and ordered in the sidebar. In most cases, it’s best to update this file after your content is in place, so the navigation reflects the structure of your documentation.
 
-You’ll learn how to configure this file in detail in the [Side Navigation](/configuration/sidenav) section.
+You’ll learn how to configure this file in detail in the [Side Navigation](/syntax-components/sidenav) section.
 
 #### styles
 
@@ -214,5 +214,13 @@ Locks dependency versions for consistent installations.
 ### .gitignore
 
 The `.gitignore` file tells Git which files and directories should not be tracked in version control.
+
+# Next steps
+
+Now that you understand the structure of the project, you’re ready to start writing content.
+
+Explore the available syntax and components to build rich, structured documentation:
+
+* [Syntax & Components](/syntax-components/headings)
 
 
