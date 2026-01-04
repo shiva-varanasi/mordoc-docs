@@ -5,7 +5,7 @@ description: Configure the side navigation menu for your documentation site usin
 
 The side navigation defines the primary structure of your documentation site. It is configured using a single file: `config/sidenav.yaml`. This file controls the order, hierarchy, and grouping of all pages in your documentation.
 
-# Basic Configuration
+# Basic configuration
 
 Below is a simple example of a side navigation configuration:
 
@@ -23,7 +23,7 @@ Below is a simple example of a side navigation configuration:
 
 Each item in the file represents a navigation entry in the sidebar.
 
-# Navigation Item Properties
+# Navigation item properties
 
 Every navigation item supports the following properties:
 
@@ -52,9 +52,9 @@ Every navigation item supports the following properties:
 * `path` is required only if the item should link to a page.
 * `children` is optional and used to create nested navigation.
 
-# Navigation Patterns
+# Navigation patterns
 
-## Page with Content
+## Page with content
 
 A basic navigation item that links directly to a page:
 
@@ -69,7 +69,7 @@ This maps to:
 content/en/flight-school.md
 ```
 
-## Parent with Content and Children
+## Parent with content and children
 
 A parent item can have its own page and child pages.
 
@@ -95,7 +95,7 @@ content/en/
 
 The parent label links to `/flight-school`, while child items link to their respective pages.
 
-## Parent as Label Only
+## Parent as label only
 
 A parent can also be used purely as a visual grouping, without its own page.
 
@@ -121,9 +121,9 @@ content/en/
     └── git.md
 ```
 
-# Nested Navigation
+# Nested navigation
 
-## Two-Level Navigation
+## Two-level navigation
 
 ```yaml
 - label: API Reference
@@ -137,7 +137,7 @@ content/en/
       path: /api/projects
 ```
 
-## Multi-Level Navigation
+## Multi-level navigation
 
 Mordoc supports deeper nesting when needed:
 
@@ -160,7 +160,7 @@ Mordoc supports deeper nesting when needed:
 Although deep nesting is supported, avoid going beyond three levels to maintain usability and clarity.
 {% /callout %}
 
-# Path Mapping
+# Path mapping
 
 Paths defined in `sidenav.yaml` map directly to markdown files in your content directory.
 
@@ -189,7 +189,7 @@ Paths defined in `sidenav.yaml` map directly to markdown files in your content d
 * Match the folder structure under `content/`
 * Use lowercase letters and hyphens
 
-# Styling the Side Navigation
+# Styling the side navigation
 
 If you want to customize side navigation colors to better match your brand, you can do so by adding a `sidenav.json` file under the `config/styles/` directory.
 
@@ -206,7 +206,7 @@ This file allows you to control how side navigation active items appear in both 
 }
 ```
 
-## Available Style Variables
+## Available style variables
 
 {% table %}
 * Variable

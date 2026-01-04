@@ -47,7 +47,7 @@ Use hash symbols (`#`) to create headings. The number of hashes determines the h
 2. **Don't Skip Levels** - Go from `##` to `###`, not `##` to `####`
 3. **Keep It Short** - Headings should be concise and descriptive
 
-## Next steps
+# Next steps
 
 Learn about other content elements:
 
