@@ -49,7 +49,7 @@ The Markdoc table syntax supports rich content within cells:
 
 ````markdown
 {% table %}
-* Code block
+* Rich text example
 * Description
 ---
 * 
@@ -69,6 +69,9 @@ The Markdoc table syntax supports rich content within cells:
   * Checks whether the Fellowship includes Frodo.
   * Throws an error if he’s missing; otherwise returns a success message.
   * Demonstrates the function with a sample Fellowship list.
+  {% callout type="note" title="note" %}
+  This is a fictional code.
+  {% /callout %}
 ---
 * 
   **Callout**
@@ -83,7 +86,7 @@ The Markdoc table syntax supports rich content within cells:
 ## Result
 
 {% table %}
-* Rich text
+* Rich text example
 * Description
 ---
 * 
@@ -105,6 +108,9 @@ The Markdoc table syntax supports rich content within cells:
   * Checks whether the Fellowship includes Frodo.
   * Throws an error if he’s missing; otherwise returns a success message.
   * Demonstrates the function with a sample Fellowship list.
+  {% callout type="note" title="note" %}
+  This is a fictional code.
+  {% /callout %}
 ---
 * 
   **Callout**

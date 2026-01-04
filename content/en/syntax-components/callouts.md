@@ -49,12 +49,12 @@ Use warnings for important information that users should be aware of:
 * 
   ```markdown
   {% callout type="warning" title="Warning" %}
-  This foe is beyond any of you.
+  Some enemies, like the Balrog beneath the mountain, are not meant to be fought at all
   {% /callout %}
   ```
 * 
   {% callout type="warning" title="Warning" %}
-  This foe is beyond any of you.
+  Some enemies, like the Balrog beneath the mountain, are not meant to be fought at all
   {% /callout %}
 ---
 {% /table %}
@@ -70,12 +70,12 @@ Use danger callouts for critical warnings about destructive or risky actions:
 * 
   ```markdown
   {% callout type="danger" title="Danger" %}
-  Fly, you fools.
+  Do not claim the Ring for yourself, or it will claim you in return.
   {% /callout %}
   ```
 * 
   {% callout type="danger" title="Danger" %}
-  Fly, you fools.
+  Do not claim the Ring for yourself, or it will claim you in return.
   {% /callout %}
 ---
 {% /table %}
