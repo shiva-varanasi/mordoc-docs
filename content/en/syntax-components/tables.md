@@ -69,7 +69,7 @@ The Markdoc table syntax supports rich content within cells:
   * Checks whether the Fellowship includes Frodo.
   * Throws an error if he’s missing; otherwise returns a success message.
   * Demonstrates the function with a sample Fellowship list.
-  {% callout type="note" title="note" %}
+  {% callout type="note" title="Note" %}
   This is a fictional code.
   {% /callout %}
 ---

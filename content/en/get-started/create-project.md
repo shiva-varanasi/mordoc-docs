@@ -7,23 +7,25 @@ Mordoc provides a CLI tool that scaffolds a complete documentation project using
 
 # Create a new project
 
-In your code editor’s terminal, navigate to the directory where you want to create your project and run the following command:
+In your code editor’s terminal, navigate to the directory where you want to create your project and run the following command. Replace `my-docs` with your preferred project name.
 
 ```bash
 npx create-mordoc-app my-docs
 ```
 
-Replace `my-docs` with your preferred project name.
+{% callout type="note" title="Note" %}
+If script execution is disabled on your system, an error may occur. Search the exact error message online for resolution steps.
+{% /callout %}
+
+The terminal will guide you through the project setup process.
 
 {% callout type="note" title="What is npx?" %}
 `npx` is a package runner that comes with npm. It downloads and runs the latest version of `create-mordoc-app` without requiring a global installation.
 {% /callout %}
 
-The terminal will guide you through the project setup process.
-
 # Navigate to your project
 
-Once the setup is complete, a new directory named `my-docs` will be created. This directory contains all the files needed for your documentation site.
+Once the setup is complete, a new directory named `my-docs` will be created. This directory contains a starter template for your documentation site.
 
 ## In terminal
 
