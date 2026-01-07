@@ -51,7 +51,7 @@
     - label: Version Control
       path: /deployment/version-control
     - label: Deploy
-      path: /deployment/Deploy
+      path: /deployment/deploy
 
 - label: References
   children: 
