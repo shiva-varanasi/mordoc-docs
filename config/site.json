@@ -1,15 +1,12 @@
 {
-  "title": "Mordoc Docs",
+  "name": "Mordoc Docs",
   "description": "Create powerful documentation websites with Mordoc - an open-source tool that lets you write in markdown and deploy anywhere.",
-  "keywords": [
-    "mordoc",
-    "documentation",
-    "mordoc documentation",
-    "markdown",
-    "static site generator",
-    "mordoc docs",
-    "open source",
-    "documentation generator"
-  ],
-  "baseUrl": "https://www.mordoc.dev/"
+  "baseUrl": "https://www.mordoc.dev",
+  "defaultLanguage": "en",
+  "metadata": {
+    "ogImage": "/images/og-image.svg",
+    "ogType": "website",
+    "twitterCard": "summary_large_image",
+    "twitterSite": "@mordocdocs"
+  }
 }
