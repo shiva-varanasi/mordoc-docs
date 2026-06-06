@@ -7,20 +7,20 @@ Before you can run Mordoc, you need **Node.js** installed on your system. Don’
 
 This page explains what Node.js and npm are in simple terms, and then walks you through installing them.
 
-# What is Node.js?
+## What is Node.js?
 
 Node.js is a runtime environment that lets you run JavaScript programs on your computer.
 
 It allows Mordoc to:
 
 * Run locally on your machine
-* Generate your documentation website
+* Build your documentation website
 * Manage dependencies and tooling behind the scenes
 
 You won’t be writing JavaScript or building applications. Node.js is just something Mordoc needs in order to work.
 
 
-# What is npm?
+## What is npm?
 
 **npm** stands for *Node Package Manager*.
 
@@ -32,7 +32,7 @@ It comes bundled with Node.js and is used to:
 
 You don’t need to install npm separately. If Node.js is installed, npm is already included.
 
-# Download Node.js
+## Download Node.js
 
 1. Visit the official Node.js website: [https://nodejs.org](https://nodejs.org)
 2. Download the **LTS (Long Term Support)** version. This is the recommended and most stable option.
@@ -43,13 +43,13 @@ Choose the installer for your operating system:
 * **macOS**: Download the macOS installer
 * **Linux**: Use the official package for your distribution or follow the Linux installation instructions on the website
 
-# Install Node.js
+## Install Node.js
 
 Run the installer and follow the recommended options in the installation wizard.
 
 For most users, the default settings are correct. You do not need to customize anything.
 
-# Verify the installation
+## Verify the installation
 
 After installation is complete, verify that Node.js is installed correctly.
 
@@ -71,7 +71,7 @@ You can also verify npm by running:
 npm -v
 ```
 
-# If the command is not found
+## If the command is not found
 
 If you see a message like `command not found` or `node is not recognized`, it usually means Node.js is not available in your system’s PATH.
 
@@ -80,6 +80,6 @@ If you see a message like `command not found` or `node is not recognized`, it us
 
 If the issue persists, reinstall Node.js using the official installer and make sure you accept the default options.
 
-# Next steps
+## Next step
 
 - [Install Git](/prerequisites/git)

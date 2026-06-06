@@ -1,21 +1,14 @@
 {
   "name": "mordoc-docs",
   "version": "1.0.0",
-  "description": "Photoniuum Flight Notes — corporate documentation for lightspeed travel (fictional starter site)",
+  "description": "Mordoc is a documentation framework, that transforms your content into clean, elegant, and highly usable documentation websites.",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "mordoc dev",
-    "build": "mordoc build",
-    "build:verbose": "mordoc build --verbose",
-    "build:drafts": "mordoc build --drafts"
+    "build": "mordoc build"
   },
-  "keywords": [
-    "photoniuum",
-    "lightspeed",
-    "ftl",
-    "documentation"
-  ],
   "dependencies": {
-    "mordoc": "^0.1.14"
+    "mordoc": "^1.3.1"
   }
 }
