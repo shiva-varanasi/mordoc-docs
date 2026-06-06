@@ -3,18 +3,20 @@ title: Install Git
 description: Install Git for version control and collaboration on your documentation.
 ---
 
-# What is Git
+## What is Git?
 
 Git is a version control system that helps you track changes to your documentation, collaborate with others, and deploy your site.
 
-# Why use Git?
+## Why use Git?
+
+Git is not required to run Mordoc, but it is strongly recommended for real documentation projects.
 
 - **Version History**: Track every change to your documentation
 - **Collaboration**: Work with team members on the same documentation
 - **Backup**: Keep your documentation safe in remote repositories
 - **Deployment**: Many hosting platforms integrate with Git for automatic deployments
 
-# Download Git
+## Download Git
 
 1. Visit the official Git website: [https://git-scm.com/](https://git-scm.com/install/)
 
@@ -24,7 +26,7 @@ Git is a version control system that helps you track changes to your documentati
    * **macOS**: Download the macOS installer
    * **Linux**: Use your distribution’s package manager or follow the Linux instructions on the website
 
-# Install Git
+## Install Git
 
 Run the installer and follow the recommended options.
 
@@ -32,7 +34,7 @@ Run the installer and follow the recommended options.
 For most users, the default settings are sufficient. You do not need to customize anything during installation.
 {% /callout %}
 
-# Verify the installation
+## Verify the installation
 
 After installation is complete, verify that Git is installed correctly.
 
@@ -46,9 +48,9 @@ git --version
 
 If Git is installed correctly, you should see a version number printed to the screen.
 
-# Next steps
+## Next steps
 
 With Git installed, you're ready to:
 
-- [Create your first project](/get-started/create-project)
+- [Create a Project](/getting-started/create-project)
 

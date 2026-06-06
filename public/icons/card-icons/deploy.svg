@@ -1,0 +1,11 @@
+<svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="40" height="36" rx="8" fill="#FAF0EB"/>
+<!-- Package box -->
+<path d="M14 20H26V27H14V20Z" stroke="#D64518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- Box middle crease -->
+<path d="M14 23.5H26" stroke="#D64518" stroke-width="2" stroke-linecap="round"/>
+<!-- Arrow shaft (from top of box upward) -->
+<path d="M20 20V11" stroke="#D64518" stroke-width="2" stroke-linecap="round"/>
+<!-- Arrow head -->
+<path d="M16.5 14.5L20 11L23.5 14.5" stroke="#D64518" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

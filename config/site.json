@@ -4,7 +4,7 @@
   "baseUrl": "https://www.mordoc.dev",
   "defaultLanguage": "en",
   "metadata": {
-    "ogImage": "/images/og-image.svg",
+    "ogImage": "/images/metadata/og-image.svg",
     "ogType": "website",
     "twitterCard": "summary_large_image",
     "twitterSite": "@mordocdocs"
