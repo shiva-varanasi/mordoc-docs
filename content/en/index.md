@@ -1,5 +1,5 @@
 ---
-title: Mordoc Docs
+title: Home
 layout: landing
 ---
 
