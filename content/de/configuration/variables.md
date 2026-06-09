@@ -38,7 +38,7 @@ Verwenden Sie Anführungszeichen, wenn ein Wert als Text behandelt werden soll, 
 Sobald eine Variable definiert ist, können Sie sie in Markdown-Inhalten verwenden:
 
 ```markdown
-Willkommen bei {{ $productName }}.
+Willkommen bei {% $productName %}.
 ```
 
 Mordoc ersetzt die Variable durch den Wert aus `config/variables.yaml`.
@@ -68,7 +68,7 @@ supportEmail: support@example.com
 Verwenden Sie es dann überall, wo Leser die Support-Adresse benötigen:
 
 ```markdown
-Senden Sie eine E-Mail an {{ $supportEmail }}, wenn Sie Hilfe benötigen.
+Senden Sie eine E-Mail an {% $supportEmail %}, wenn Sie Hilfe benötigen.
 ```
 
 Wenn sich die Adresse später ändert, müssen Sie nur `config/variables.yaml` aktualisieren.

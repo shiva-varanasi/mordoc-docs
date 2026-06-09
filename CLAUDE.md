@@ -25,7 +25,7 @@ Variables are defined in `config/variables.yaml` and referenced in content with 
 
 **In body text:**
 ```markdown
-Welcome to {{ $productName }}.
+Welcome to {% $productName %}.
 ```
 
 **In link targets (no curly braces):**
@@ -34,7 +34,7 @@ Welcome to {{ $productName }}.
 ```
 
 **Rules for translation:**
-- Do not translate `{{ $variableName }}` or `$VARIABLE_NAME` — preserve them verbatim.
+- Do not translate `{% $variableName %}` or `$VARIABLE_NAME` — preserve them verbatim.
 - Translate surrounding text as normal.
 
 ## Tags (Markdoc Components)
@@ -182,6 +182,53 @@ Do **not** prefix paths inside code blocks (fenced with ` ``` `) — preserve th
 
 ---
 
+## Navigation Label Translations
+
+Navigation labels in `config/navigation/` files must be translated for each non-default language. This is separate from translating content files.
+
+### Navigation file structure
+
+Depending on the project, navigation files may include:
+
+- `config/navigation/sidenav.yaml` — single site-wide sidebar (used when `topnav.yaml` does **not** exist)
+- `config/navigation/topnav.yaml` — optional; when present, replaces `sidenav.yaml` with per-area sidenav files
+- `config/navigation/headernav.yaml` — optional header links
+- Custom per-area sidenav files referenced from `topnav.yaml` (e.g., `config/navigation/field-manual.yaml`, `config/navigation/ship-systems.yaml`)
+
+When `topnav.yaml` exists there is **no** `sidenav.yaml` — collect labels from `topnav.yaml` and all custom sidenav files it references via the `sidenav:` field.
+
+### Translation file location
+
+One YAML file per language under:
+
+```text
+config/navigation/translations/<language code>.yaml
+```
+
+For example, for German: `config/navigation/translations/de.yaml`.
+
+### Translation file syntax
+
+Flat YAML key-value pairs — original label on the left, translated label on the right:
+
+```yaml
+Getting Started: Premiers pas
+Writing Content: Rediger du contenu
+Configuration: Configuration
+```
+
+### What to translate
+
+Translate every `label` value from every navigation file: group labels, child link labels, labels in `topnav.yaml`, labels in `headernav.yaml`, and labels in any custom per-area sidenav files.
+
+If a label is missing from the translation file, Mordoc falls back to showing the original label.
+
+### What not to translate
+
+Do not translate `path`, `sidenav` (filename references), `variant`, or `expanded` values.
+
+---
+
 ## Summary: What to Translate vs. Preserve
 
 | Element | Translate? |
@@ -205,3 +252,5 @@ Do **not** prefix paths inside code blocks (fenced with ` ``` `) — preserve th
 | Inline code (backtick `code`) | No — preserve verbatim |
 | Link paths `[text](/path)` — the path part | No |
 | Link paths `[text](/path)` — the text part | Yes |
+| Navigation `label` values (sidenav, topnav, headernav, custom sidenav files) | Yes — in `config/navigation/translations/<lang>.yaml` |
+| Navigation `path`, `sidenav`, `variant`, `expanded` values | No |
