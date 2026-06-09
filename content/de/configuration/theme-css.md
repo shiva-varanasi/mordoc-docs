@@ -128,4 +128,4 @@ Bearbeiten Sie keine CSS-Dateien in `dist/`. Der `dist/`-Ordner wird beim Bauen 
 
 ## Nächster Schritt
 
-[Website bauen](/de/publishing/build-your-site).
+[Änderungsmanagement mit Git](/de/publishing/change-management).
