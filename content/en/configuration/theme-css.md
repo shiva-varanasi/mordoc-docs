@@ -128,4 +128,4 @@ Do not edit CSS files inside `dist/`. The `dist/` folder is generated when you b
 
 ## Next step
 
-[Build your site](/publishing/build-your-site).
+[Change management with Git](/publishing/change-management).

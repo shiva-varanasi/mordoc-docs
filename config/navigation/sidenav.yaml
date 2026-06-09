@@ -68,6 +68,8 @@
 - label: Publishing
   expanded: true
   children:
+    - label: Change Management with Git
+      path: /publishing/change-management
     - label: Build Your Site
       path: /publishing/build-your-site
     - label: Preview Before Publishing
