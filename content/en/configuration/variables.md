@@ -38,7 +38,7 @@ Use quotes when a value should stay as text but looks like a number, or when it 
 After a variable is defined, you can use it in Markdown content:
 
 ```markdown
-Welcome to {{ $productName }}.
+Welcome to {% $productName %}.
 ```
 
 Mordoc replaces the variable with the value from `config/variables.yaml`.
@@ -68,7 +68,7 @@ supportEmail: support@example.com
 Then use it wherever readers need the support address:
 
 ```markdown
-Email {{ $supportEmail }} if you need help.
+Email {% $supportEmail %} if you need help.
 ```
 
 If the address changes later, you only need to update `config/variables.yaml`.
