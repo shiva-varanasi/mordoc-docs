@@ -1,5 +1,5 @@
 {
-  "name": "Mordoc Docs",
+  "name": "Mordoc",
   "description": "Create powerful documentation websites with Mordoc - an open-source tool that lets you write in markdown and deploy anywhere.",
   "baseUrl": "https://www.mordoc.dev",
   "defaultLanguage": "en",
@@ -7,6 +7,6 @@
     "ogImage": "/images/metadata/og-image.png",
     "ogType": "website",
     "twitterCard": "summary_large_image",
-    "twitterSite": "@mordocdocs"
+    "twitterSite": "@mordoc"
   }
 }
