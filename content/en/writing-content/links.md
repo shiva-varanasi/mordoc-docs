@@ -43,7 +43,7 @@ When a link target needs to come from a variable, use the `link` tag instead:
 {% link path=$SUPPORT_PORTAL_URL %}Contact support{% /link %}
 ```
 
-`path` resolves against `config/variables.yaml` the same way `{% $variableName %}` does in running text. See [Variables](/mordoc-docs/variables) to learn how to define one.
+`path` resolves against `config/variables.yaml` the same way `{% $variableName %}` does in running text. See [Variables](/configuration/variables) to learn how to define one.
 
 Use the tag form only when the target actually needs to vary — for ordinary internal and external links, plain Markdown links are simpler and work the same way.
 

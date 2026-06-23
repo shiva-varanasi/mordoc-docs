@@ -28,9 +28,14 @@ Variables are defined in `config/variables.yaml` and referenced in content with 
 Welcome to {% $productName %}.
 ```
 
-**In link targets (no curly braces):**
+**In link tags:**
 ```markdown
-[Contact support]($SUPPORT_PORTAL_URL)
+{% link path=$SUPPORT_PORTAL_URL %}Contact support{% /link %}
+```
+
+**In image tags:**
+```markdown
+{% image src=$IMAGE_LINK alt="Artwork" /%}
 ```
 
 **Rules for translation:**
