@@ -70,32 +70,6 @@ Use numbered lists when the order matters:
 3. Save the file.
 ```
 
-## Add links
-
-Use the page address when linking to another page:
-
-```markdown
-[Read my first page](/my-first-page)
-```
-
-Do not link to the Markdown file itself:
-
-```markdown
-[Read my first page](./my-first-page.md)
-```
-
-The [Routes and Links](/getting-started/routes-and-links) page explains why Mordoc links use page addresses.
-
-## Add images
-
-Put content images in `public/`, then reference them with a path that starts with `/`.
-
-```markdown
-![A short description of the image](/images/my-image.png)
-```
-
-The [Images and Files](/getting-started/images-and-files) page shows this step by step.
-
 ## Add code examples
 
 Use backticks for short inline code:
@@ -118,4 +92,4 @@ Add the language name after the opening backticks when you know it. Mordoc uses 
 
 ## Next step
 
-[Use callouts](/writing-content/callouts).
+* [Add Links](/writing-content/links).

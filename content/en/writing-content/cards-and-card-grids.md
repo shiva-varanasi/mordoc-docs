@@ -114,4 +114,4 @@ Card text should help readers choose. One short sentence is usually enough.
 
 ## Next step
 
-[Create landing pages](/writing-content/landing-pages).
+* [Create landing pages](/writing-content/landing-pages).

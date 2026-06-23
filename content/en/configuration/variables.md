@@ -73,23 +73,27 @@ Email {% $supportEmail %} if you need help.
 
 If the address changes later, you only need to update `config/variables.yaml`.
 
-## Use variables in links
+## Use variables in links and images
 
-Variables can also be used as link targets.
-
-For links, write the variable directly in the parentheses:
+`{% $variableName %}` only works in running text. A link or image's destination is parsed as plain text before Mordoc ever sees it, so a variable written directly inside the parentheses is never resolved:
 
 ```markdown
 [Contact support]($SUPPORT_PORTAL_URL)
 ```
 
-Do not use curly braces in a link target:
+This renders the literal text `$SUPPORT_PORTAL_URL` as the address, not the value from `config/variables.yaml`.
+
+For a link or image that needs a variable, use the `link` or `image` tag instead:
 
 ```markdown
-[Contact support]({{ $SUPPORT_PORTAL_URL }})
+{% link path=$SUPPORT_PORTAL_URL %}Contact support{% /link %}
 ```
 
-The link variable should be defined in `config/variables.yaml`:
+```markdown
+{% image src=$IMAGE_LINK alt="Artwork" /%}
+```
+
+The variable still needs to be defined in `config/variables.yaml`:
 
 ```yaml
 SUPPORT_PORTAL_URL: https://support.example.com
