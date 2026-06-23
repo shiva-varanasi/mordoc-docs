@@ -31,7 +31,7 @@ When an image source needs to come from a variable, use the `image` tag instead.
 {% image src=$IMAGE_LINK alt="Artwork" /%}
 ```
 
-`src` resolves against `config/variables.yaml` the same way `{% $variableName %}` does in running text. See [Variables](/mordoc-docs/variables) to learn how to define one.
+`src` resolves against `config/variables.yaml` the same way `{% $variableName %}` does in running text. See [Variables](/configuration/variables) to learn how to define one.
 
 Use the tag form only when the source actually needs to vary — for ordinary static images, plain Markdown is simpler and works the same way.
 

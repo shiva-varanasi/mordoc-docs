@@ -70,32 +70,6 @@ Verwenden Sie nummerierte Listen, wenn die Reihenfolge wichtig ist:
 3. Speichern Sie die Datei.
 ```
 
-## Links hinzufügen
-
-Verwenden Sie die Seitenadresse, wenn Sie zu einer anderen Seite verlinken:
-
-```markdown
-[Meine erste Seite lesen](/my-first-page)
-```
-
-Verlinken Sie nicht zur Markdown-Datei selbst:
-
-```markdown
-[Meine erste Seite lesen](./my-first-page.md)
-```
-
-Die Seite [Routen und Links](/de/getting-started/routes-and-links) erklärt, warum Mordoc-Links Seitenadressen verwenden.
-
-## Bilder hinzufügen
-
-Legen Sie Inhaltsbilder in `public/` ab und referenzieren Sie sie mit einem Pfad, der mit `/` beginnt.
-
-```markdown
-![Eine kurze Beschreibung des Bildes](/images/my-image.png)
-```
-
-Die Seite [Bilder und Dateien](/de/getting-started/images-and-files) zeigt diesen Schritt im Detail.
-
 ## Code-Beispiele hinzufügen
 
 Verwenden Sie Backticks für kurzen Inline-Code:
@@ -118,4 +92,4 @@ Fügen Sie den Sprachnamen nach den öffnenden Backticks hinzu, wenn Sie ihn ken
 
 ## Nächster Schritt
 
-[Callouts verwenden](/de/writing-content/callouts).
+* [Links hinzufügen](/de/writing-content/links).
