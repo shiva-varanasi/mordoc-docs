@@ -90,4 +90,4 @@ A good callout is usually one short paragraph or a small list. If the callout be
 
 ## Next step
 
-[Create tables](/writing-content/tables).
+* [Create tables](/writing-content/tables).
