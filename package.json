@@ -9,6 +9,6 @@
     "build": "mordoc build"
   },
   "dependencies": {
-    "mordoc": "^1.6.1"
+    "mordoc": "^1.6.2"
   }
 }
