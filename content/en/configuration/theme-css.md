@@ -128,4 +128,4 @@ Do not edit CSS files inside `dist/`. The `dist/` folder is generated when you b
 
 ## Next step
 
-[Change management with Git](/publishing/change-management).
+* [Change management with Git](/publishing/change-management).
