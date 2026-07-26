@@ -47,6 +47,14 @@
     - label: Landing Pages
       path: /writing-content/landing-pages
 
+- label: Creating Diagrams
+  expanded: true
+  children:
+    - label: Overview
+      path: /creating-diagrams/overview
+    - label: Sequence Diagrams
+      path: /creating-diagrams/sequence-diagrams
+
 - label: Configuration
   expanded: true
   children:

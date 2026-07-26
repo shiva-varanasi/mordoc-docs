@@ -134,4 +134,4 @@ Use a normal page for:
 
 ## Next step
 
-[Configure your site](/configuration/site-configuration).
+* [Create diagrams](/creating-diagrams/overview).
