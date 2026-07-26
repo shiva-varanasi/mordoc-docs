@@ -62,7 +62,7 @@ When a sequence of messages keeps an actor "busy" — it's the `from` or `to` of
 An actor can send a message to itself:
 
 ```markdown
-frodo -> frodo: Starts the journey towards Mordor
+frodo -> frodo: Keep it safe,\nkeep it secret
 ```
 
 This renders as a small loop out from and back to the actor's own lifeline, rather than a line to another column.
@@ -117,7 +117,7 @@ frodo -> gandalf: I will take it, though\nI do not know the way
 sauron -> frodo: I see you
 frodo -> aragorn: Will you help me\nprotect the Ring?
 aragorn --> frodo: You have my sword
-frodo -> frodo: Starts the journey
+frodo -> frodo: Keep it safe,\nkeep it secret
 ```
 ````
 
