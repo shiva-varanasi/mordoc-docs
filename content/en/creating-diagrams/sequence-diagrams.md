@@ -135,7 +135,7 @@ frodo -> gandalf: I will take it, though\nI do not know the way
 sauron -> frodo: I see you
 frodo -> aragorn: Will you help me\nprotect the Ring?
 aragorn --> frodo: You have my sword
-frodo -> frodo: Starts the journey
+frodo -> frodo: Keep it safe,\nkeep it secret
 ```
 
 A few things to notice:
