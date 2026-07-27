@@ -134,4 +134,4 @@ Verwenden Sie eine normale Seite für:
 
 ## Nächster Schritt
 
-[Website konfigurieren](/de/configuration/site-configuration).
+* [Diagramme erstellen](/de/creating-diagrams/overview).

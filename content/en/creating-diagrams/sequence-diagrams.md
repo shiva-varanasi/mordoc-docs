@@ -5,8 +5,6 @@ description: Show messages passing between participants over time, with a plain-
 
 A sequence diagram shows participants ("actors") as columns, and messages between them as arrows down the page in the order they happen. Use it for request/response flows, protocol walkthroughs, or — as in the example below — any story where the order events happen in matters.
 
-See [Diagrams](/mordoc-docs/overview) for why Mordoc renders these itself instead of embedding Mermaid.
-
 ## Basic syntax
 
 Write the diagram inside a ` ```sequence-diagram ` fenced code block:
@@ -94,7 +92,7 @@ Set `icon=<path>` on an actor to show a small image above its label instead of j
 actor frodo as "Frodo" icon=/icons/frodo.svg
 ```
 
-The path works exactly like an image `src` — put the file under `public/` and reference it with a path starting at `/`. See [Images](/mordoc-docs/images) for the same rule applied to inline images. Mordoc doesn't ship a bundled icon set, so bring your own SVGs; a simple square icon around 40×40px reads best.
+The path works exactly like an image `src` — put the file under `public/` and reference it with a path starting at `/`. Mordoc doesn't ship a bundled icon set, so bring your own SVGs; a simple square icon around 40×40px reads best.
 
 {% callout type="tip" title="Keep icons simple" %}
 Icons render small, next to several others across the diagram's header row. A flat silhouette or a single bold shape on a solid background stays legible at that size — fine linework tends to disappear.
