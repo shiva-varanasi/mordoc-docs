@@ -170,6 +170,33 @@ Learn more
 
 ---
 
+## Diagrams (`sequence-diagram` code blocks)
+
+Fenced blocks tagged `sequence-diagram` hold diagram DSL, not literal code — unlike other code blocks, part of their content **is** translated.
+
+```
+actor <id> [as "<label>"] [icon=<path>]
+<from> -> <to>: <message text>
+<from> --> <to>: <message text>
+# comment text
+```
+
+**Translate:** the `"<label>"` string after `as`, the `<message text>` after `:` (including text on either side of `\n` break markers), `# comment` text.
+**Do not translate:** the ` ```sequence-diagram ` language tag, the `actor`/`as` keywords, `<id>` values, `icon=<path>` values, arrow syntax (`->`, `-->`), `\n` markers themselves.
+
+Example:
+```
+actor frodo as "Frodo" icon=/icons/frodo.svg
+frodo -> gandalf: I will take it,\nthough I do not know the way
+```
+→ (German)
+```
+actor frodo as "Frodo" icon=/icons/frodo.svg
+frodo -> gandalf: Ich werde es nehmen,\nobwohl ich den Weg nicht kenne
+```
+
+---
+
 ## Language-specific Path Prefixes
 
 When translating content for a non-default language folder (e.g., `content/de/`), all relative navigation link paths must be prefixed with the language code.
@@ -254,6 +281,8 @@ Do not translate `path`, `sidenav` (filename references), `variant`, or `expande
 | `---` row separators in tables | No |
 | Standard Markdown text (paragraphs, headings, lists) | Yes |
 | Code blocks (fenced with ` ``` `) | No — preserve verbatim |
+| `sequence-diagram` code blocks — labels/message text/comments | Yes — see [Diagrams](#diagrams-sequence-diagram-code-blocks) |
+| `sequence-diagram` code blocks — ids, `icon=` paths, arrows, keywords | No |
 | Inline code (backtick `code`) | No — preserve verbatim |
 | Link paths `[text](/path)` — the path part | No |
 | Link paths `[text](/path)` — the text part | Yes |

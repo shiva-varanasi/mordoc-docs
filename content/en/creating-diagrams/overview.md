@@ -17,12 +17,6 @@ Mermaid and tools like it are excellent, and you may already know their syntax. 
 Because diagrams are parsed and laid out during the build, a broken diagram fails the build with a clear error — the same way a broken link in your navigation config would — rather than shipping a silently blank box to readers.
 {% /callout %}
 
-## What's supported today
-
-Mordoc's diagram support ships its first diagram type in this release: **sequence diagrams**, for showing messages passing between participants over time. See [Sequence Diagrams](/mordoc-docs/sequence-diagrams) for the full syntax.
-
-More diagram types may follow in later releases. Adding one doesn't change how existing diagrams are written — each type is its own fenced-code-block language.
-
 ## The general shape
 
 Every diagram is a fenced code block whose language names the diagram type:
