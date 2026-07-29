@@ -49,7 +49,7 @@ my-docs/
 └── package-lock.json
 ```
 
-Der Starter-Inhalt ist fiktiv. Er verwendet ein kleines „Ring der Macht"-Beispiel, damit Sie eine funktionierende Dokumentationswebsite sehen können, bevor Sie sie mit Ihren eigenen Inhalten ersetzen.
+Der Starter-Inhalt ist fiktiv, damit Sie eine funktionierende Dokumentationswebsite sehen können, bevor Sie sie mit Ihren eigenen Inhalten ersetzen.
 
 ## Die Dateien, die Sie am häufigsten bearbeiten werden
 
@@ -80,7 +80,7 @@ Jede `.md`-Datei ist eine Markdown-Seite. Markdown ist das Klartextformat, das S
 
 Der Ordner `en` bedeutet, dass dieser Inhalt auf Englisch verfasst ist. Wenn Ihre Website später mehrere Sprachen hat, kann jede Sprache ihren eigenen Ordner haben.
 
-Die Starter-Seiten werden zu folgenden URLs:
+Die Starter-Seiten werden zu folgenden URLs auf der Dokumentationswebsite:
 
 ```text
 content/en/index.md             -> /
@@ -134,7 +134,7 @@ Die Starter-Datei sieht so aus:
 
 Sie werden irgendwann den Namen, die Beschreibung und die Produktions-URL für Ihre eigene Dokumentationswebsite ändern.
 
-Das müssen Sie noch nicht tun. Eine spätere Seite erklärt jedes Feld unter [Website-Konfiguration](/de/configuration/site-configuration).
+Das müssen Sie noch nicht tun. Sie werden jedes Feld im Detail auf der Seite [Website-Konfiguration](/de/configuration/site-configuration) durchgehen.
 
 ### navigation
 
@@ -159,7 +159,7 @@ Beachten Sie zunächst, dass jeder sichtbare Link zwei Teile hat:
 * `label` ist der Text, den Leser in der Seitenleiste sehen.
 * `path` ist die Seiten-URL.
 
-Wenn Sie eigene Seiten hinzufügen, aktualisieren Sie diese Datei, damit Leser sie finden können. Eine spätere Seite führt Sie durch diesen Schritt unter [Navigationsgrundlagen](/de/getting-started/navigation-basics).
+Wenn Sie eigene Seiten hinzufügen, aktualisieren Sie diese Datei, damit Leser sie finden können. Sie werden diesen Schritt auf der Seite [Navigationsgrundlagen](/de/getting-started/navigation-basics) durchgehen.
 
 ### assets
 
@@ -175,7 +175,7 @@ config/assets/
 
 Diese können Sie zunächst in Ruhe lassen. Später können Sie sie durch Ihre eigenen Logo-Dateien ersetzen.
 
-Eine spätere Seite erklärt dies unter [Bilder und Dateien](/de/getting-started/images-and-files).
+Mehr dazu unter [Bilder und Dateien](/de/getting-started/images-and-files).
 
 ### styles
 
@@ -283,4 +283,4 @@ Mehr darüber erfahren Sie später unter [Website bauen](/de/publishing/build-yo
 
 ## Nächster Schritt
 
-[Ihre ersten Seiten schreiben](/de/getting-started/write-pages).
+- [Ihre ersten Seiten schreiben](/de/getting-started/write-pages).

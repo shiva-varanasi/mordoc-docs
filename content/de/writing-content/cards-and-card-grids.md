@@ -7,27 +7,7 @@ Karten sind nützlich, wenn Sie Leser zu einigen verwandten Seiten oder Optionen
 
 Eine Karte ist ein kleiner Inhaltsblock. Ein Karten-Raster ordnet mehrere Karten zusammen an.
 
-## Karten für Auswahlmöglichkeiten verwenden
-
-Verwenden Sie Karten, wenn ein Leser wählen muss, wohin er als nächstes gehen möchte.
-
-Eine Startseite könnte zum Beispiel zu den wichtigsten Abschnitten verlinken:
-
-```markdown
-{% cardGrid cols="3" %}
-{% card title="Erste Schritte" path="/getting-started/create-project" %}
-Erstellen Sie Ihr erstes Mordoc-Projekt.
-{% /card %}
-
-{% card title="Inhalte schreiben" path="/writing-content/markdown-basics" %}
-Lernen Sie, wie Sie Seiten schreiben.
-{% /card %}
-
-{% card title="Konfiguration" path="/configuration/site-configuration" %}
-Passen Sie Ihre Dokumentationswebsite an.
-{% /card %}
-{% /cardGrid %}
-```
+Verwenden Sie Karten, wenn ein Leser wählen muss, wohin er als nächstes gehen möchte. Eine Startseite könnte zum Beispiel zu den wichtigsten Abschnitten einer Website verlinken.
 
 ## Ein Karten-Raster hinzufügen
 
@@ -38,9 +18,21 @@ Beginnen Sie mit einem `cardGrid`:
 {% /cardGrid %}
 ```
 
-Der `cols`-Wert steuert, wie viele Spalten das Raster auf breiten Bildschirmen anzeigen soll. Übliche Werte sind `2` und `3`.
+Der `cols`-Wert steuert, wie viele Spalten das Raster auf breiten Bildschirmen anzeigen soll. Übliche Werte sind `2` und `3`. Mordoc passt das Layout auf kleineren Bildschirmen weiterhin an.
 
-Mordoc passt das Layout auf kleineren Bildschirmen weiterhin an.
+## Karten-Raster-Attribute
+
+{% table %}
+* Attribut
+* Beschreibung
+* Werte
+* Erforderlich
+---
+* `cols`
+* Bevorzugte Anzahl der Spalten auf breiten Bildschirmen
+* `1`-`4` (Standard `3`)
+* Optional
+{% /table %}
 
 ## Karten innerhalb des Rasters hinzufügen
 
@@ -51,67 +43,181 @@ Jede Karte benötigt ein `title`-Attribut:
 {% card title="Installieren" path="/guides/install" %}
 Installieren Sie das Produkt und prüfen Sie, ob es läuft.
 {% /card %}
-
 {% card title="Konfigurieren" path="/guides/configure" %}
 Passen Sie die Einstellungen für Ihr Projekt an.
 {% /card %}
 {% /cardGrid %}
 ```
 
-Verwenden Sie `path`, wenn die Karte irgendwohin verlinken soll.
+Das `title`-Feld ist erforderlich. Verwenden Sie `path`, wenn die Karte irgendwohin verlinken soll. Die anderen Karten-Felder sind optional.
 
-Das `title`-Feld ist erforderlich. Die anderen Karten-Felder sind optional.
+## Eine Kartenart wählen
 
-## Icons oder Bilder hinzufügen
+Mordoc unterstützt einige Kartenarten:
 
-Sie können ein Icon hinzufügen:
+* Eine einfache Karte, nur mit Titel, Pfad und Textinhalt
+* Eine Karte mit `tag`, für ein kurzes Abzeichen wie `Neu` oder `Hier starten`
+* Eine Karte mit `icon`, für ein kleines Icon neben dem Titel
+* Eine Karte mit `image`, für ein größeres Bild über dem Titel
+
+## Einfache Karten
+
+Verwenden Sie eine einfache Karte, wenn der Titel und ein kurzer Satz ausreichen, um dem Leser bei der Entscheidung zu helfen.
 
 ```markdown
-{% card title="Sicherheit" path="/security" icon="/images/icons/shield.svg" %}
-Sicherheitsempfehlungen überprüfen.
+{% cardGrid cols="2" %}
+{% card title="Bauen und Bereitstellen" path="/de/publishing/build-your-site" %}
+Erzeugen Sie eine statische Website und stellen Sie sie in wenigen Minuten auf einer beliebigen Hosting-Plattform bereit.
 {% /card %}
+{% card title="Vorschau vor der Veröffentlichung" path="/de/publishing/preview-before-publishing" %}
+Sehen Sie genau, wie Ihre Website aussieht, bevor sie live geht — keine Überraschungen.
+{% /card %}
+{% /cardGrid %}
 ```
 
-Sie können auch ein Bild hinzufügen:
+**So sieht das aus**
 
-```markdown
-{% card title="Versionshinweise" path="/releases" image="/images/releases.png" %}
-Sehen Sie, was sich in der neuesten Version geändert hat.
+{% cardGrid cols="2" %}
+{% card title="Bauen und Bereitstellen" path="/de/publishing/build-your-site" %}
+Erzeugen Sie eine statische Website und stellen Sie sie in wenigen Minuten auf einer beliebigen Hosting-Plattform bereit.
 {% /card %}
-```
+{% card title="Vorschau vor der Veröffentlichung" path="/de/publishing/preview-before-publishing" %}
+Sehen Sie genau, wie Ihre Website aussieht, bevor sie live geht — keine Überraschungen.
+{% /card %}
+{% /cardGrid %}
 
-Dateien für `icon` und `image` gehören in `public/`.
+## Einfache Karten mit Abzeichen
 
-## Ein kleines Tag hinzufügen
-
-Verwenden Sie `tag` für kurze Beschriftungen wie `Neu`, `Hier starten` oder `Empfohlen`.
+Verwenden Sie `tag` für kurze Beschriftungen wie `Neu`, `Hier starten` oder `Empfohlen`. Verwenden Sie Tags sparsam. Wenn jede Karte ein Tag hat, verlieren die Tags ihre Wirkung.
 
 ```markdown
-{% card title="Schnellstart" path="/quickstart" tag="Hier starten" %}
+{% cardGrid cols="2" %}
+{% card title="Schnellstart" path="/de/getting-started/create-project" tag="Hier starten" %}
 Beginnen Sie mit dem schnellsten Weg durch die Dokumentation.
 {% /card %}
+{% card title="Callouts" path="/de/writing-content/callouts" tag="Neu" %}
+Heben Sie Hinweise, Tipps, Warnungen und wichtige Meldungen auf Mordoc-Seiten hervor.
+{% /card %}
+{% /cardGrid %}
 ```
 
-Verwenden Sie Tags sparsam. Wenn jede Karte ein Tag hat, verlieren die Tags ihre Wirkung.
+**So sieht das aus**
 
-## Karten-Optionen
+{% cardGrid cols="2" %}
+{% card title="Schnellstart" path="/de/getting-started/create-project" tag="Hier starten" %}
+Beginnen Sie mit dem schnellsten Weg durch die Dokumentation.
+{% /card %}
+{% card title="Callouts" path="/de/writing-content/callouts" tag="Neu" %}
+Heben Sie Hinweise, Tipps, Warnungen und wichtige Meldungen auf Mordoc-Seiten hervor.
+{% /card %}
+{% /cardGrid %}
 
-Karten unterstützen diese Felder:
+## Karten mit Icon
 
-* `title` ist erforderlich und wird zur Kartenüberschrift.
-* `path` lässt die Karte zu einer anderen Seite oder Website verlinken.
-* `icon` zeigt ein kleines Icon.
-* `image` zeigt ein größeres Bild.
-* `tag` zeigt eine kurze Beschriftung wie `Neu` oder `Hier starten`.
+Fügen Sie `icon` hinzu, um ein kleines Icon neben dem Titel anzuzeigen. `icon` wird in einer kleinen quadratischen Box ohne Zuschneiden dargestellt, daher passt ein quadratisches Icon, idealerweise ein SVG, am besten.
 
-Verwenden Sie nur die Felder, die Lesern helfen zu wählen, wohin sie als nächstes gehen möchten.
+```markdown
+{% cardGrid cols="3" %}
+{% card title="Erste Schritte" path="/de/getting-started/create-project" icon="/icons/card-icons/getting-started.svg" %}
+Erstellen Sie Ihr erstes Projekt, führen Sie es lokal aus und lernen Sie von Grund auf, wie Mordoc funktioniert.
+{% /card %}
+{% card title="Inhalte schreiben" path="/de/writing-content/markdown-basics" icon="/icons/card-icons/writing.svg" %}
+Markdown-Grundlagen, Callouts, Tabellen, Karten, Landing-Pages und alles dazwischen.
+{% /card %}
+{% card title="Konfiguration" path="/de/configuration/site-configuration" icon="/icons/card-icons/configuration.svg" %}
+Passen Sie Ihre Website mit Navigation, Branding, Themes, Variablen und Mehrsprachigkeit an.
+{% /card %}
+{% /cardGrid %}
+```
 
-Karten-Raster unterstützen `cols`, das die bevorzugte Spaltenanzahl auf breiten Bildschirmen steuert.
+**So sieht das aus**
+
+{% cardGrid cols="3" %}
+{% card title="Erste Schritte" path="/de/getting-started/create-project" icon="/icons/card-icons/getting-started.svg" %}
+Erstellen Sie Ihr erstes Projekt, führen Sie es lokal aus und lernen Sie von Grund auf, wie Mordoc funktioniert.
+{% /card %}
+{% card title="Inhalte schreiben" path="/de/writing-content/markdown-basics" icon="/icons/card-icons/writing.svg" %}
+Markdown-Grundlagen, Callouts, Tabellen, Karten, Landing-Pages und alles dazwischen.
+{% /card %}
+{% card title="Konfiguration" path="/de/configuration/site-configuration" icon="/icons/card-icons/configuration.svg" %}
+Passen Sie Ihre Website mit Navigation, Branding, Themes, Variablen und Mehrsprachigkeit an.
+{% /card %}
+{% /cardGrid %}
+
+## Karten mit Bild
+
+Fügen Sie `image` hinzu, um ein größeres Bild über dem Titel anzuzeigen.
+
+```markdown
+{% cardGrid cols="3" %}
+{% card title="Český Krumlov" image="/images/content-images/cesky-krumlov.jpg" %}
+Eine märchenhafte Stadt in Südböhmen, eingefasst von einer Flussschleife der Moldau.
+{% /card %}
+{% card title="Island" image="/images/content-images/iceland.jpg" %}
+Wasserfälle, Gletscher und schwarze Sandstrände hinter jeder Kurve.
+{% /card %}
+{% card title="Reine" image="/images/content-images/reine.jpg" %}
+Ein Fischerdorf, eingebettet unter den Gipfeln der Lofoten.
+{% /card %}
+{% /cardGrid %}
+```
+
+**So sieht das aus**
+
+{% cardGrid cols="3" %}
+{% card title="Český Krumlov" image="/images/content-images/cesky-krumlov.jpg" %}
+Eine märchenhafte Stadt in Südböhmen, eingefasst von einer Flussschleife der Moldau.
+{% /card %}
+{% card title="Island" image="/images/content-images/iceland.jpg" %}
+Wasserfälle, Gletscher und schwarze Sandstrände hinter jeder Kurve.
+{% /card %}
+{% card title="Reine" image="/images/content-images/reine.jpg" %}
+Ein Fischerdorf, eingebettet unter den Gipfeln der Lofoten.
+{% /card %}
+{% /cardGrid %}
+
+{% callout type="tip" title="Das erwartete Seitenverhältnis beachten" %}
+`image` wird in einer festen 16:9-Box dargestellt und zugeschnitten, um sie auszufüllen. Ein Quellbild im Format 16:9 (zum Beispiel 800x450 oder 1200x675) verhindert daher, dass Ränder verloren gehen.
+{% /callout %}
 
 ## Kartentext kurz halten
 
 Kartentext sollte Lesern bei der Wahl helfen. Ein kurzer Satz ist in der Regel ausreichend.
 
+## Karten-Attribute
+
+{% table %}
+* Attribut
+* Beschreibung
+* Werte
+* Erforderlich
+---
+* `title`
+* Die Kartenüberschrift
+* Beliebiger Text
+* Erforderlich
+---
+* `path`
+* Die Seite oder URL, zu der die gesamte Karte verlinkt
+* Ein Pfad oder eine URL
+* Optional
+---
+* `icon`
+* Ein kleines Icon, das neben dem Titel angezeigt wird. Wird ignoriert, wenn `image` gesetzt ist
+* Icon-Pfad
+* Optional
+---
+* `image`
+* Ein größeres Bild, das über dem Titel angezeigt wird
+* Bildpfad
+* Optional
+---
+* `tag`
+* Ein kurzes Abzeichen, das über dem Titel angezeigt wird, z. B. `Neu` oder `Hier starten`
+* Beliebiger Text
+* Optional
+{% /table %}
+
 ## Nächster Schritt
 
-[Landing-Pages erstellen](/de/writing-content/landing-pages).
+* [Landing-Pages erstellen](/de/writing-content/landing-pages).

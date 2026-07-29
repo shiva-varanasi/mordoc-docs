@@ -37,4 +37,4 @@ Sie können den Server zunächst laufen lassen, während Sie weiterlesen. Wenn S
 
 ## Nächster Schritt
 
-[Die Projektstruktur verstehen](/de/getting-started/project-structure).
+- [Die Projektstruktur verstehen](/de/getting-started/project-structure).

@@ -1,6 +1,6 @@
 ---
 title: Bilder und Dateien
-description: Erfahren Sie, wo Sie Logos, Screenshots, Downloads und andere statische Dateien ablegen.
+description: Erfahren Sie, wo Sie Bilder, Icons und andere statische Dateien ablegen.
 ---
 
 Ihre Dokumentation wird häufig Bilder, Screenshots, Diagramme oder herunterladbare Dateien benötigen.
@@ -82,18 +82,12 @@ Zum Beispiel:
 
 Guter Alt-Text hilft Lesern, die Bildschirmlesegeräte verwenden, und liefert Kontext, falls ein Bild nicht geladen werden kann.
 
-## Was ist mit Logos?
+## Was ist mit Icons und Logos?
 
-Das Starter-Projekt hat auch diesen Ordner:
+Icons folgen derselben `public/`-Regel wie Bilder. Siehe [Icons](/de/writing-content/images#icons), um zu erfahren, wie Komponenten wie Karten und Sequenzdiagramme sie verwenden.
 
-```text
-config/assets/
-```
-
-Dieser Ordner ist für Website-weite Bilder wie das Logo in der Kopfzeile. Sie müssen ihn noch nicht ändern.
-
-Später wird die Seite [Assets und Branding](/de/configuration/assets-and-branding) Logo- und Favicon-Dateien erklären.
+Das Website-Logo funktioniert anders: Es befindet sich in `config/assets/` statt in `public/`, da es zur Website-Oberfläche gehört und nicht zu einer bestimmten Seite. Siehe [Assets und Branding](/de/configuration/assets-and-branding), wenn Sie bereit sind, es zu ersetzen.
 
 ## Nächster Schritt
 
-[Mehr über das Schreiben von Inhalten erfahren](/de/writing-content/markdown-basics).
+- [Mehr über das Schreiben von Inhalten erfahren](/de/writing-content/markdown-basics).

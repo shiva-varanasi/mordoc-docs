@@ -3,7 +3,9 @@ title: Diagramme
 description: Erstellen Sie Diagramme direkt in Markdown, gerendert als scharfe Vektorgrafiken, die zum Design Ihrer Website passen.
 ---
 
-Mit Mordoc können Sie Diagramme direkt in Markdown zeichnen, mit einer Klartext-Syntax innerhalb eines eingezäunten Codeblocks. Kein Bildexport, kein separates Diagrammtool, keine Datei, die mit der umgebenden Seite synchron gehalten werden muss — das Diagramm lebt in der Seite selbst.
+Mordoc überträgt die Philosophie „Content as Code" auch auf Diagramme. Sie zeichnen Diagramme direkt in Markdown, mit einer Klartext-Syntax innerhalb eines eingezäunten Codeblocks. Es gibt kein Bild zu exportieren, kein separates Diagrammtool und keine Datei, die mit der umgebenden Seite synchron gehalten werden muss. Das Diagramm lebt in der Seite selbst.
+
+Das macht sich vor allem bemerkbar, sobald Ihre Website mehr als eine Sprache unterstützt. Ein bildbasiertes Diagramm muss für jede unterstützte Sprache neu gezeichnet und neu exportiert werden und muss dann von Hand synchron gehalten werden, sobald sich das Quelldiagramm ändert. Ein Mordoc-Diagramm ist reiner Text, sodass das Übersetzen genauso funktioniert wie das Übersetzen eines Absatzes: Aktualisieren Sie die Beschriftungen und Nachrichten, und Mordoc erstellt daraus ein vollständig lokalisiertes Diagramm, ganz ohne Design-Tool.
 
 ## Warum nicht einfach Mermaid verwenden?
 
@@ -27,7 +29,7 @@ Jedes Diagramm ist ein eingezäunter Codeblock, dessen Sprache den Diagrammtyp b
 ```
 ````
 
-Mordoc erkennt die Sprache, parst den Inhalt des Blocks und ersetzt ihn durch das gerenderte Diagramm — genauso wie es einen ` ```javascript `-Block durch ein syntax-hervorgehobenes Codebeispiel ersetzt, nur zu einem anderen Renderer geleitet.
+Mordoc erkennt die Sprache, parst den Inhalt des Blocks und ersetzt ihn durch das gerenderte Diagramm.
 
 ## Nächster Schritt
 

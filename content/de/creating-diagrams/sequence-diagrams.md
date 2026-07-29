@@ -38,8 +38,8 @@ Akteure erscheinen von links nach rechts in der Reihenfolge, in der sie zuerst a
 ## Nachrichten senden
 
 ```markdown
-<from> -> <to>: <message text>
-<from> --> <to>: <message text>
+<from> -> <to>: <message text>    (durchgezogener Pfeil)
+<from> --> <to>: <message text>   (gestrichelter Pfeil)
 ```
 
 Jede Nachricht wird zu einem nummerierten Pfeil zwischen den Spalten zweier Akteure, in der Reihenfolge, in der die Nachrichten im eingezäunten Block erscheinen. Mordoc nummeriert sie für Sie — Sie schreiben die Nummer nie selbst.

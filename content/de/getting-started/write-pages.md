@@ -47,7 +47,7 @@ description: A short history of the One Ring and the forces bound to it.
 
 Dies ist der Seiteninhalt.
 
-## Bevor Sie beginnen
+## Was der Ring ist
 
 Dies ist ein Abschnitt innerhalb der Seite.
 ```
@@ -71,7 +71,7 @@ Mordoc verwendet diesen als Hauptseitenüberschrift. Da der Titel bereits zur Ha
 Zum Beispiel:
 
 ```markdown
-## Bevor Sie beginnen
+## Was der Ring ist
 
 Schreiben Sie hier Ihren Abschnittsinhalt.
 ```
@@ -84,9 +84,7 @@ Das `description`-Feld ist optional, aber es ist eine gute Gewohnheit, es einzuf
 description: A short history of the One Ring and the forces bound to it.
 ```
 
-Verwenden Sie einen kurzen Satz, der erklärt, worum es auf der Seite geht. Mordoc kann ihn für Seiteninformationen und Suchmaschinen-Vorschauen verwenden.
-
-Die Seite [Frontmatter-Referenz](/de/reference/frontmatter) wird später alle unterstützten Frontmatter-Felder auflisten.
+Verwenden Sie einen kurzen Satz, der erklärt, worum es auf der Seite geht. Er erscheint für Leser unterhalb des Titels, und Suchmaschinen verwenden ihn für Vorschau-Snippets.
 
 ## Eine neue Seite erstellen
 
@@ -116,6 +114,8 @@ Dadurch wird eine Seite unter folgendem Pfad erstellt:
 ```text
 /my-first-page
 ```
+
+Sie werden im nächsten Schritt lernen, wie Dateipfade zu Seiten-URLs werden.
 
 {% callout type="note" title="Warum sie möglicherweise noch nicht in der Seitenleiste erscheint" %}
 Das Erstellen der Datei erstellt die Seitenroute, fügt die Seite jedoch nicht automatisch zur Seitenleiste hinzu. Die Navigation wird separat gesteuert, damit Sie wählen können, welche Seiten im Menü erscheinen.

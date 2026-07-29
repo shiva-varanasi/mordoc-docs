@@ -25,4 +25,4 @@ Installieren Sie VS Code, indem Sie den empfohlenen Optionen im Installationsass
 
 Nachdem Sie einen Code-Editor installiert haben, fahren Sie fort mit:
 
-- [Node.js installieren](/de/prerequisites/nodejs) – Erforderlich zum Ausführen von Mordoc
+- [Node.js installieren](/de/prerequisites/nodejs) – Erforderlich, um Mordoc lokal zu erstellen und auszuführen

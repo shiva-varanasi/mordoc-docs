@@ -37,6 +37,8 @@ Verwenden Sie Landing-Pages sparsam. Die meisten Dokumentationsseiten sollten da
 
 Ein Hero ist ein großer Eröffnungsbereich, der in der Regel oben auf einer Landing-Page verwendet wird.
 
+Sie können Ihrer Landing-Page mit dem `{% hero %}`-Tag einen Hero-Bereich hinzufügen.
+
 ```markdown
 {% hero
   title="Meine Produkt-Dokumentation"
@@ -50,34 +52,103 @@ Jetzt starten
 {% /hero %}
 ```
 
-Das `title`-Attribut ist erforderlich. Andere Felder sind optional.
+## Hero-Attribute
 
-Ein Hero kann folgendes verwenden:
+{% table %}
+* Attribut
+* Beschreibung
+* Werte
+* Erforderlich
+---
+* `title`
+* Der Haupttitel-Text
+* Beliebiger Text
+* Erforderlich
+---
+* `titleAccent`
+* Hervorgehobener Text, der in einer neuen Zeile unter dem Titel angezeigt wird
+* Beliebiger Text
+* Optional
+---
+* `description`
+* Unterstützender Text, der unter dem Titel angezeigt wird
+* Beliebiger Text
+* Optional
+---
+* `image`
+* Ein unterstützendes Bild, wie zum Beispiel ein Produkt-Screenshot, das unter den Schaltflächen angezeigt wird
+* Bildpfad
+* Optional
+---
+* `background`
+* Eine Hintergrundfarbe oder ein Hintergrundbild hinter dem gesamten Hero
+* Farbe oder Bildpfad
+* Optional
+---
+* `titleColor`
+* Überschreibt die Textfarbe des Titels
+* Farbwert
+* Optional
+---
+* `titleAccentColor`
+* Überschreibt die Textfarbe von titleAccent
+* Farbwert
+* Optional
+---
+* `descriptionColor`
+* Überschreibt die Textfarbe der Beschreibung
+* Farbwert
+* Optional
+{% /table %}
 
-* `title` für den Haupttext
-* `titleAccent` für hervorgehobenen Titeltext
-* `description` für unterstützenden Text
-* `image` für ein Hero-Bild
-* `background` für eine Farbe oder einen Bildpfad
-* `titleColor`, `titleAccentColor` und `descriptionColor` für Textfarben
+Verwenden Sie `background` für eine randlose Hintergrundfarbe oder ein randloses Hintergrundbild hinter dem gesamten Hero. Verwenden Sie `image` für ein separates unterstützendes Bild, wie zum Beispiel einen Produkt-Screenshot, das unter den Schaltflächen angezeigt wird.
+
+## Größe eines Hintergrundbilds
+
+Der Hero hat keine feste Höhe. Er wächst oder schrumpft mit dem Titel, `titleAccent`, der Beschreibung und den Schaltflächen, die Sie einfügen, sowie mit der Breite des Viewports. Ein Hintergrundbild wird so skaliert, dass es diesen Bereich abdeckt, und daher zugeschnitten, um die jeweilige Höhe des Heros vollständig auszufüllen.
+
+Wählen Sie ein breites, kurzes Seitenverhältnis und halten Sie den wichtigen Bildbereich zentriert. Inhalte nahe dem oberen und unteren Rand werden zuerst zugeschnitten, wenn der Hero höher wird.
+
+{% callout type="tip" title="Zuschneiden mit einem abstrakten Bild umgehen" %}
+Ein Bild ohne festen Fokuspunkt, wie eine Textur, ein Farbverlauf oder ein Muster, wirkt unabhängig davon, wie sich der Hero in der Größe ändert. Zuschneiden verändert sein Aussehen kaum.
+{% /callout %}
 
 ## Abschnitte hinzufügen
 
-Verwenden Sie Abschnitte, um Landing-Page-Inhalte zu gruppieren:
+Ein Abschnitt gruppiert Inhalte auf einer Landing-Page, mit einem optionalen Titel und Hintergrund.
+
+Sie können Ihrer Landing-Page mit dem `{% section %}`-Tag einen Abschnitt hinzufügen.
 
 ```markdown
-{% section title="Wählen Sie, wo Sie beginnen möchten" background="subtle" %}
+{% section title="Wählen Sie, wo Sie beginnen möchten" background="#f5f5f4" %}
 Dieser Abschnitt stellt die Hauptwege durch die Dokumentation vor.
 {% /section %}
 ```
 
-Der `background`-Wert kann `subtle`, eine Farbe oder ein Bildpfad sein.
+## Abschnitts-Attribute
 
-Der `title`-Wert ist bei Abschnitten optional, aber in der Regel hilfreich.
+{% table %}
+* Attribut
+* Beschreibung
+* Werte
+* Erforderlich
+---
+* `title`
+* Eine Überschrift, die über dem Abschnittsinhalt angezeigt wird
+* Beliebiger Text
+* Optional
+---
+* `background`
+* Eine Hintergrundfarbe oder ein Hintergrundbild hinter dem Abschnitt
+* Farbe oder Bildpfad
+* Optional
+{% /table %}
+
+Wenn `background` ein Bild ist, wechseln Abschnittstitel und -text automatisch zu Weiß für bessere Lesbarkeit.
 
 ## Karten zu einer Landing-Page hinzufügen
 
-Landing-Pages verwenden häufig Karten, um Leser zu führen:
+Landing-Pages verwenden häufig Karten innerhalb eines Abschnitts, um Leser dorthin zu führen, wo sie als Nächstes hinsollen:
 
 ```markdown
 {% section title="Die Dokumentation erkunden" %}
@@ -85,21 +156,17 @@ Landing-Pages verwenden häufig Karten, um Leser zu führen:
 {% card title="Erste Schritte" path="/getting-started/create-project" tag="Hier starten" %}
 Erstellen und starten Sie Ihr erstes Projekt.
 {% /card %}
-
-{% card title="Inhalte schreiben" path="/writing-content/markdown-basics" %}
-Lernen Sie die Schreibgrundlagen.
-{% /card %}
-
-{% card title="Konfiguration" path="/configuration/site-configuration" %}
-Passen Sie Ihre Website-Einstellungen an.
-{% /card %}
 {% /cardGrid %}
 {% /section %}
 ```
 
+Die vollständige Karten- und Karten-Raster-Syntax finden Sie unter [Karten und Karten-Raster](/de/writing-content/cards-and-card-grids).
+
 ## Schaltflächen hinzufügen
 
-Schaltflächen sind nützlich für wichtige Handlungsaufforderungen:
+Eine Schaltfläche ist eine gestaltete Handlungsaufforderung, die normalerweise zu einer anderen Seite verlinkt.
+
+Sie können mit dem `{% button %}`-Tag eine Schaltfläche hinzufügen.
 
 ```markdown
 {% button path="/getting-started/create-project" %}
@@ -115,7 +182,24 @@ Markdown lernen
 {% /button %}
 ```
 
-Der `path`-Wert ist für Schaltflächen erforderlich. Der `variant`-Wert ist optional und kann `primary` oder `secondary` sein.
+## Schaltflächen-Attribute
+
+{% table %}
+* Attribut
+* Beschreibung
+* Werte
+* Erforderlich
+---
+* `path`
+* Die Seite oder URL, zu der die Schaltfläche verlinkt
+* Ein Pfad oder eine URL
+* Erforderlich
+---
+* `variant`
+* Steuert den visuellen Stil der Schaltfläche
+* `primary`, `secondary` (Standard `primary`)
+* Optional
+{% /table %}
 
 ## Wann eine Landing-Page verwenden
 
@@ -124,13 +208,6 @@ Verwenden Sie eine Landing-Page für:
 * Die Startseite
 * Eine Produktübersicht
 * Eine Übersicht eines Hauptabschnitts
-
-Verwenden Sie eine normale Seite für:
-
-* Schritt-für-Schritt-Anleitungen
-* Referenzseiten
-* Fehlerbehebungsseiten
-* Detaillierte Erklärungen
 
 ## Nächster Schritt
 

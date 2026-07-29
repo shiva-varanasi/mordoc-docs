@@ -58,9 +58,9 @@ Für die meisten Benutzer sind die Standardeinstellungen korrekt. Sie müssen ni
    * In VS Code können Sie es über das Menü öffnen: **Terminal → New Terminal**
 3. Führen Sie den folgenden Befehl aus:
 
-```bash
-node -v
-```
+   ```bash
+   node -v
+   ```
 
 Wenn Node.js korrekt installiert ist, sollte eine Versionsnummer auf dem Bildschirm angezeigt werden.
 
@@ -74,10 +74,14 @@ npm -v
 
 Wenn Sie eine Meldung wie `command not found` oder `node is not recognized` sehen, bedeutet das in der Regel, dass Node.js nicht im PATH Ihres Systems verfügbar ist.
 
-* Unter **Windows** löst ein Neustart des Computers dieses Problem oft
+* Unter **Windows** hilft es oft, das Terminal zu schließen und erneut zu öffnen (oder den Computer neu zu starten, falls das nicht hilft)
 * Unter **macOS** und **Linux** ist das bei Verwendung des offiziellen Installationsprogramms selten
 
 Wenn das Problem weiterhin besteht, installieren Sie Node.js erneut mit dem offiziellen Installationsprogramm und stellen Sie sicher, dass Sie die Standardoptionen übernehmen.
+
+{% callout type="note" title="Auf einem firmenverwalteten Rechner?" %}
+Wenn keine der oben genannten Lösungen hilft, wurde Node.js möglicherweise aufgrund von IT-Einschränkungen gar nicht zum `PATH` Ihres Systems hinzugefügt. Wenden Sie sich an Ihre IT-Administration, um es hinzufügen zu lassen, oder fragen Sie nach, ob Node.js stattdessen über das Software-Center Ihres Unternehmens installiert werden sollte.
+{% /callout %}
 
 ## Nächster Schritt
 

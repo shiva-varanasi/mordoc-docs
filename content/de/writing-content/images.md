@@ -1,6 +1,6 @@
 ---
 title: Bilder
-description: Fügen Sie Bilder hinzu, einschließlich solcher mit einer variablenbasierten Quelle.
+description: Fügen Sie Bilder und Icons hinzu, einschließlich solcher mit einer variablenbasierten Quelle.
 ---
 
 Legen Sie Inhaltsbilder in `public/` ab und referenzieren Sie sie dann mit einem Pfad, der mit `/` beginnt.
@@ -8,33 +8,33 @@ Legen Sie Inhaltsbilder in `public/` ab und referenzieren Sie sie dann mit einem
 ## Grundlegende Bilder
 
 ```markdown
-![Eine kurze Beschreibung des Bildes](/images/my-image.png)
+![Grafik](/images/content-images/artwork.png)
 ```
 
-Der Text in eckigen Klammern ist der `alt`-Text des Bildes — halten Sie ihn beschreibend, da Bildschirmlesegeräte ihn vorlesen und er angezeigt wird, falls das Bild nicht geladen werden kann.
+Der Text in eckigen Klammern ist der `alt`-Text des Bildes. Halten Sie ihn beschreibend, da Bildschirmlesegeräte ihn vorlesen und er angezeigt wird, falls das Bild nicht geladen werden kann.
 
-Die Seite [Bilder und Dateien](/de/getting-started/images-and-files) zeigt diesen Schritt im Detail.
+**So sieht das aus**
+
+![Grafik](/images/content-images/artwork.png)
+
+Die Seite [Bilder und Dateien](/de/getting-started/images-and-files) führt Sie Schritt für Schritt durch das Hinzufügen eines Bildes.
+
+## Icons
+
+Icons funktionieren genauso wie jedes andere Bild: Legen Sie die Datei in `public/` ab und referenzieren Sie dann ihren Pfad.
+
+```text
+public/icons/shield.svg
+```
+
+Kleine SVGs sind die häufigste Wahl, da sie in jeder Größe scharf bleiben.
+
+Sie fügen ein Icon nicht direkt in den Seitentext ein. Stattdessen nehmen bestimmte Komponenten eine Icon-Datei über ein Attribut entgegen, wie zum Beispiel `icon` bei einer [Karte](/de/writing-content/cards-and-card-grids) oder das Icon eines Akteurs in einem [Sequenzdiagramm](/de/creating-diagrams/sequence-diagrams).
 
 ## Bilder mit Variablen
 
-Wie bei Links wird die Quelle eines einfachen Markdown-Bildes als reiner Text analysiert, sodass eine darin enthaltene Variable nie aufgelöst wird:
-
-```markdown
-![Grafik]($IMAGE_LINK)
-```
-
-Dies zeigt den literalen Text `$IMAGE_LINK` als Bildquelle an, nicht den Wert aus `config/variables.yaml`.
-
-Wenn eine Bildquelle aus einer Variable stammen muss, verwenden Sie stattdessen den `image`-Tag. Er ist selbstschließend, da `alt` ein Attribut und kein Bildinhalt ist:
-
-```markdown
-{% image src=$IMAGE_LINK alt="Grafik" /%}
-```
-
-`src` wird gegen `config/variables.yaml` aufgelöst, genauso wie `{% $variableName %}` im laufenden Text. Siehe [Variablen](/de/configuration/variables), um zu erfahren, wie Sie eine definieren.
-
-Verwenden Sie die Tag-Form nur, wenn die Quelle sich tatsächlich ändern muss — für gewöhnliche statische Bilder ist einfaches Markdown einfacher und funktioniert genauso.
+Manchmal sollte die Quelle eines Bildes aus einem wiederverwendbaren Wert stammen, anstatt direkt geschrieben zu werden, zum Beispiel eine Logo-URL, die sich später ändern könnte. Siehe [Variablen](/de/configuration/variables), um zu erfahren, wie Sie eine Variable definieren und in einem Bild verwenden.
 
 ## Nächster Schritt
 
-[Callouts verwenden](/de/writing-content/callouts).
+- [Callouts verwenden](/de/writing-content/callouts).

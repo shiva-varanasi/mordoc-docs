@@ -20,7 +20,7 @@ description: A simple test page for learning Mordoc.
 
 Das `title`-Feld ist erforderlich. Mordoc verwendet es als Hauptseitenüberschrift.
 
-Das `description`-Feld ist optional, aber es ist eine gute Gewohnheit, es einzufügen. Es hilft dabei, die Seite in Suchergebnissen und Seiten-Metadaten zu beschreiben.
+Das `description`-Feld ist optional, aber es ist eine gute Gewohnheit, es einzufügen. Es erscheint für Leser unterhalb des Titels, und Suchmaschinen verwenden es für Vorschau-Snippets.
 
 Landing-Pages können auch `layout: landing` verwenden. Mehr dazu erfahren Sie unter [Landing-Pages](/de/writing-content/landing-pages).
 
