@@ -3,7 +3,7 @@ title: Introduction
 description: Build elegant and highly usable documentation websites using Mordoc.
 ---
 
-Mordoc is a documentation site generator built on [Markdoc](https://markdoc.dev/) that transforms your content into clean, elegant, and highly usable documentation websites.
+Mordoc is a documentation site generator that transforms your content into clean, elegant, and highly usable documentation websites.
 
 You write Markdown content and simple configuration files, and Mordoc takes care of the rest by handling navigation, layouts, styling, and structure. The result is a fully functional documentation site that feels professional out of the box.
 
@@ -21,58 +21,27 @@ You do what you do best, writing content, and let Mordoc take care of the rest.
 
 Here’s what that looks like in practice.
 
-### Content‑first, component‑driven
-
-Mordoc ships with the documentation app and common documentation components built in, so there is nothing to assemble before you start writing. Once installed, those components can be reused everywhere through clear, readable syntax.
-
-That means:
-
-* Content writers focus on structure and clarity, not implementation details
-* Rich components like cards, callouts, code blocks, and tables are easy to use
-* Documentation stays consistent across pages and contributors
-
-The syntax is intentionally limited and predictable. It is designed to be easy to learn, easy to read, and easy to maintain over time.
-
 ### Content as code
 
-Mordoc treats content as code without forcing authors to think like developers.
+Mordoc treats content as code without forcing authors to think like developers. Your content lives in files, so changes are tracked and reviewable, version history is explicit, and collaboration scales naturally with your team, just as it would for a codebase. You get the benefits of modern change management while keeping the writing experience lightweight and focused.
 
-Because your content lives in files:
+### Content‑first, component‑driven
 
-* Changes are tracked and reviewable
-* Version history is explicit
-* Collaboration scales naturally with your team
+Mordoc leverages Markdown, the most popular syntax for writing content, and provides additional built-in custom documentation components you need (cards, callouts, code blocks, tables, and more) by harnessing [Markdoc](https://markdoc.dev/). There is nothing to assemble before you start writing, and once installed, those components can be reused everywhere through clear, readable syntax.
 
-You get the benefits of modern change management while keeping the writing experience lightweight and focused.
+That leaves content writers free to focus on structure and clarity instead of implementation details, and it keeps documentation consistent across pages and contributors, even as more people write. The syntax itself is intentionally limited and predictable, designed to be easy to learn, easy to read, and easy to maintain over time.
 
 ### No vendor lock‑in
 
-Your documentation belongs to you.
-
-* Host it anywhere
-* Deploy on any infrastructure
-* Move away anytime without rewriting content
-
-Mordoc generates documentation websites. It doesn’t trap your content inside a platform.
+Your documentation belongs to you. Host it anywhere, deploy it on any infrastructure, and move away whenever you like without rewriting a word of content. Mordoc generates documentation websites; it doesn’t trap your content inside a platform.
 
 ### Built for collaboration
 
-Mordoc is designed so that:
-
-* Content creators focus on writing and structure
-* Developers focus on setup and infrastructure only when needed
-
-This separation of concerns makes documentation easier to scale and easier to maintain.
+Mordoc is designed so that content creators can focus on writing and structure, while developers step in for setup and infrastructure only when needed. That separation of concerns makes documentation easier to scale and easier to maintain.
 
 ### Open source by design
 
-Mordoc is open source and transparent.
-
-* No black boxes
-* No hidden behavior
-* Community‑driven improvements
-
-You can inspect it, understand how it works, and adapt your documentation workflow to your needs.
+Mordoc is open source and transparent: no black boxes, no hidden behavior, just community‑driven improvements. You can inspect it, understand how it works, and adapt your documentation workflow to your needs.
 
 Curious to see how it works? Let’s get started.
 

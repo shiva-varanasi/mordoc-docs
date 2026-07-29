@@ -9,7 +9,7 @@ The fastest way to start is with `create-mordoc-app`. It creates the project fol
 
 ## Create the project
 
-Open the terminal in your code editor, then go to the folder where you want to keep your documentation projects.
+Open the terminal in your code editor, then go to the folder where you want to keep your documentation project.
 
 Run this command:
 
@@ -53,4 +53,4 @@ Open the new project folder in your code editor. You do not need to understand e
 
 ## Next step
 
-[Run your site locally](/getting-started/run-locally).
+- [Run your site locally](/getting-started/run-locally).

@@ -92,4 +92,4 @@ Später wird die Seite [Seitennavigation](/de/configuration/side-navigation) ver
 
 ## Nächster Schritt
 
-[Bilder und Dateien hinzufügen](/de/getting-started/images-and-files).
+- [Bilder und Dateien hinzufügen](/de/getting-started/images-and-files).

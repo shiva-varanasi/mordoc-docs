@@ -49,7 +49,7 @@ my-docs/
 └── package-lock.json
 ```
 
-The starter content is fictional. It uses a small "Ring of Power" example so you can see a working documentation site before replacing it with your own content.
+The starter content is fictional so you can see a working documentation site before replacing it with your own content.
 
 ## The files you will edit most
 
@@ -80,7 +80,7 @@ Each `.md` file is a Markdown page. Markdown is the plain-text writing format yo
 
 The `en` folder means this content is written in English. Later, if your site has more languages, each language can have its own folder.
 
-The starter pages become these URLs:
+The starter pages become these URLs on the documentation website:
 
 ```text
 content/en/index.md             -> /
@@ -134,11 +134,11 @@ The starter file looks like this:
 
 You will eventually change the name, description, and production URL for your own documentation site.
 
-You do not need to do that yet. A later page will explain each field in [Site Configuration](/configuration/site-configuration).
+You do not need to do that yet. You'll cover each field in detail on the [Site Configuration](/configuration/site-configuration) page.
 
 ### navigation
 
-`config/navigation/sidenav.yaml` controls the sidebar links.
+`config/navigation/sidenav.yaml` controls the side navigation bar links.
 
 The starter navigation looks like this:
 
@@ -159,7 +159,7 @@ For now, notice that each visible link has two parts:
 * `label` is the text readers see in the sidebar.
 * `path` is the page URL.
 
-When you add your own pages, you will update this file so readers can find them. A later page will walk through that step in [Navigation Basics](/getting-started/navigation-basics).
+When you add your own pages, you will update this file so readers can find them. You'll walk through that step on the [Navigation Basics](/getting-started/navigation-basics) page.
 
 ### assets
 
@@ -175,7 +175,7 @@ config/assets/
 
 You can leave these alone for now. Later, you can replace them with your own logo files.
 
-A later page will explain this in [Images and Files](/getting-started/images-and-files).
+More on this in [Images and Files](/getting-started/images-and-files).
 
 ### styles
 
@@ -283,4 +283,4 @@ You will learn more about this later in [Build Your Site](/publishing/build-your
 
 ## Next step
 
-[Write your first pages](/getting-started/write-pages).
+- [Write your first pages](/getting-started/write-pages).

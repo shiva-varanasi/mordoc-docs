@@ -21,31 +21,31 @@ Do not link to the Markdown file itself:
 
 The [Routes and Links](/getting-started/routes-and-links) page explains why Mordoc links use page addresses.
 
-External links work the same way — just use the full URL:
+External links work the same way; just use the full URL:
 
 ```markdown
 [Mordoc on GitHub](https://github.com/shiva-varanasi/mordoc)
 ```
 
+You don't need to do anything special to tell Mordoc which is which. It looks at the link target itself: a relative path like `/my-first-page` is treated as an internal link and takes readers to the new page instantly, without a full page reload, while a full URL starting with `https://` is treated as external and opens in a new tab.
+
+## Link to a section on the page
+
+To link to a specific heading, add `#` followed by the heading text in lowercase with spaces replaced by hyphens. For example, this links to the "Basic links" heading above:
+
+```markdown
+[Jump to Basic links](#basic-links)
+```
+
+You can link to a heading on a different page the same way: combine the page address with the `#` anchor. For example, this links to the "How page addresses are created" heading on the Routes and Links page:
+
+```markdown
+[How page addresses are created](/getting-started/routes-and-links#how-page-addresses-are-created)
+```
+
 ## Links with variables
 
-A plain Markdown link's destination is parsed as plain text, so a variable inside it is never resolved:
-
-```markdown
-[Contact support]($SUPPORT_PORTAL_URL)
-```
-
-This renders the literal text `$SUPPORT_PORTAL_URL`, not the value from `config/variables.yaml`.
-
-When a link target needs to come from a variable, use the `link` tag instead:
-
-```markdown
-{% link path=$SUPPORT_PORTAL_URL %}Contact support{% /link %}
-```
-
-`path` resolves against `config/variables.yaml` the same way `{% $variableName %}` does in running text. See [Variables](/configuration/variables) to learn how to define one.
-
-Use the tag form only when the target actually needs to vary — for ordinary internal and external links, plain Markdown links are simpler and work the same way.
+Sometimes a link's destination should come from a reusable value instead of being written directly, for example a support URL that might change later. See [Variables](/configuration/variables) for how to define a variable and use it in a link.
 
 ## Next step
 

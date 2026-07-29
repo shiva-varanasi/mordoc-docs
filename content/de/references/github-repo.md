@@ -15,7 +15,7 @@ Dieses Repository enthält das Mordoc-Kernframework, einschließlich Rendering-L
 
 [github.com/create-mordoc-app](https://github.com/shiva-varanasi/create-mordoc-app)
 
-Dieses Repository stellt einen schlanken Wrapper bereit, der ein neues Mordoc-Projekt initialisiert, indem es die Create-App-Funktionalität aus dem Mordoc-Kern aufruft.
+Dieses Repository erstellt neue Mordoc-Projekte eigenständig. Es bündelt die Starter-Vorlage, Konfiguration und Starter-Inhalte, sodass das Ausführen von `npx create-mordoc-app` diese Vorlage in Ihr neues Projekt kopiert, Ihren Projektnamen einträgt und das neueste `mordoc`-Paket als Abhängigkeit installiert.
 
 # Mordoc Docs
 

@@ -76,4 +76,4 @@ See [Site Configuration](/configuration/site-configuration) if you need to updat
 
 ## Next step
 
-[Preview the built site](/publishing/preview-before-publishing).
+- [Preview the built site](/publishing/preview-before-publishing).

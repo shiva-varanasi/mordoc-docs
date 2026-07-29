@@ -122,4 +122,4 @@ Search only works after you build the site. The dev server does not have search 
 
 ## Next step
 
-[Deploy your site](/publishing/deploy-your-site).
+- [Deploy your site](/publishing/deploy-your-site).

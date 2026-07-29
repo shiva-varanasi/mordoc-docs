@@ -20,7 +20,7 @@ description: A simple test page for learning Mordoc.
 
 The `title` is required. Mordoc uses it as the main page heading.
 
-The `description` is optional, but it is a good habit to include it. It helps describe the page in search results and page metadata.
+The `description` is optional, but it is a good habit to include it. It appears below the title for readers, and search engines use it for preview snippets.
 
 Landing pages can also use `layout: landing`. You will learn about that in [Landing Pages](/writing-content/landing-pages).
 

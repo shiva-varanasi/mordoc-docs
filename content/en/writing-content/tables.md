@@ -30,6 +30,23 @@ Use `*` for each cell. Use `---` to separate the header and rows.
 {% /table %}
 ```
 
+**How it renders**
+
+{% table %}
+* Header 1
+* Header 2
+* Header 3
+---
+* Row 1, Cell 1
+* Row 1, Cell 2
+* Row 1, Cell 3
+---
+* Row 2, Cell 1
+* Row 2, Cell 2
+* Row 2, Cell 3
+---
+{% /table %}
+
 Each row should have the same number of cells as the header.
 
 ## Add more columns
@@ -143,24 +160,79 @@ For example, a cell can include formatted text, lists, blockquotes, code blocks,
 {% /table %}
 ````
 
-## Keep tables readable
+**How it renders**
 
-Tables work best when each row answers the same kind of question.
+{% table %}
+* Content type
+* Example
+---
+* Typography
+* **Bold**, *italic*, `inline code`, and a [link](/getting-started/create-project).
+---
+* Unordered list
+*
+  - Alpha
+  - Beta
+    - Gamma nested
+---
+* Ordered list
+*
+  1. Step one
+  2. Step two
+     1. Sub-step a
+     2. Sub-step b
+---
+* Blockquote
+*
+  > Quoted line one.
+  >
+  > Quoted line two.
+---
+* Code block
+*
+  ```ts
+  export function isReady(pageCount: number): boolean {
+    return pageCount > 0;
+  }
+  ```
+---
+* Callout note
+*
+  {% callout type="note" title="Inside table" %}
+  Callout body with a list:
 
-Use a table for:
-
-* Comparing options
-* Listing fields and meanings
-* Showing small structured examples
-
-Avoid tables when:
-
-* The content is mostly long paragraphs
-* Every row has a different shape
-* The table becomes wider than the page
-
-If a table becomes difficult to scan, split the content into normal sections.
+  - Allowed in callouts
+  - Second item
+  {% /callout %}
+---
+* Callout warning
+*
+  {% callout type="warning" title="Warning" %}
+  ```json
+  { "pages": 3 }
+  ```
+  {% /callout %}
+---
+* Callout danger
+*
+  {% callout type="danger" title="Danger" %}
+  Critical constraint in a table cell.
+  {% /callout %}
+---
+* Callout tip
+*
+  {% callout type="tip" %}
+  Tip without a title.
+  {% /callout %}
+---
+* Image
+*
+  ![Mordoc hero image](/images/content-images/artwork.png)
+---
+* Mixed inline links
+* External: [Example](https://example.com), internal: [Create a Project](/getting-started/create-project)
+{% /table %}
 
 ## Next step
 
-[Use cards and card grids](/writing-content/cards-and-card-grids).
+- [Use cards and card grids](/writing-content/cards-and-card-grids).

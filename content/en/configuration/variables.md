@@ -114,4 +114,4 @@ Avoid using variables for long paragraphs. Long content is usually clearer when 
 
 ## Next step
 
-[Configure assets and branding](/configuration/assets-and-branding).
+- [Configure assets and branding](/configuration/assets-and-branding).

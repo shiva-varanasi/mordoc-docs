@@ -9,9 +9,9 @@ In the previous steps, you created a page at:
 /my-first-page
 ```
 
-The page exists, but it does not appear in the sidebar yet. Mordoc keeps pages and navigation separate so you can choose which pages readers see in the menu.
+The page exists, but it does not appear in the side navigation bar yet. Mordoc keeps pages and navigation separate so you can choose which pages readers see in the menu.
 
-In this step, you will add your new page to the sidebar.
+In this step, you will add your new page to the side navigation bar.
 
 ## Open the navigation file
 
@@ -35,7 +35,7 @@ The starter file looks like this:
       path: /safeguards
 ```
 
-This file controls the links shown in the sidebar.
+This file controls the links shown in the side navigation bar.
 
 ## Add your page
 
@@ -57,7 +57,7 @@ Add your new page under `children`:
 
 Save the file.
 
-If your local server is running, the sidebar should update automatically. You should now see `My First Page` in the sidebar.
+If your local server is running, the side navigation bar should update automatically. You should now see `My First Page` in the side navigation bar.
 
 ## What label and path mean
 
@@ -68,7 +68,7 @@ Each navigation item has a `label` and a `path`.
   path: /my-first-page
 ```
 
-The `label` is what readers see in the sidebar.
+The `label` is what readers see in the side navigation bar.
 
 The `path` is the page address that opens when they click the label.
 
@@ -86,10 +86,10 @@ Avoid long labels when a shorter one is clear enough.
 
 ## More navigation options
 
-This page only covers the first sidebar edit.
+This page only covers the first side navigation bar edit.
 
 Later, the [Side Navigation](/configuration/side-navigation) page will explain nested groups and expanded groups. The Configuration section will also explain top navigation, header links, and translated navigation labels.
 
 ## Next step
 
-[Add images and files](/getting-started/images-and-files).
+- [Add images and files](/getting-started/images-and-files).

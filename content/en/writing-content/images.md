@@ -1,6 +1,6 @@
 ---
 title: Images
-description: Add images, including ones with a variable-driven source.
+description: Add images and icons, including ones with a variable-driven source.
 ---
 
 Put content images in `public/`, then reference them with a path that starts with `/`.
@@ -8,33 +8,33 @@ Put content images in `public/`, then reference them with a path that starts wit
 ## Basic images
 
 ```markdown
-![A short description of the image](/images/my-image.png)
+![Artwork](/images/content-images/artwork.png)
 ```
 
-The text in brackets is the image's `alt` text — keep it descriptive, since it is read by screen readers and shown if the image fails to load.
+The text in brackets is the image's `alt` text. Keep it descriptive, since it is read by screen readers and shown if the image fails to load.
 
-The [Images and Files](/getting-started/images-and-files) page shows this step by step.
+**Here is how it renders**
+
+![Artwork](/images/content-images/artwork.png)
+
+The [Images and Files](/getting-started/images-and-files) page walks through adding an image step by step.
+
+## Icons
+
+Icons work the same way as any other image: place the file in `public/`, then reference its path.
+
+```text
+public/icons/shield.svg
+```
+
+Small SVGs are the most common choice, since they stay sharp at any size.
+
+You won't insert an icon into page text directly. Instead, certain components take an icon file through an attribute, such as `icon` on a [card](/writing-content/cards-and-card-grids) or an actor's icon in a [sequence diagram](/creating-diagrams/sequence-diagrams).
 
 ## Images with variables
 
-Like links, a plain Markdown image's source is parsed as plain text, so a variable inside it is never resolved:
-
-```markdown
-![Artwork]($IMAGE_LINK)
-```
-
-This renders the literal text `$IMAGE_LINK` as the image source, not the value from `config/variables.yaml`.
-
-When an image source needs to come from a variable, use the `image` tag instead. It is self-closing, since `alt` is an attribute rather than image content:
-
-```markdown
-{% image src=$IMAGE_LINK alt="Artwork" /%}
-```
-
-`src` resolves against `config/variables.yaml` the same way `{% $variableName %}` does in running text. See [Variables](/configuration/variables) to learn how to define one.
-
-Use the tag form only when the source actually needs to vary — for ordinary static images, plain Markdown is simpler and works the same way.
+Sometimes an image's source should come from a reusable value instead of being written directly, for example a logo URL that might change later. See [Variables](/configuration/variables) for how to define a variable and use it in an image.
 
 ## Next step
 
-[Use callouts](/writing-content/callouts).
+- [Use callouts](/writing-content/callouts).

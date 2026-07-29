@@ -99,10 +99,10 @@ Avoid spaces and special characters in filenames.
 
 ## More link options
 
-Later, the [Writing Content](/writing-content/markdown-basics) section will explain more link examples, including links to headings inside a page.
+- [Links](/writing-content/links) page will explain more link examples.
 
-Later, the [Languages](/configuration/languages) page will explain how page addresses work when your site has more than one language.
+- [Languages](/configuration/languages) page will explain how page addresses work when your site has more than one language.
 
 ## Next step
 
-[Add pages to navigation](/getting-started/navigation-basics).
+- [Add pages to navigation](/getting-started/navigation-basics).

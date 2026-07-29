@@ -1,6 +1,6 @@
 ---
 title: Images and Files
-description: Learn where to place logos, screenshots, downloads, and other static files.
+description: Learn where to place images, icons and other static files.
 ---
 
 Your documentation will often need images, screenshots, diagrams, or downloadable files.
@@ -82,18 +82,12 @@ For example:
 
 Good alt text helps readers who use screen readers and gives context if an image cannot load.
 
-## What about logos?
+## What about icons and logos?
 
-The starter project also has this folder:
+Icons follow the same `public/` rule as images. See [Icons](/writing-content/images#icons) for how components like cards and sequence diagrams use them.
 
-```text
-config/assets/
-```
-
-That folder is for site-level images, such as the logo in the header. You do not need to change it yet.
-
-Later, the [Assets and Branding](/configuration/assets-and-branding) page will explain logo and favicon files.
+The site logo works differently: it lives in `config/assets/` instead of `public/`, since it belongs to the site interface rather than a specific page. See [Assets and Branding](/configuration/assets-and-branding) when you are ready to replace it.
 
 ## Next step
 
-[Learn more about writing content](/writing-content/markdown-basics).
+- [Learn more about writing content](/writing-content/markdown-basics).

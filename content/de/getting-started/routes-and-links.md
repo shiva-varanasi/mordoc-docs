@@ -99,10 +99,10 @@ Vermeiden Sie Leerzeichen und Sonderzeichen in Dateinamen.
 
 ## Weitere Link-Optionen
 
-Später wird der Abschnitt [Inhalte schreiben](/de/writing-content/markdown-basics) weitere Link-Beispiele erklären, einschließlich Links zu Überschriften innerhalb einer Seite.
+- Die Seite [Links](/de/writing-content/links) erklärt weitere Link-Beispiele.
 
-Später wird die Seite [Sprachen](/de/configuration/languages) erklären, wie Seitenadressen funktionieren, wenn Ihre Website mehr als eine Sprache hat.
+- Die Seite [Sprachen](/de/configuration/languages) erklärt, wie Seitenadressen funktionieren, wenn Ihre Website mehr als eine Sprache hat.
 
 ## Nächster Schritt
 
-[Seiten zur Navigation hinzufügen](/de/getting-started/navigation-basics).
+- [Seiten zur Navigation hinzufügen](/de/getting-started/navigation-basics).

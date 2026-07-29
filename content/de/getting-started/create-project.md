@@ -9,7 +9,7 @@ Der schnellste Einstieg erfolgt mit `create-mordoc-app`. Es erstellt den Projekt
 
 ## Das Projekt erstellen
 
-Öffnen Sie das Terminal in Ihrem Code-Editor und navigieren Sie zu dem Ordner, in dem Sie Ihre Dokumentationsprojekte ablegen möchten.
+Öffnen Sie das Terminal in Ihrem Code-Editor und navigieren Sie zu dem Ordner, in dem Sie Ihr Dokumentationsprojekt ablegen möchten.
 
 Führen Sie diesen Befehl aus:
 
@@ -53,4 +53,4 @@ Wenn Sie einen anderen Projektnamen verwendet haben, verwenden Sie stattdessen d
 
 ## Nächster Schritt
 
-[Website lokal ausführen](/de/getting-started/run-locally).
+- [Website lokal ausführen](/de/getting-started/run-locally).

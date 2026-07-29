@@ -23,11 +23,7 @@ The starter project includes this file. In the Ring of Power example, it looks l
 }
 ```
 
-Mordoc loads this file automatically. You do not need to import it anywhere else.
-
 ## Change the accent color
-
-The most common theme change is the accent color.
 
 Replace the value of `--accent` with your brand color:
 
@@ -37,78 +33,29 @@ Replace the value of `--accent` with your brand color:
 }
 ```
 
-Mordoc uses `--accent` across the site for links, active navigation states, buttons, and other emphasis.
-
-You do not need to set every related color by hand. Mordoc derives lighter and darker accent shades from `--accent` for you.
-
 Save the file. If your local server is running, refresh the browser to see the change.
 
-## How theme CSS works
+## Set a different accent for dark mode
 
-Mordoc uses CSS variables for its design.
-
-Your theme file overrides those variables in `:root`:
+If your brand color does not have enough contrast on a dark background, override `--accent` again inside a `.dark` selector:
 
 ```css
 :root {
   --accent: #2563eb;
-  --font-sans: 'Inter', system-ui, sans-serif;
 }
-```
 
-For dark mode, use the `.dark` selector:
-
-```css
 .dark {
-  --color-bg: #121212;
-  --color-fg: #e2e8f0;
+  --accent: #60a5fa;
 }
 ```
 
-Mordoc adds the `dark` class to the page when the reader switches to dark mode.
+Mordoc adds the `dark` class to the page when the reader switches to dark mode, so this second value only applies there. The `:root` value covers light mode as before.
 
-## Common global settings
+## How the accent color spreads through the site
 
-These variables are a good starting point for light branding changes:
+`--accent` is the one color Mordoc asks you to set. Every other accent shade on the site, such as the lighter tint behind an active navigation item or the darker shade a button turns on hover, is calculated automatically from that single value.
 
-* `--accent` for links, buttons, active navigation, and other emphasis
-* `--color-bg` for the main page background
-* `--color-surface` for subtle background areas, such as blockquotes
-* `--color-border` for borders and dividers
-* `--color-fg` for main text color
-* `--color-content-fg` for body text in documentation pages
-* `--color-fg-muted` for secondary text, such as descriptions
-* `--font-sans` for the main site font
-* `--font-mono` for inline code and code blocks
-* `--content-max-width` for the maximum width of page content
-* `--page-gutter` for horizontal spacing on landing pages
-
-Start with `--accent`. Add more variables only when you need finer control.
-
-## Advanced component settings
-
-Mordoc also defines variables for specific parts of the site, such as the sidebar, header, and callouts.
-
-For example:
-
-* `--sidenav-bg` and `--sidenav-fg` for the sidebar
-* `--callout-note-accent` and similar variables for callout colors
-
-You can override these in `config/styles/theme.css` when you need deeper customization.
-
-For most company documentation sites, the global settings above are enough.
-
-## Prefer content settings first
-
-Before changing CSS, check whether the page or component already has the option you need.
-
-For example:
-
-* Landing pages can set hero colors and backgrounds.
-* Cards can use icons and images.
-* Callouts already have built-in types.
-
-Use theme CSS when you want site-wide visual changes, not when you are trying to style one page differently.
+This means changing `--accent` updates links, buttons, active navigation states, card tags, and similar details across the whole site at once. Each mode recalculates its shades from whichever `--accent` is active for that mode, so light and dark mode stay consistent even if you've set them to different colors. You do not need to hunt down and set each one by hand.
 
 ## Keep the file small
 
@@ -128,4 +75,4 @@ Do not edit CSS files inside `dist/`. The `dist/` folder is generated when you b
 
 ## Next step
 
-* [Change management with Git](/publishing/change-management).
+- [Custom head scripts](/configuration/custom-head).

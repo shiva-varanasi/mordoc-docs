@@ -37,4 +37,4 @@ For now, you can leave the server running while you continue reading. If you wan
 
 ## Next step
 
-[Understand the project structure](/getting-started/project-structure).
+- [Understand the project structure](/getting-started/project-structure).
