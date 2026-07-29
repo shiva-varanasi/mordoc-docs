@@ -137,4 +137,4 @@ A later page on [SEO and search](/publishing/seo-and-search) will explain how th
 
 ## Next step
 
-[Configure the side navigation](/configuration/side-navigation).
+- [Configure the side navigation](/configuration/side-navigation).

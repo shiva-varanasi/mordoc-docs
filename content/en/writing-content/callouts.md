@@ -5,7 +5,7 @@ description: Highlight notes, tips, warnings, and important messages in Mordoc p
 
 Callouts help important information stand out from the rest of the page.
 
-Use them when a reader should pause, notice something, or be careful before continuing. Do not use a callout for every important sentence; too many callouts make a page harder to scan.
+Use them when a reader should pause, notice something, or be careful before continuing. Do not use a callout for every important sentence. Too many callouts make a page harder to scan.
 
 ## Add a basic callout
 
@@ -13,7 +13,7 @@ A callout starts with `{% callout %}` and ends with `{% /callout %}`.
 
 ```markdown
 {% callout type="note" title="Good to know" %}
-You can keep the local preview open while you edit pages.
+The Fellowship of the Ring set out from Rivendell with nine companions.
 {% /callout %}
 ```
 
@@ -38,55 +38,87 @@ Use `note` for helpful information that supports the main text.
 
 ```markdown
 {% callout type="note" title="Good to know" %}
-Mordoc updates the local preview when you save content changes.
+The Shire lies west of Bree, across the Brandywine River.
 {% /callout %}
 ```
+
+**How it renders**
+
+{% callout type="note" title="Good to know" %}
+The Shire lies west of Bree, across the Brandywine River.
+{% /callout %}
 
 ## Tip
 
 Use `tip` for advice that makes a task easier.
 
 ```markdown
-{% callout type="tip" title="Writing tip" %}
-Keep page titles short so they are easier to scan in navigation.
+{% callout type="tip" title="Speak, friend, and enter" %}
+When at the gates of Moria, say "Mellon."
 {% /callout %}
 ```
+
+**How it renders**
+
+{% callout type="tip" title="Speak, friend, and enter" %}
+When at the gates of Moria, say "Mellon."
+{% /callout %}
 
 ## Warning
 
 Use `warning` when readers should slow down or check something before continuing.
 
 ```markdown
-{% callout type="warning" title="Check the path" %}
-Use page addresses like `/guides/install`, not Markdown file paths like `./install.md`.
+{% callout type="warning" title="Mind the water" %}
+Do not linger by the lake outside the Doors of Durin. Something stirs beneath its surface.
 {% /callout %}
 ```
+
+**How it renders**
+
+{% callout type="warning" title="Mind the water" %}
+Do not linger by the lake outside the Doors of Durin. Something stirs beneath its surface.
+{% /callout %}
 
 ## Danger
 
 Use `danger` only for serious situations.
 
 ```markdown
-{% callout type="danger" title="Do not edit generated files" %}
-Do not edit files inside `dist/`. Mordoc recreates that folder when you build the site.
+{% callout type="danger" title="Never put on the Ring" %}
+Do not put on the One Ring. The moment you wear it, you draw the Eye of Sauron towards you.
 {% /callout %}
 ```
 
-## Titles are optional
+**How it renders**
 
-You can write a callout without a title:
-
-```markdown
-{% callout type="note" %}
-This callout does not have a title.
+{% callout type="danger" title="Never put on the Ring" %}
+Do not put on the One Ring. The moment you wear it, you draw the Eye of Sauron towards you.
 {% /callout %}
-```
-
-Use a title when it helps the reader understand the message quickly.
 
 ## Keep callouts short
 
 A good callout is usually one short paragraph or a small list. If the callout becomes long, it may need to be a normal section instead.
+
+## Callout attributes
+
+{% table %}
+* Attribute
+* Description
+* Values
+* Required
+---
+* `type`
+* The callout style
+* `note`, `tip`, `warning`, `danger` (default `note`)
+* Optional
+---
+* `title`
+* A short heading shown above the callout body
+* Any text
+* Optional
+---
+{% /table %}
 
 ## Next step
 

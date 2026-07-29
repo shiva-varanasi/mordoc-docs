@@ -5,7 +5,7 @@ description: Use Git and platforms like GitHub or GitLab to manage documentation
 
 Your documentation lives in files — Markdown pages, YAML configuration, images. Keeping those files in a Git repository turns your documentation project into something much more powerful than a shared folder of text files.
 
-This page explains how to manage documentation changes with Git and why the docs-as-code approach makes that possible.
+This page explains how to manage documentation changes with Git and why the content as code approach makes that possible.
 
 ## Why Git suits documentation
 
@@ -20,7 +20,7 @@ When your docs live in Markdown files under version control:
 * Mistakes are a `git revert` away
 * Multiple contributors can work in parallel on separate branches
 
-This is the core idea behind docs-as-code: treat documentation with the same engineering discipline as software.
+This is the core idea behind content as code: treat documentation with the same engineering discipline as software.
 
 ## The basic workflow
 
@@ -78,7 +78,7 @@ Then open a pull request on GitHub or a merge request on GitLab through the plat
 
 A pull request shows reviewers a precise diff — exactly which lines were added, changed, or removed. Reviewers can leave inline comments, request revisions, or approve the change. Nothing merges until it is ready.
 
-This review step is one of the clearest advantages of docs-as-code. On a wiki or in a shared document, changes go live immediately. With a pull request, every change passes a review before readers see it.
+This review step is one of the clearest advantages of content as code. On a wiki or in a shared document, changes go live immediately. With a pull request, every change passes a review before readers see it.
 
 ## Protect the main branch
 
@@ -111,4 +111,4 @@ Clear commit messages and branch names make this history useful rather than just
 
 ## Next step
 
-[Build your site](/publishing/build-your-site).
+- [Build your site](/publishing/build-your-site).

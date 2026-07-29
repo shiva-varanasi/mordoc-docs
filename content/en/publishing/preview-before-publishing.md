@@ -57,4 +57,4 @@ If something is wrong, fix the source files in your project, run `npm run build`
 
 ## Next step
 
-[Review SEO and search settings](/publishing/seo-and-search).
+- [Review SEO and search settings](/publishing/seo-and-search).

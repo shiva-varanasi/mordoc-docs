@@ -152,4 +152,4 @@ Click each top navigation item and make sure the sidebar changes to the matching
 
 ## Next step
 
-[Configure header links](/configuration/header-links).
+- [Configure header links](/configuration/header-links).

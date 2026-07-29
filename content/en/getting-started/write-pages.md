@@ -47,7 +47,7 @@ description: A short history of the One Ring and the forces bound to it.
 
 This is the page body.
 
-## Before you begin
+## What the Ring Is
 
 This is a section inside the page.
 ```
@@ -71,7 +71,7 @@ Mordoc uses this as the main page heading. Because the title already becomes the
 For example:
 
 ```markdown
-## Before you begin
+## What the Ring Is
 
 Write your section content here.
 ```
@@ -84,9 +84,7 @@ The `description` field is optional, but it is a good habit to include it:
 description: A short history of the One Ring and the forces bound to it.
 ```
 
-Use one short sentence that explains what the page is about. Mordoc can use it for page information and search engine previews.
-
-The [Frontmatter Reference](/reference/frontmatter) page will list all supported frontmatter fields later.
+Use one short sentence that explains what the page is about. It appears below the title for readers, and search engines use it for preview snippets.
 
 ## Create a new page
 
@@ -119,8 +117,8 @@ This creates a page at:
 
 You will learn how file paths become page URLs in the next step.
 
-{% callout type="note" title="Why you may not see it in the sidebar yet" %}
-Creating the file creates the page route, but it does not automatically add the page to the sidebar. Navigation is controlled separately so you can choose which pages appear in the menu.
+{% callout type="note" title="Why you may not see it in the side navigation bar yet" %}
+Creating the file creates the page route, but it does not automatically add the page to the side navigation bar. Navigation is controlled separately so you can choose which pages appear in the menu.
 {% /callout %}
 
 ## Next step

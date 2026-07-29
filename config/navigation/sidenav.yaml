@@ -76,6 +76,8 @@
       path: /configuration/assets-and-branding
     - label: Theme CSS
       path: /configuration/theme-css
+    - label: Custom Head Scripts
+      path: /configuration/custom-head
 
 - label: Publishing
   expanded: true

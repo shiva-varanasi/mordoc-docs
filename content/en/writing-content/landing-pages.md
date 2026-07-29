@@ -3,7 +3,7 @@ title: Landing Pages
 description: Create full-width pages for homepages and overview pages.
 ---
 
-Most Mordoc pages use the normal documentation layout: sidebar on the left, page content in the middle, and a table of contents on the right.
+Most Mordoc pages use the normal documentation layout: side navigation bar on the left, page content in the middle, and a table of contents on the right.
 
 Sometimes you need a different kind of page. A homepage or product overview often works better as a landing page.
 
@@ -37,6 +37,8 @@ Use landing pages sparingly. Most documentation pages should use the normal layo
 
 A hero is a large opening section, usually used at the top of a landing page.
 
+You can add a hero section to your landing page using the `{% hero %}` tag.
+
 ```markdown
 {% hero
   title="My Product Docs"
@@ -50,34 +52,103 @@ Get started
 {% /hero %}
 ```
 
-The `title` is required. Other fields are optional.
+## Hero attributes
 
-A hero can use:
+{% table %}
+* Attribute
+* Description
+* Values
+* Required
+---
+* `title`
+* The main heading text
+* Any text
+* Required
+---
+* `titleAccent`
+* Highlighted text shown on a new line under the title
+* Any text
+* Optional
+---
+* `description`
+* Supporting text shown below the title
+* Any text
+* Optional
+---
+* `image`
+* A supporting image, such as a product screenshot, shown below the buttons
+* Image path
+* Optional
+---
+* `background`
+* A background color or image behind the whole hero
+* Color or image path
+* Optional
+---
+* `titleColor`
+* Overrides the title text color
+* Color value
+* Optional
+---
+* `titleAccentColor`
+* Overrides the titleAccent text color
+* Color value
+* Optional
+---
+* `descriptionColor`
+* Overrides the description text color
+* Color value
+* Optional
+{% /table %}
 
-* `title` for the main text
-* `titleAccent` for highlighted title text
-* `description` for supporting text
-* `image` for a hero image
-* `background` for a color or image path
-* `titleColor`, `titleAccentColor`, and `descriptionColor` for text colors
+Use `background` for a full-bleed background color or image behind the whole hero. Use `image` for a separate supporting image, such as a product screenshot, shown below the buttons.
+
+## Sizing a background image
+
+The hero has no fixed height. It grows or shrinks with the title, `titleAccent`, description, and buttons you include, and with the viewport width. A background image is scaled to cover that space, so it gets cropped to fill whatever height the hero ends up with.
+
+Pick a wide, short aspect ratio and keep the important part of the image centered. Content near the top and bottom edges is the first to be cropped as the hero grows taller.
+
+{% callout type="tip" title="Sidestep cropping with an abstract image" %}
+An image with no fixed focal point, such as a texture, gradient, or pattern, holds up no matter how the hero resizes. Cropping barely changes how it looks.
+{% /callout %}
 
 ## Add sections
 
-Use sections to group landing page content:
+A section groups content on a landing page, with an optional title and background.
+
+You can add a section to your landing page using the `{% section %}` tag.
 
 ```markdown
-{% section title="Choose where to begin" background="subtle" %}
+{% section title="Choose where to begin" background="#f5f5f4" %}
 This section introduces the main paths through the documentation.
 {% /section %}
 ```
 
-The `background` value can be `subtle`, a color, or an image path.
+## Section attributes
 
-The `title` value is optional on sections, but it is usually helpful.
+{% table %}
+* Attribute
+* Description
+* Values
+* Required
+---
+* `title`
+* A heading shown above the section content
+* Any text
+* Optional
+---
+* `background`
+* A background color or image behind the section
+* Color or image path
+* Optional
+{% /table %}
+
+When `background` is an image, section titles and text automatically switch to white for readability.
 
 ## Add cards to a landing page
 
-Landing pages often use cards to guide readers:
+Landing pages often use cards inside a section to guide readers toward where to go next:
 
 ```markdown
 {% section title="Explore the docs" %}
@@ -85,21 +156,17 @@ Landing pages often use cards to guide readers:
 {% card title="Getting Started" path="/getting-started/create-project" tag="Start here" %}
 Create and run your first project.
 {% /card %}
-
-{% card title="Writing Content" path="/writing-content/markdown-basics" %}
-Learn the writing basics.
-{% /card %}
-
-{% card title="Configuration" path="/configuration/site-configuration" %}
-Customize your site settings.
-{% /card %}
 {% /cardGrid %}
 {% /section %}
 ```
 
+See [Cards and card grids](/writing-content/cards-and-card-grids) for the full card and card grid syntax.
+
 ## Add buttons
 
-Buttons are useful for important calls to action:
+A button is a styled call to action, usually linking to another page.
+
+You can add a button using the `{% button %}` tag.
 
 ```markdown
 {% button path="/getting-started/create-project" %}
@@ -115,7 +182,24 @@ Learn Markdown
 {% /button %}
 ```
 
-The `path` value is required for buttons. The `variant` value is optional and can be `primary` or `secondary`.
+## Button attributes
+
+{% table %}
+* Attribute
+* Description
+* Values
+* Required
+---
+* `path`
+* The page or URL the button links to
+* A path or URL
+* Required
+---
+* `variant`
+* Controls the button's visual style
+* `primary`, `secondary` (default `primary`)
+* Optional
+{% /table %}
 
 ## When to use a landing page
 
@@ -124,13 +208,6 @@ Use a landing page for:
 * The homepage
 * A product overview
 * A major section overview
-
-Use a normal page for:
-
-* Step-by-step guides
-* Reference pages
-* Troubleshooting pages
-* Detailed explanations
 
 ## Next step
 

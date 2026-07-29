@@ -15,7 +15,7 @@ This repository contains the core Mordoc framework, including rendering logic, c
 
 [github.com/create-mordoc-app](https://github.com/shiva-varanasi/create-mordoc-app)
 
-This repository provides a thin wrapper that initializes a new Mordoc project by invoking the create-app functionality from the Mordoc core.
+This repository scaffolds new Mordoc projects on its own. It bundles the starter template, config, and starter content, so running `npx create-mordoc-app` copies that template into your new project, fills in your project name, and installs the latest `mordoc` package as a dependency.
 
 # Mordoc Docs
 
