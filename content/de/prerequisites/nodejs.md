@@ -33,6 +33,10 @@ Sie müssen npm nicht separat installieren. Wenn Node.js installiert ist, ist np
 
 ## Node.js herunterladen
 
+{% callout type="note" title="Erforderliche Mindestversion" %}
+Mordoc erfordert Node.js in Version **24.18.1** oder höher. Der unten stehende LTS-Download erfüllt diese Anforderung.
+{% /callout %}
+
 1. Besuchen Sie die offizielle Node.js-Website: [https://nodejs.org](https://nodejs.org)
 2. Laden Sie die **LTS-Version (Long Term Support)** herunter. Dies ist die empfohlene und stabilste Option.
 
