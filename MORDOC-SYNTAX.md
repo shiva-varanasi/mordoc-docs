@@ -114,7 +114,7 @@ Get started
 {% /hero %}
 ```
 
-**Attributes:** `title`, `titleAccent`, `description` (text), `background` (asset path), `titleColor`, `titleAccentColor`, `descriptionColor` (hex colors).
+**Attributes:** `title`, `titleAccent`, `description` (text), `image` (asset path, a supporting image shown below the CTAs), `background` (asset path only, never a color). Colors are not attributes: title, title-accent, and description color are all set once in `Hero.module.css`'s tokens (`--hero-title-color`, etc.), not per-instance in Markdown.
 
 ---
 
@@ -123,12 +123,12 @@ Get started
 Groups content on landing pages.
 
 ```markdown
-{% section title="Everything you need" background="subtle" %}
+{% section title="Everything you need" background="/images/section-bg.png" %}
 Body text here.
 {% /section %}
 ```
 
-**Attributes:** `title` (text), `background` (`subtle`, a color, or a path).
+**Attributes:** `title` (text), `background` (asset path only, never a color; a solid background color is set once in `Section.module.css`'s `--section-bg` token, not per-instance in Markdown).
 
 ---
 

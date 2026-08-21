@@ -1,36 +1,36 @@
 ---
-title: Benutzerdefinierte Head-Skripte
-description: Fügen Sie Skripte von Drittanbietern, wie Analytics oder Cookie-Consent-Banner, in den HTML-Head jeder Seite ein.
+title: Custom Head Scripts
+description: Add third-party scripts, such as analytics or cookie-consent banners, to every page's HTML head.
 ---
 
-Mordoc rendert Ihr `content/`-Markdown für Sie in HTML. Das bedeutet, es gibt keine Seite, auf der Sie einen `<script>`-Tag von Hand direkt in `<head>` schreiben können.
+Mordoc renders your `content/` markdown into HTML for you. That means there is no page where you can hand-write a `<script>` tag directly into `<head>`.
 
-Manche Skripte müssen trotzdem dorthin. Analytics, ein Cookie-Consent- oder Datenschutz-Banner eines Drittanbieters oder ein von Ihrem Unternehmen selbst entwickeltes Snippet sind gängige Beispiele. `config/custom-head.html` ist der Ort dafür.
+Some scripts still need to go there. Analytics, a cookie-consent or privacy banner from a third-party vendor, or a snippet your company built in-house are common examples. `config/custom-head.html` is where those go.
 
-## Die Datei hinzufügen
+## Add the file
 
-Erstellen Sie sie hier:
+Create it here:
 
 ```text
 config/custom-head.html
 ```
 
-Die Datei ist optional. Existiert sie nicht, überspringt Mordoc sie, und nichts ändert sich.
+The file is optional. If it does not exist, Mordoc skips it and nothing changes.
 
-Fügen Sie darin das HTML ein, das das Skript benötigt. Zum Beispiel ein Analytics-Snippet eines Drittanbieters:
+Put whatever HTML the script needs inside it. For example, a third-party analytics snippet:
 
 ```html
 <script defer src="https://analytics.example.com/script.js" data-site-id="your-site-id"></script>
 ```
 
-## Wie Mordoc sie verwendet
+## How Mordoc uses it
 
-Mordoc fügt den Inhalt der Datei in den `<head>` jeder Seite ein, sowohl in `mordoc dev` als auch in `mordoc build`. Mordocs eigene Tags, wie `<title>` sowie seine Meta- und Open-Graph-Tags, sind bereits vorhanden, bevor Ihr Inhalt hinzugefügt wird.
+Mordoc inserts the file's contents into the `<head>` of every page, in both `mordoc dev` and `mordoc build`. Mordoc's own tags, such as `<title>` and its meta and Open Graph tags, are already in place before your content is added.
 
-{% callout type="warning" title="Inhalt wird unverändert eingefügt" %}
-Mordoc prüft oder verändert den Inhalt von `config/custom-head.html` nicht. Er wird genau so eingefügt, wie er geschrieben wurde, auf jeder Seite, für jeden Besucher. Fügen Sie nur Skripte aus Quellen hinzu, denen Sie vertrauen.
+{% callout type="warning" title="Content is inserted as-is" %}
+Mordoc does not check or modify what is inside `config/custom-head.html`. It is inserted exactly as written, on every page, for every visitor. Only add scripts from sources you trust.
 {% /callout %}
 
-## Nächster Schritt
+## Next step
 
-- [Änderungsmanagement mit Git](/de/publishing/change-management).
+- [Customize your site's look](/customization/basic).

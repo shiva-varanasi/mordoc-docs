@@ -1,26 +1,26 @@
 ---
-title: Assets und Branding
-description: Ersetzen Sie das Website-Logo, das Dark-Logo, das Favicon und das Sharing-Bild.
+title: Assets and Branding
+description: Replace the site logo, dark logo, favicon, and sharing image.
 ---
 
-Mordoc verwendet zwei Orte für Bilddateien:
+Mordoc uses two places for image files:
 
 ```text
 config/assets/
 public/
 ```
 
-Sie haben unterschiedliche Aufgaben. Verwenden Sie `config/assets/` für die Website-Oberfläche, wie Logos. Verwenden Sie `public/` für Bilder und Dateien, die von Ihren Inhaltsseiten verwendet werden.
+They have different jobs. Use `config/assets/` for the site chrome, such as logos. Use `public/` for images and files used by your content pages.
 
-## Config-Assets verstehen
+## Understand config assets
 
-Website-Branding-Dateien befinden sich in:
+Site branding files live in:
 
 ```text
 config/assets/
 ```
 
-Das Starter-Projekt enthält:
+The starter project includes:
 
 ```text
 config/assets/
@@ -28,63 +28,63 @@ config/assets/
 └── logo-dark.svg
 ```
 
-Diese Dateien werden von der Website-Oberfläche verwendet, nicht von einer bestimmten Markdown-Seite.
+These files are used by the site interface, not by a specific Markdown page.
 
-## Das Logo ersetzen
+## Replace the logo
 
-Um das Hellmodus-Logo zu ersetzen, ersetzen Sie:
-
-```text
-config/assets/logo.svg
-```
-
-Behalten Sie den Dateinamen `logo` und verwenden Sie einen unterstützten Bilddateityp.
-
-Zum Beispiel:
+To replace the light-mode logo, replace:
 
 ```text
 config/assets/logo.svg
 ```
 
-Unterstützte Bilddateitypen sind SVG, PNG, JPG und JPEG.
+Keep the filename as `logo` and use a supported image file type.
 
-## Das Dark-Logo ersetzen
+For example:
 
-Wenn Ihr Logo eine andere Version auf dunklen Hintergründen benötigt, fügen Sie Folgendes hinzu oder ersetzen Sie:
+```text
+config/assets/logo.svg
+```
+
+Supported image file types include SVG, PNG, JPG, and JPEG.
+
+## Replace the dark logo
+
+If your logo needs a different version on dark backgrounds, add or replace:
 
 ```text
 config/assets/logo-dark.svg
 ```
 
-Das Dark-Logo sollte dem Hellmodus-Logo in Größe und Form so eng wie möglich entsprechen. Das hilft, den Header stabil zu halten, wenn sich das Theme ändert.
+The dark logo should match the light logo in size and shape as closely as possible. That helps the header feel stable when the theme changes.
 
-## Ein Favicon hinzufügen
+## Add a favicon
 
-Ein Favicon ist das kleine Symbol, das Browser in Tabs und Lesezeichen anzeigen.
+A favicon is the small icon browsers show in tabs and bookmarks.
 
-Fügen Sie es hier hinzu:
+Add it here:
 
 ```text
 config/assets/favicon.ico
 ```
 
-Sie können dies überspringen, während Sie Ihre Dokumentation entwerfen. Fügen Sie es vor der Veröffentlichung hinzu, wenn Ihre Website ein gebrandetes Browser-Symbol verwenden soll.
+You can skip this while drafting your documentation. Add it before publishing if your site should use a branded browser icon.
 
-## Public für Inhaltsdateien verwenden
+## Use public for content files
 
-Legen Sie Screenshots, Diagramme, Downloads oder andere Inhaltsdateien nicht in `config/assets/` ab.
+Do not put screenshots, diagrams, downloads, or other content files in `config/assets/`.
 
-Diese Dateien gehören in `public/`. Lesen Sie [Bilder und Dateien](/de/getting-started/images-and-files) für die vollständige Anleitung.
+Those files belong in `public/`. See [Images and Files](/getting-started/images-and-files) for the full walkthrough.
 
-## Ein Sharing-Bild festlegen
+## Set a sharing image
 
-Das Starter-Projekt enthält ein Sharing-Bild:
+The starter project includes a sharing image:
 
 ```text
 public/images/ring-og.svg
 ```
 
-Sie können in `config/site.json` auf ein Sharing-Bild verweisen:
+You can point to a sharing image from `config/site.json`:
 
 ```json
 {
@@ -94,8 +94,8 @@ Sie können in `config/site.json` auf ein Sharing-Bild verweisen:
 }
 ```
 
-Da sich die Datei in `public/` befindet, beginnt der Pfad mit `/` und enthält nicht `public`.
+Because the file is inside `public/`, the path starts with `/` and does not include `public`.
 
-## Nächster Schritt
+## Next step
 
-[Theme CSS anpassen](/de/configuration/theme-css).
+[Customize your site's look](/customization/basic).

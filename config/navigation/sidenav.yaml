@@ -74,10 +74,62 @@
       path: /configuration/variables
     - label: Assets and Branding
       path: /configuration/assets-and-branding
-    - label: Theme CSS
-      path: /configuration/theme-css
     - label: Custom Head Scripts
       path: /configuration/custom-head
+
+- label: Customization
+  expanded: true
+  children:
+    - label: Basic
+      path: /customization/basic
+      children:
+        - label: Theme CSS
+          path: /customization/basic/theme-css
+        - label: Font Family
+          path: /customization/basic/font-family
+    - label: Advanced
+      path: /customization/advanced
+      children:
+        - label: Design Tokens
+          path: /customization/advanced/design-tokens
+        - label: App Layout
+          path: /customization/advanced/app-layout
+        - label: Header
+          path: /customization/advanced/header
+        - label: Header Links
+          path: /customization/advanced/header-links
+        - label: Top Navigation
+          path: /customization/advanced/top-navigation
+        - label: Language Picker
+          path: /customization/advanced/language-picker
+        - label: Theme Toggle
+          path: /customization/advanced/theme-toggle
+        - label: Search
+          path: /customization/advanced/search
+        - label: Side Navigation
+          path: /customization/advanced/side-navigation
+        - label: Content Layout
+          path: /customization/advanced/content-layout
+        - label: Article Page
+          path: /customization/advanced/article-page
+        - label: Table of Contents
+          path: /customization/advanced/table-of-contents
+        - label: Callouts
+          path: /customization/advanced/callouts
+        - label: Cards and Card Grids
+          path: /customization/advanced/cards
+        - label: Code Blocks
+          path: /customization/advanced/code-blocks
+        - label: Diagrams
+          path: /customization/advanced/diagrams
+        - label: Images
+          path: /customization/advanced/images
+        - label: Hero
+          path: /customization/advanced/hero
+        - label: Sections
+          path: /customization/advanced/sections
+        - label: Buttons
+          path: /customization/advanced/buttons
 
 - label: Publishing
   expanded: true

@@ -1,11 +1,9 @@
 ---
 title: Theme CSS
-description: Adjust your Mordoc site's colors, fonts, and other visual settings with theme CSS.
+description: Adjust your Mordoc site's colors with theme CSS.
 ---
 
-Mordoc gives you a working design by default.
-
-You do not need to write CSS to create pages, add navigation, or publish documentation. When you are ready to match your company's branding, use `config/styles/theme.css`.
+When you are ready to match your company's branding, use `config/styles/theme.css`. A single color change here gets you most of the way to a site that feels like your own.
 
 ## Open the theme file
 
@@ -57,22 +55,6 @@ Mordoc adds the `dark` class to the page when the reader switches to dark mode, 
 
 This means changing `--accent` updates links, buttons, active navigation states, card tags, and similar details across the whole site at once. Each mode recalculates its shades from whichever `--accent` is active for that mode, so light and dark mode stay consistent even if you've set them to different colors. You do not need to hunt down and set each one by hand.
 
-## Keep the file small
-
-Add only the rules you understand.
-
-A short theme file is easier to maintain when you update Mordoc or change branding later.
-
-## Do not edit generated files
-
-Theme changes belong in:
-
-```text
-config/styles/theme.css
-```
-
-Do not edit CSS files inside `dist/`. The `dist/` folder is generated when you build the site, and Mordoc can replace it on the next build.
-
 ## Next step
 
-- [Custom head scripts](/configuration/custom-head).
+- [Set a font family](/customization/basic/font-family).

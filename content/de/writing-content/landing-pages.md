@@ -1,214 +1,207 @@
 ---
-title: Landing-Pages
-description: Erstellen Sie vollbreite Seiten für Startseiten und Übersichtsseiten.
+title: Landing Pages
+description: Create full-width pages for homepages and overview pages.
 ---
 
-Die meisten Mordoc-Seiten verwenden das normale Dokumentations-Layout: Seitenleiste links, Seiteninhalt in der Mitte und ein Inhaltsverzeichnis rechts.
+Most Mordoc pages use the normal documentation layout: side navigation bar on the left, page content in the middle, and a table of contents on the right.
 
-Manchmal benötigen Sie eine andere Art von Seite. Eine Startseite oder Produktübersicht funktioniert oft besser als Landing-Page.
+Sometimes you need a different kind of page. A homepage or product overview often works better as a landing page.
 
-## Was eine Landing-Page verändert
+## What a landing page changes
 
-Eine Landing-Page ist vollbreit.
+A landing page is full-width.
 
-Sie zeigt nicht:
+It does not show:
 
-* Die Seitennavigation
-* Das rechte Inhaltsverzeichnis
-* Den normalen Artikel-Header
+* The side navigation
+* The right-side table of contents
+* The normal article header
 
-Das macht sie nützlich für Seiten, die die Website vorstellen, Karten zeigen oder Leser in die Hauptdokumentation führen.
+That makes it useful for pages that introduce the site, show cards, or guide readers into the main documentation.
 
-## Eine Seite in eine Landing-Page umwandeln
+## Turn a page into a landing page
 
-Fügen Sie `layout: landing` zum Seiten-Frontmatter hinzu:
+Add `layout: landing` to the page frontmatter:
 
 ```markdown
 ---
-title: Startseite
-description: Willkommen bei meiner Dokumentation.
+title: Home
+description: Welcome to my documentation.
 layout: landing
 ---
 ```
 
-Verwenden Sie Landing-Pages sparsam. Die meisten Dokumentationsseiten sollten das normale Layout verwenden.
+Use landing pages sparingly. Most documentation pages should use the normal layout.
 
-## Einen Hero hinzufügen
+## Add a hero
 
-Ein Hero ist ein großer Eröffnungsbereich, der in der Regel oben auf einer Landing-Page verwendet wird.
+A hero is a large opening section, usually used at the top of a landing page.
 
-Sie können Ihrer Landing-Page mit dem `{% hero %}`-Tag einen Hero-Bereich hinzufügen.
+You can add a hero section to your landing page using the `{% hero %}` tag.
 
 ```markdown
 {% hero
-  title="Meine Produkt-Dokumentation"
-  titleAccent="leicht gemacht"
-  description="Finden Sie Anleitungen, Referenzmaterial und praktische Beispiele."
-  background="#120b08"
+  title="My Product Docs"
+  titleAccent="made simple"
+  description="Find guides, reference material, and practical examples."
+  background="/images/hero-bg.png"
 %}
 {% button path="/getting-started/create-project" %}
-Jetzt starten
+Get started
 {% /button %}
 {% /hero %}
 ```
 
-## Hero-Attribute
+## Hero attributes
 
 {% table %}
-* Attribut
-* Beschreibung
-* Werte
-* Erforderlich
+* Attribute
+* Description
+* Values
+* Required
 ---
 * `title`
-* Der Haupttitel-Text
-* Beliebiger Text
-* Erforderlich
+* The main heading text
+* Any text
+* Required
 ---
 * `titleAccent`
-* Hervorgehobener Text, der in einer neuen Zeile unter dem Titel angezeigt wird
-* Beliebiger Text
+* Highlighted text shown on a new line under the title
+* Any text
 * Optional
 ---
 * `description`
-* Unterstützender Text, der unter dem Titel angezeigt wird
-* Beliebiger Text
+* Supporting text shown below the title
+* Any text
 * Optional
 ---
 * `image`
-* Ein unterstützendes Bild, wie zum Beispiel ein Produkt-Screenshot, das unter den Schaltflächen angezeigt wird
-* Bildpfad
+* A supporting image, such as a product screenshot, shown below the buttons
+* Image path
 * Optional
 ---
 * `background`
-* Eine Hintergrundfarbe oder ein Hintergrundbild hinter dem gesamten Hero
-* Farbe oder Bildpfad
-* Optional
----
-* `titleColor`
-* Überschreibt die Textfarbe des Titels
-* Farbwert
-* Optional
----
-* `titleAccentColor`
-* Überschreibt die Textfarbe von titleAccent
-* Farbwert
-* Optional
----
-* `descriptionColor`
-* Überschreibt die Textfarbe der Beschreibung
-* Farbwert
+* A background image behind the whole hero
+* Image path
 * Optional
 {% /table %}
 
-Verwenden Sie `background` für eine randlose Hintergrundfarbe oder ein randloses Hintergrundbild hinter dem gesamten Hero. Verwenden Sie `image` für ein separates unterstützendes Bild, wie zum Beispiel einen Produkt-Screenshot, das unter den Schaltflächen angezeigt wird.
+Use `background` for a full-bleed image behind the whole hero. Use `image` for a separate supporting image, such as a product screenshot, shown below the buttons.
 
-## Größe eines Hintergrundbilds
-
-Der Hero hat keine feste Höhe. Er wächst oder schrumpft mit dem Titel, `titleAccent`, der Beschreibung und den Schaltflächen, die Sie einfügen, sowie mit der Breite des Viewports. Ein Hintergrundbild wird so skaliert, dass es diesen Bereich abdeckt, und daher zugeschnitten, um die jeweilige Höhe des Heros vollständig auszufüllen.
-
-Wählen Sie ein breites, kurzes Seitenverhältnis und halten Sie den wichtigen Bildbereich zentriert. Inhalte nahe dem oberen und unteren Rand werden zuerst zugeschnitten, wenn der Hero höher wird.
-
-{% callout type="tip" title="Zuschneiden mit einem abstrakten Bild umgehen" %}
-Ein Bild ohne festen Fokuspunkt, wie eine Textur, ein Farbverlauf oder ein Muster, wirkt unabhängig davon, wie sich der Hero in der Größe ändert. Zuschneiden verändert sein Aussehen kaum.
+{% callout type="note" title="Colors are not attributes" %}
+There's no `titleColor`, `titleAccentColor`, or `descriptionColor` attribute, and `background` never accepts a plain color, only an image path. A hero's colors are a design decision, not content, so they're set once in CSS. See [Hero](/customization/advanced/hero) under Advanced Customization.
 {% /callout %}
 
-## Abschnitte hinzufügen
+## Sizing a background image
 
-Ein Abschnitt gruppiert Inhalte auf einer Landing-Page, mit einem optionalen Titel und Hintergrund.
+The hero has no fixed height. It grows or shrinks with the title, `titleAccent`, description, and buttons you include, and with the viewport width. A background image is scaled to cover that space, so it gets cropped to fill whatever height the hero ends up with.
 
-Sie können Ihrer Landing-Page mit dem `{% section %}`-Tag einen Abschnitt hinzufügen.
+Pick a wide, short aspect ratio and keep the important part of the image centered. Content near the top and bottom edges is the first to be cropped as the hero grows taller.
+
+{% callout type="tip" title="Sidestep cropping with an abstract image" %}
+An image with no fixed focal point, such as a texture, gradient, or pattern, holds up no matter how the hero resizes. Cropping barely changes how it looks.
+{% /callout %}
+
+## Add sections
+
+A section groups content on a landing page, with an optional title and background.
+
+You can add a section to your landing page using the `{% section %}` tag.
 
 ```markdown
-{% section title="Wählen Sie, wo Sie beginnen möchten" background="#f5f5f4" %}
-Dieser Abschnitt stellt die Hauptwege durch die Dokumentation vor.
+{% section title="Choose where to begin" background="/images/section-bg.png" %}
+This section introduces the main paths through the documentation.
 {% /section %}
 ```
 
-## Abschnitts-Attribute
+## Section attributes
 
 {% table %}
-* Attribut
-* Beschreibung
-* Werte
-* Erforderlich
+* Attribute
+* Description
+* Values
+* Required
 ---
 * `title`
-* Eine Überschrift, die über dem Abschnittsinhalt angezeigt wird
-* Beliebiger Text
+* A heading shown above the section content
+* Any text
 * Optional
 ---
 * `background`
-* Eine Hintergrundfarbe oder ein Hintergrundbild hinter dem Abschnitt
-* Farbe oder Bildpfad
+* A background image behind the section
+* Image path
 * Optional
 {% /table %}
 
-Wenn `background` ein Bild ist, wechseln Abschnittstitel und -text automatisch zu Weiß für bessere Lesbarkeit.
+When a section has a `background` image, its title and text automatically switch to white for readability.
 
-## Karten zu einer Landing-Page hinzufügen
+{% callout type="note" title="Colors are not attributes" %}
+`background` never accepts a plain color, only an image path. A section's solid background color is a design decision, not content, so it's set once in CSS. See [Sections](/customization/advanced/sections) under Advanced Customization.
+{% /callout %}
 
-Landing-Pages verwenden häufig Karten innerhalb eines Abschnitts, um Leser dorthin zu führen, wo sie als Nächstes hinsollen:
+## Add cards to a landing page
+
+Landing pages often use cards inside a section to guide readers toward where to go next:
 
 ```markdown
-{% section title="Die Dokumentation erkunden" %}
+{% section title="Explore the docs" %}
 {% cardGrid cols="3" %}
-{% card title="Erste Schritte" path="/getting-started/create-project" tag="Hier starten" %}
-Erstellen und starten Sie Ihr erstes Projekt.
+{% card title="Getting Started" path="/getting-started/create-project" tag="Start here" %}
+Create and run your first project.
 {% /card %}
 {% /cardGrid %}
 {% /section %}
 ```
 
-Die vollständige Karten- und Karten-Raster-Syntax finden Sie unter [Karten und Karten-Raster](/de/writing-content/cards-and-card-grids).
+See [Cards and card grids](/writing-content/cards-and-card-grids) for the full card and card grid syntax.
 
-## Schaltflächen hinzufügen
+## Add buttons
 
-Eine Schaltfläche ist eine gestaltete Handlungsaufforderung, die normalerweise zu einer anderen Seite verlinkt.
+A button is a styled call to action, usually linking to another page.
 
-Sie können mit dem `{% button %}`-Tag eine Schaltfläche hinzufügen.
+You can add a button using the `{% button %}` tag.
 
 ```markdown
 {% button path="/getting-started/create-project" %}
-Ein Projekt erstellen
+Create a project
 {% /button %}
 ```
 
-Verwenden Sie `variant="secondary"` für eine dezentere Schaltfläche:
+Use `variant="secondary"` for a quieter button:
 
 ```markdown
 {% button path="/writing-content/markdown-basics" variant="secondary" %}
-Markdown lernen
+Learn Markdown
 {% /button %}
 ```
 
-## Schaltflächen-Attribute
+## Button attributes
 
 {% table %}
-* Attribut
-* Beschreibung
-* Werte
-* Erforderlich
+* Attribute
+* Description
+* Values
+* Required
 ---
 * `path`
-* Die Seite oder URL, zu der die Schaltfläche verlinkt
-* Ein Pfad oder eine URL
-* Erforderlich
+* The page or URL the button links to
+* A path or URL
+* Required
 ---
 * `variant`
-* Steuert den visuellen Stil der Schaltfläche
-* `primary`, `secondary` (Standard `primary`)
+* Controls the button's visual style
+* `primary`, `secondary` (default `primary`)
 * Optional
 {% /table %}
 
-## Wann eine Landing-Page verwenden
+## When to use a landing page
 
-Verwenden Sie eine Landing-Page für:
+Use a landing page for:
 
-* Die Startseite
-* Eine Produktübersicht
-* Eine Übersicht eines Hauptabschnitts
+* The homepage
+* A product overview
+* A major section overview
 
-## Nächster Schritt
+## Next step
 
-* [Diagramme erstellen](/de/creating-diagrams/overview).
+* [Create diagrams](/creating-diagrams/overview).
