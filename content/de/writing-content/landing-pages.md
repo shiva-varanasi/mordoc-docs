@@ -44,7 +44,7 @@ Sie können Ihrer Landing-Page mit dem `{% hero %}`-Tag einen Hero-Bereich hinzu
   title="Meine Produkt-Dokumentation"
   titleAccent="leicht gemacht"
   description="Finden Sie Anleitungen, Referenzmaterial und praktische Beispiele."
-  background="#120b08"
+  background="/images/hero-bg.png"
 %}
 {% button path="/getting-started/create-project" %}
 Jetzt starten
@@ -81,27 +81,16 @@ Jetzt starten
 * Optional
 ---
 * `background`
-* Eine Hintergrundfarbe oder ein Hintergrundbild hinter dem gesamten Hero
-* Farbe oder Bildpfad
-* Optional
----
-* `titleColor`
-* Überschreibt die Textfarbe des Titels
-* Farbwert
-* Optional
----
-* `titleAccentColor`
-* Überschreibt die Textfarbe von titleAccent
-* Farbwert
-* Optional
----
-* `descriptionColor`
-* Überschreibt die Textfarbe der Beschreibung
-* Farbwert
+* Ein Hintergrundbild hinter dem gesamten Hero
+* Bildpfad
 * Optional
 {% /table %}
 
-Verwenden Sie `background` für eine randlose Hintergrundfarbe oder ein randloses Hintergrundbild hinter dem gesamten Hero. Verwenden Sie `image` für ein separates unterstützendes Bild, wie zum Beispiel einen Produkt-Screenshot, das unter den Schaltflächen angezeigt wird.
+Verwenden Sie `background` für ein randloses Hintergrundbild hinter dem gesamten Hero. Verwenden Sie `image` für ein separates unterstützendes Bild, wie zum Beispiel einen Produkt-Screenshot, das unter den Schaltflächen angezeigt wird.
+
+{% callout type="note" title="Farben sind keine Attribute" %}
+Es gibt kein `titleColor`-, `titleAccentColor`- oder `descriptionColor`-Attribut, und `background` akzeptiert niemals eine reine Farbe, sondern nur einen Bildpfad. Die Farben eines Heros sind eine Design-Entscheidung, keine Inhaltsfrage, daher werden sie einmalig in CSS festgelegt. Siehe [Hero](/de/customization/advanced/hero) unter Erweiterte Anpassung.
+{% /callout %}
 
 ## Größe eines Hintergrundbilds
 
@@ -120,7 +109,7 @@ Ein Abschnitt gruppiert Inhalte auf einer Landing-Page, mit einem optionalen Tit
 Sie können Ihrer Landing-Page mit dem `{% section %}`-Tag einen Abschnitt hinzufügen.
 
 ```markdown
-{% section title="Wählen Sie, wo Sie beginnen möchten" background="#f5f5f4" %}
+{% section title="Wählen Sie, wo Sie beginnen möchten" background="/images/section-bg.png" %}
 Dieser Abschnitt stellt die Hauptwege durch die Dokumentation vor.
 {% /section %}
 ```
@@ -139,12 +128,16 @@ Dieser Abschnitt stellt die Hauptwege durch die Dokumentation vor.
 * Optional
 ---
 * `background`
-* Eine Hintergrundfarbe oder ein Hintergrundbild hinter dem Abschnitt
-* Farbe oder Bildpfad
+* Ein Hintergrundbild hinter dem Abschnitt
+* Bildpfad
 * Optional
 {% /table %}
 
-Wenn `background` ein Bild ist, wechseln Abschnittstitel und -text automatisch zu Weiß für bessere Lesbarkeit.
+Wenn ein Abschnitt ein `background`-Bild hat, wechseln sein Titel und Text automatisch zu Weiß für bessere Lesbarkeit.
+
+{% callout type="note" title="Farben sind keine Attribute" %}
+`background` akzeptiert niemals eine reine Farbe, sondern nur einen Bildpfad. Die einfarbige Hintergrundfarbe eines Abschnitts ist eine Design-Entscheidung, keine Inhaltsfrage, daher wird sie einmalig in CSS festgelegt. Siehe [Abschnitte](/de/customization/advanced/sections) unter Erweiterte Anpassung.
+{% /callout %}
 
 ## Karten zu einer Landing-Page hinzufügen
 

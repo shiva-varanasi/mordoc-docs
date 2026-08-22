@@ -98,4 +98,4 @@ Da sich die Datei in `public/` befindet, beginnt der Pfad mit `/` und enthält n
 
 ## Nächster Schritt
 
-[Theme CSS anpassen](/de/configuration/theme-css).
+[Das Erscheinungsbild Ihrer Website anpassen](/de/customization/basic).
