@@ -183,7 +183,7 @@ More on this in [Images and Files](/getting-started/images-and-files).
 
 You do not need to edit it while learning the basics. Mordoc already gives you a working design.
 
-Later, [Theme CSS](/configuration/theme-css) will explain what is safe to customize.
+Later, [Theme CSS](/customization/basic/theme-css) will explain what is safe to customize.
 
 ## public
 

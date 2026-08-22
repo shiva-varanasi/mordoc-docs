@@ -1,23 +1,23 @@
 ---
-title: Project Structure
-description: Learn what the starter project contains and which files you will edit first.
+title: Projektstruktur
+description: Erfahren Sie, was das Starter-Projekt enthält und welche Dateien Sie zuerst bearbeiten werden.
 ---
 
-A Mordoc project is just a folder on your computer. Inside that folder, some files are for your documentation content, some files are for site settings, and some files are created automatically so Mordoc can run.
+Ein Mordoc-Projekt ist nur ein Ordner auf Ihrem Computer. Darin befinden sich einige Dateien für Ihre Dokumentationsinhalte, einige für die Website-Einstellungen und einige, die automatisch erstellt werden, damit Mordoc laufen kann.
 
-You do not need to understand everything at once. This page is only a first tour of the project you created with `create-mordoc-app`.
+Sie müssen nicht alles auf einmal verstehen. Diese Seite ist nur eine erste Übersicht des Projekts, das Sie mit `create-mordoc-app` erstellt haben.
 
-## The folder you created
+## Der erstellte Ordner
 
-If you ran:
+Wenn Sie Folgendes ausgeführt haben:
 
 ```bash
 npx create-mordoc-app my-docs
 ```
 
-Then you now have a folder named `my-docs`.
+Haben Sie jetzt einen Ordner namens `my-docs`.
 
-Inside it, you will see something like this:
+Darin sehen Sie etwa Folgendes:
 
 ```text
 my-docs/
@@ -49,23 +49,23 @@ my-docs/
 └── package-lock.json
 ```
 
-The starter content is fictional so you can see a working documentation site before replacing it with your own content.
+Der Starter-Inhalt ist fiktiv, damit Sie eine funktionierende Dokumentationswebsite sehen können, bevor Sie sie mit Ihren eigenen Inhalten ersetzen.
 
-## The files you will edit most
+## Die Dateien, die Sie am häufigsten bearbeiten werden
 
-Most of your work will happen in three places:
+Der Großteil Ihrer Arbeit findet an drei Stellen statt:
 
-* `content/` for the pages readers will read
-* `config/` for site settings, navigation, branding, and light customization
-* `public/` for images and files used by your pages
+* `content/` für die Seiten, die Leser lesen werden
+* `config/` für Website-Einstellungen, Navigation, Branding und kleinere Anpassungen
+* `public/` für Bilder und Dateien, die von Ihren Seiten verwendet werden
 
-You can ignore the other generated files for now. They are explained later on this page so you know what they are when you see them.
+Die anderen generierten Dateien können Sie zunächst ignorieren. Sie werden später auf dieser Seite erklärt, damit Sie wissen, was sie sind, wenn Sie sie sehen.
 
 ## content
 
-`content/` is where your documentation pages live.
+`content/` ist der Ort, an dem Ihre Dokumentationsseiten gespeichert sind.
 
-In the starter project, it looks like this:
+Im Starter-Projekt sieht es so aus:
 
 ```text
 content/
@@ -76,11 +76,11 @@ content/
     └── wielding-the-ring.md
 ```
 
-Each `.md` file is a Markdown page. Markdown is the plain-text writing format you use for headings, paragraphs, lists, links, images, and Mordoc components.
+Jede `.md`-Datei ist eine Markdown-Seite. Markdown ist das Klartextformat, das Sie für Überschriften, Absätze, Listen, Links, Bilder und Mordoc-Komponenten verwenden.
 
-The `en` folder means this content is written in English. Later, if your site has more languages, each language can have its own folder.
+Der Ordner `en` bedeutet, dass dieser Inhalt auf Englisch verfasst ist. Wenn Ihre Website später mehrere Sprachen hat, kann jede Sprache ihren eigenen Ordner haben.
 
-The starter pages become these URLs on the documentation website:
+Die Starter-Seiten werden zu folgenden URLs auf der Dokumentationswebsite:
 
 ```text
 content/en/index.md             -> /
@@ -89,19 +89,19 @@ content/en/safeguards.md        -> /safeguards
 content/en/wielding-the-ring.md -> /wielding-the-ring
 ```
 
-For now, just remember this:
+Merken Sie sich zunächst Folgendes:
 
-* Edit files in `content/en/` when you want to change page text.
-* Keep `content/en/index.md`; it is the homepage for the starter site.
-* Replace the fictional sample pages with your real documentation when you are ready.
+* Bearbeiten Sie Dateien in `content/en/`, wenn Sie Seitentext ändern möchten.
+* Behalten Sie `content/en/index.md`; es ist die Startseite der Starter-Website.
+* Ersetzen Sie die fiktiven Beispielseiten durch Ihre eigene Dokumentation, wenn Sie bereit sind.
 
-Later, the [Writing Content](/writing-content/markdown-basics) section will explain Markdown, frontmatter, links, images, and Mordoc syntax in detail.
+Später wird der Abschnitt [Inhalte schreiben](/de/writing-content/markdown-basics) Markdown, Frontmatter, Links, Bilder und die Mordoc-Syntax im Detail erklären.
 
 ## config
 
-`config/` is where you tell Mordoc how your documentation site should behave.
+`config/` ist der Ort, an dem Sie Mordoc mitteilen, wie sich Ihre Dokumentationswebsite verhalten soll.
 
-In the starter project, it looks like this:
+Im Starter-Projekt sieht es so aus:
 
 ```text
 config/
@@ -115,13 +115,13 @@ config/
     └── theme.css
 ```
 
-You do not need to edit all of these right away. The starter project already works. Think of this folder as the place you return to when you are ready to rename the site, change navigation, replace the logo, or adjust the theme.
+Sie müssen das nicht alles sofort bearbeiten. Das Starter-Projekt funktioniert bereits. Betrachten Sie diesen Ordner als den Ort, zu dem Sie zurückkehren, wenn Sie die Website umbenennen, die Navigation ändern, das Logo ersetzen oder das Theme anpassen möchten.
 
 ### site.json
 
-`config/site.json` stores basic information about the site.
+`config/site.json` speichert grundlegende Informationen über die Website.
 
-The starter file looks like this:
+Die Starter-Datei sieht so aus:
 
 ```json
 {
@@ -132,15 +132,15 @@ The starter file looks like this:
 }
 ```
 
-You will eventually change the name, description, and production URL for your own documentation site.
+Sie werden irgendwann den Namen, die Beschreibung und die Produktions-URL für Ihre eigene Dokumentationswebsite ändern.
 
-You do not need to do that yet. You'll cover each field in detail on the [Site Configuration](/configuration/site-configuration) page.
+Das müssen Sie noch nicht tun. Sie werden jedes Feld im Detail auf der Seite [Website-Konfiguration](/de/configuration/site-configuration) durchgehen.
 
 ### navigation
 
-`config/navigation/sidenav.yaml` controls the side navigation bar links.
+`config/navigation/sidenav.yaml` steuert die Seitenleisten-Links.
 
-The starter navigation looks like this:
+Die Starter-Navigation sieht so aus:
 
 ```yaml
 - label: The Ring
@@ -154,18 +154,18 @@ The starter navigation looks like this:
       path: /safeguards
 ```
 
-For now, notice that each visible link has two parts:
+Beachten Sie zunächst, dass jeder sichtbare Link zwei Teile hat:
 
-* `label` is the text readers see in the sidebar.
-* `path` is the page URL.
+* `label` ist der Text, den Leser in der Seitenleiste sehen.
+* `path` ist die Seiten-URL.
 
-When you add your own pages, you will update this file so readers can find them. You'll walk through that step on the [Navigation Basics](/getting-started/navigation-basics) page.
+Wenn Sie eigene Seiten hinzufügen, aktualisieren Sie diese Datei, damit Leser sie finden können. Sie werden diesen Schritt auf der Seite [Navigationsgrundlagen](/de/getting-started/navigation-basics) durchgehen.
 
 ### assets
 
-`config/assets/` is for site-level images such as the logo.
+`config/assets/` ist für Website-weite Bilder wie das Logo.
 
-The starter project includes:
+Das Starter-Projekt enthält:
 
 ```text
 config/assets/
@@ -173,23 +173,23 @@ config/assets/
 └── logo-dark.svg
 ```
 
-You can leave these alone for now. Later, you can replace them with your own logo files.
+Diese können Sie zunächst in Ruhe lassen. Später können Sie sie durch Ihre eigenen Logo-Dateien ersetzen.
 
-More on this in [Images and Files](/getting-started/images-and-files).
+Mehr dazu unter [Bilder und Dateien](/de/getting-started/images-and-files).
 
 ### styles
 
-`config/styles/theme.css` is for small visual changes, such as theme colors.
+`config/styles/theme.css` ist für kleine visuelle Änderungen, wie zum Beispiel Theme-Farben.
 
-You do not need to edit it while learning the basics. Mordoc already gives you a working design.
+Sie müssen diese Datei beim Erlernen der Grundlagen nicht bearbeiten. Mordoc liefert Ihnen bereits ein funktionierendes Design.
 
-Later, [Theme CSS](/customization/basic/theme-css) will explain what is safe to customize.
+Später wird [Theme CSS](/de/configuration/theme-css) erklären, was sicher angepasst werden kann.
 
 ## public
 
-`public/` is for images and files used inside your documentation pages.
+`public/` ist für Bilder und Dateien, die in Ihren Dokumentationsseiten verwendet werden.
 
-The starter project includes icons and an image used by the sample pages:
+Das Starter-Projekt enthält Icons und ein Bild, das von den Beispielseiten verwendet wird:
 
 ```text
 public/
@@ -201,27 +201,27 @@ public/
         └── spark.svg
 ```
 
-When a file is inside `public/`, you can reference it from a page with a path that starts with `/`.
+Wenn sich eine Datei in `public/` befindet, können Sie sie von einer Seite aus mit einem Pfad referenzieren, der mit `/` beginnt.
 
-For example:
+Zum Beispiel:
 
 ```markdown
-![Diagram](/images/diagram.png)
+![Diagramm](/images/diagram.png)
 ```
 
-You do not need to add images yet. This will be covered later in [Images and Files](/getting-started/images-and-files).
+Sie müssen noch keine Bilder hinzufügen. Dies wird später unter [Bilder und Dateien](/de/getting-started/images-and-files) behandelt.
 
 ## package.json
 
-`package.json` is a small project information file.
+`package.json` ist eine kleine Projektinformationsdatei.
 
-You will not edit it often, but it is useful to know what it does. It stores:
+Sie werden sie nicht oft bearbeiten, aber es ist nützlich zu wissen, was sie tut. Sie speichert:
 
-* The project name
-* The commands you run, such as `npm run dev` and `npm run build`
-* The Mordoc version your project uses
+* Den Projektnamen
+* Die Befehle, die Sie ausführen, wie `npm run dev` und `npm run build`
+* Die Mordoc-Version, die Ihr Projekt verwendet
 
-A simplified example looks like this:
+Ein vereinfachtes Beispiel sieht so aus:
 
 ```json
 {
@@ -237,50 +237,50 @@ A simplified example looks like this:
 }
 ```
 
-You have already used one command from this file:
+Sie haben bereits einen Befehl aus dieser Datei verwendet:
 
 ```bash
 npm run dev
 ```
 
-Later, when you want to update to a newer Mordoc version, you may come back to this file. For now, you can leave it as it is.
+Wenn Sie später auf eine neuere Mordoc-Version aktualisieren möchten, kommen Sie möglicherweise zu dieser Datei zurück. Für jetzt können Sie sie so lassen, wie sie ist.
 
-## Files you do not need to edit
+## Dateien, die Sie nicht bearbeiten müssen
 
-Some files and folders are created automatically. It is normal to see them, but you usually do not need to open or edit them.
+Einige Dateien und Ordner werden automatisch erstellt. Es ist normal, sie zu sehen, aber Sie müssen sie in der Regel nicht öffnen oder bearbeiten.
 
 ### node_modules
 
-`node_modules/` contains installed packages that Mordoc needs in order to run.
+`node_modules/` enthält installierte Pakete, die Mordoc zum Ausführen benötigt.
 
-You do not need to edit anything inside `node_modules/`. If it is ever missing, it can be recreated by running `npm install`.
+Sie müssen nichts innerhalb von `node_modules/` bearbeiten. Falls er jemals fehlt, kann er durch Ausführen von `npm install` neu erstellt werden.
 
 ### package-lock.json
 
-`package-lock.json` is created by npm. It helps npm install the same package versions consistently.
+`package-lock.json` wird von npm erstellt. Es hilft npm, dieselben Paketversionen konsistent zu installieren.
 
-You do not need to edit it by hand.
+Sie müssen es nicht manuell bearbeiten.
 
 ### .gitignore
 
-`.gitignore` tells Git which generated folders should not be saved in version history.
+`.gitignore` teilt Git mit, welche generierten Ordner nicht in der Versionshistorie gespeichert werden sollen.
 
-You can leave it alone.
+Sie können es in Ruhe lassen.
 
 ### dist
 
-`dist/` is created later when you build the site:
+`dist/` wird später erstellt, wenn Sie die Website bauen:
 
 ```bash
 npm run build
 ```
 
-`dist/` contains the finished website files for publishing.
+`dist/` enthält die fertigen Website-Dateien zur Veröffentlichung.
 
-Do not edit files in `dist/` manually. If you need to change the site, edit the source files in `content/`, `config/`, or `public/`, then build again.
+Bearbeiten Sie Dateien in `dist/` nicht manuell. Wenn Sie die Website ändern müssen, bearbeiten Sie die Quelldateien in `content/`, `config/` oder `public/` und bauen Sie dann erneut.
 
-You will learn more about this later in [Build Your Site](/publishing/build-your-site).
+Mehr darüber erfahren Sie später unter [Website bauen](/de/publishing/build-your-site).
 
-## Next step
+## Nächster Schritt
 
-- [Write your first pages](/getting-started/write-pages).
+- [Ihre ersten Seiten schreiben](/de/getting-started/write-pages).
