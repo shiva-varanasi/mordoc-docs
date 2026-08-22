@@ -150,3 +150,9 @@
   children: 
     - label: Source Repositories
       path: /references/github-repo
+
+- label: Change Log
+  expanded: false
+  children: 
+    - label: Year 2026
+      path: /change-log/2026
