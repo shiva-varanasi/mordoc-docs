@@ -44,7 +44,7 @@ You can add a hero section to your landing page using the `{% hero %}` tag.
   title="My Product Docs"
   titleAccent="made simple"
   description="Find guides, reference material, and practical examples."
-  background="#120b08"
+  background="/images/hero-bg.png"
 %}
 {% button path="/getting-started/create-project" %}
 Get started
@@ -81,27 +81,16 @@ Get started
 * Optional
 ---
 * `background`
-* A background color or image behind the whole hero
-* Color or image path
-* Optional
----
-* `titleColor`
-* Overrides the title text color
-* Color value
-* Optional
----
-* `titleAccentColor`
-* Overrides the titleAccent text color
-* Color value
-* Optional
----
-* `descriptionColor`
-* Overrides the description text color
-* Color value
+* A background image behind the whole hero
+* Image path
 * Optional
 {% /table %}
 
-Use `background` for a full-bleed background color or image behind the whole hero. Use `image` for a separate supporting image, such as a product screenshot, shown below the buttons.
+Use `background` for a full-bleed image behind the whole hero. Use `image` for a separate supporting image, such as a product screenshot, shown below the buttons.
+
+{% callout type="note" title="Colors are not attributes" %}
+There's no `titleColor`, `titleAccentColor`, or `descriptionColor` attribute, and `background` never accepts a plain color, only an image path. A hero's colors are a design decision, not content, so they're set once in CSS. See [Hero](/customization/advanced/hero) under Advanced Customization.
+{% /callout %}
 
 ## Sizing a background image
 
@@ -120,7 +109,7 @@ A section groups content on a landing page, with an optional title and backgroun
 You can add a section to your landing page using the `{% section %}` tag.
 
 ```markdown
-{% section title="Choose where to begin" background="#f5f5f4" %}
+{% section title="Choose where to begin" background="/images/section-bg.png" %}
 This section introduces the main paths through the documentation.
 {% /section %}
 ```
@@ -139,12 +128,16 @@ This section introduces the main paths through the documentation.
 * Optional
 ---
 * `background`
-* A background color or image behind the section
-* Color or image path
+* A background image behind the section
+* Image path
 * Optional
 {% /table %}
 
-When `background` is an image, section titles and text automatically switch to white for readability.
+When a section has a `background` image, its title and text automatically switch to white for readability.
+
+{% callout type="note" title="Colors are not attributes" %}
+`background` never accepts a plain color, only an image path. A section's solid background color is a design decision, not content, so it's set once in CSS. See [Sections](/customization/advanced/sections) under Advanced Customization.
+{% /callout %}
 
 ## Add cards to a landing page
 

@@ -98,4 +98,4 @@ Because the file is inside `public/`, the path starts with `/` and does not incl
 
 ## Next step
 
-[Customize theme CSS](/configuration/theme-css).
+[Customize your site's look](/customization/basic).

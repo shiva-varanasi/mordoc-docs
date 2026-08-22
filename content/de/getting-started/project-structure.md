@@ -183,7 +183,7 @@ Mehr dazu unter [Bilder und Dateien](/de/getting-started/images-and-files).
 
 Sie müssen diese Datei beim Erlernen der Grundlagen nicht bearbeiten. Mordoc liefert Ihnen bereits ein funktionierendes Design.
 
-Später wird [Theme CSS](/de/configuration/theme-css) erklären, was sicher angepasst werden kann.
+Später wird [Theme CSS](/de/customization/basic/theme-css) erklären, was sicher angepasst werden kann.
 
 ## public
 

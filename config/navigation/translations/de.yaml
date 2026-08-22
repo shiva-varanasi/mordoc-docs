@@ -39,6 +39,25 @@ Assets and Branding: Assets und Branding
 Theme CSS: Theme CSS
 Custom Head Scripts: Benutzerdefinierte Head-Skripte
 
+Customization: Anpassung
+Basic: Grundlegend
+Font Family: Schriftfamilie
+Advanced: Erweitert
+Design Tokens: Design Tokens
+App Layout: App Layout
+Header: Header
+Language Picker: Sprachauswahl
+Theme Toggle: Theme-Umschalter
+Search: Suche
+Content Layout: Inhalts-Layout
+Article Page: Artikelseite
+Table of Contents: Inhaltsverzeichnis
+Code Blocks: Code-Blöcke
+Diagrams: Diagramme
+Hero: Hero
+Sections: Abschnitte
+Buttons: Schaltflächen
+
 Publishing: Veröffentlichen
 Change Management with Git: Änderungsmanagement mit Git
 Build Your Site: Website bauen
@@ -48,3 +67,6 @@ Deploy Your Site: Website veröffentlichen
 
 References: Referenzen
 Source Repositories: Quell-Repositories
+
+Change Log: Änderungsprotokoll
+Year 2026: Jahr 2026

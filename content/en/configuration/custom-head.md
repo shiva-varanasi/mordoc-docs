@@ -33,4 +33,4 @@ Mordoc does not check or modify what is inside `config/custom-head.html`. It is 
 
 ## Next step
 
-- [Change management with Git](/publishing/change-management).
+- [Customize your site's look](/customization/basic).
