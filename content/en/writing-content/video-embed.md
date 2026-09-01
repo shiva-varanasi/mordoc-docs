@@ -16,7 +16,7 @@ Mordoc supports native video embed player for Youtube, Vimeo and Loom.
 /%}
 ```
 
-** How it renders **
+**How it renders**
 
 {% videoEmbed 
   src="https://www.youtube.com/watch?v=AF8d72mA41M" 
