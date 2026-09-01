@@ -37,4 +37,4 @@ Manchmal sollte die Quelle eines Bildes aus einem wiederverwendbaren Wert stamme
 
 ## Nächster Schritt
 
-- [Callouts verwenden](/de/writing-content/callouts).
+- [Clips hinzufügen](/de/writing-content/clip).

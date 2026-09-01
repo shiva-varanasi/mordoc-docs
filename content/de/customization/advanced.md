@@ -27,7 +27,7 @@ Die Seiten sind so geordnet, dass sie widerspiegeln, wie Mordocs eigene Oberflä
 2. **[App Layout](/de/customization/advanced/app-layout)**: die drei Boxen, aus denen jede Seite aufgebaut ist: der Header, die Seitennavigation und der Inhaltsbereich.
 3. **Header und alles darin**: das eigene Grundgerüst des Headers, dann jedes Teil, aus dem er besteht: Header-Links, obere Navigation, die Sprachauswahl, der Theme-Umschalter und die Suche.
 4. **Seitennavigation**: die Seitenleisten-Box daneben.
-5. **Content und alles darin**: das eigene Grundgerüst des Inhaltsbereichs, dann die Artikelseite, das Inhaltsverzeichnis und jede Komponente, die Sie auf einer Markdown-Seite platzieren können: Callouts, Karten, Code-Blöcke, Diagramme, Bilder und die Landing-Page-Bausteine (Hero, Abschnitte, Schaltflächen).
+5. **Content und alles darin**: das eigene Grundgerüst des Inhaltsbereichs, dann die Artikelseite, das Inhaltsverzeichnis und jede Komponente, die Sie auf einer Markdown-Seite platzieren können: Callouts, Accordions, Karten, Code-Blöcke, Diagramme, Bilder und die Landing-Page-Bausteine (Hero, Abschnitte, Schaltflächen).
 
 Sie müssen nicht jede Seite lesen. Springen Sie direkt zu dem einen Teil der Oberfläche, den Sie ändern möchten. Seine Seite listet nur die Tokens auf, die für ihn gelten.
 

@@ -63,7 +63,7 @@ Put the video file in `public/`, then reference its path the same way you would 
 
 Clips are for short, decorative demo loops, not a narrated walkthrough. Mordoc always mutes them.
 
-For a longer, audible video — a recorded talk, a narrated walkthrough — use a [video embed](/writing-content/video-embed) instead, linking out to a video already hosted on YouTube, Vimeo, or Loom rather than a file you host yourself.
+For a longer audible video, use a [video embed](/writing-content/video-embed) instead, linking out to a video already hosted on YouTube, Vimeo, or Loom rather than a file you host yourself.
 
 ## Next step
 

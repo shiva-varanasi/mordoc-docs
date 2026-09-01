@@ -17,7 +17,7 @@ Wrap two or more `column` tags in `columns`:
 {% image src="/images/content-images/cesky-krumlov.jpg" alt="Cesky Krumlov" /%}
 {% /column %}
 {% column %}
-### Cesky Krumlov
+### Český Krumlov
 
 A small town in South Bohemia, built around a sharp bend in the Vltava river. Its old town is packed onto the riverbank below a castle that has stood since the 13th century, and the whole center is a UNESCO World Heritage Site.
 
@@ -33,7 +33,7 @@ Visitors come for the narrow cobbled streets, the castle's painted tower, and th
 {% image src="/images/content-images/cesky-krumlov.jpg" alt="Cesky Krumlov" /%}
 {% /column %}
 {% column %}
-### Cesky Krumlov
+### Český Krumlov
 
 A small town in South Bohemia, built around a sharp bend in the Vltava river. Its old town is packed onto the riverbank below a castle that has stood since the 13th century, and the whole center is a UNESCO World Heritage Site.
 
