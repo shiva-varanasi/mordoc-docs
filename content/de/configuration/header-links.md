@@ -74,4 +74,4 @@ Wenn Ihr lokaler Server läuft, überprüfen Sie den Header-Bereich der Website 
 
 ## Nächster Schritt
 
-[Sprachen konfigurieren](/de/configuration/languages).
+[Footer konfigurieren](/de/configuration/footer).

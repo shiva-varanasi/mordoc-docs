@@ -69,6 +69,23 @@ Create a Project: Creer un projet
 
 Wenn ein Label in der Übersetzungsdatei fehlt, kann Mordoc trotzdem das ursprüngliche Label anzeigen.
 
+## Footer-Zeilen übersetzen
+
+Wenn Sie einen [Footer](/de/configuration/footer) konfiguriert haben, werden seine Zeilen in derselben Datei übersetzt, im gleichen Schlüssel-Wert-Format. Verwenden Sie als Schlüssel die exakte Zeile aus `footer.yaml`, einschließlich jeder `[text](url)`-Link-Syntax:
+
+```yaml
+"Powered by [Mordoc](https://mordoc.dev)": "Bereitgestellt von [Mordoc](https://mordoc.dev)"
+"[Privacy policy](/privacy)": "[Datenschutzrichtlinie](/privacy)"
+```
+
+Setzen Sie beide Seiten in Anführungszeichen, wenn die Zeile einen Link enthält. Der Grund ist derselbe wie bei `footer.yaml` selbst: Eine eckige Klammer `[` am Zeilenanfang wird ohne Anführungszeichen als YAML-Liste gelesen.
+
+Anders als bei Sidenav- und Topnav-Pfaden, die Mordoc automatisch mit dem Sprachcode versieht, ist der Pfad einer Footer-Zeile Teil der übersetzten Zeichenkette selbst. Versehen Sie ihn bei einem internen Link von Hand mit dem Präfix:
+
+```yaml
+"[Privacy policy](/privacy)": "[Politique de confidentialité](/fr/privacy)"
+```
+
 ## Zuerst mit Sprachen beginnen
 
 Navigationsübersetzungen ergeben am meisten Sinn, nachdem Ihre Website mehr als einen Sprachordner hat, zum Beispiel:

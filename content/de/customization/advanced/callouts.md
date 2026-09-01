@@ -82,4 +82,4 @@ Eine `config/styles/callout.css`, die jeden Token auf dieser Seite festlegt, fü
 
 ## Nächster Schritt
 
-- [Karten und Karten-Raster gestalten](/de/customization/advanced/cards).
+- [Accordions gestalten](/de/customization/advanced/accordions).

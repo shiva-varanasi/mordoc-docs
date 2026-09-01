@@ -148,6 +148,79 @@ Learn more
 
 ---
 
+### Clip
+
+Muted, looping demo clip with a click-to-play/pause toggle — the recommended replacement for animated GIFs in content (autoplaying GIFs can't be paused, which fails WCAG 2.2.2).
+
+```markdown
+{% clip src="/videos/demo.mp4" thumbnail="/images/demo-thumb.jpg" title="Creating a project" alt="Demo of creating a new project" /%}
+```
+
+**Attributes:** `src` (asset path, required — the video file itself), `thumbnail` (asset path, shown paused before the reader clicks play), `title` (text, rendered as a caption below the clip), `alt` (text, accessible label for the play/pause toggle button). Self-closing — no body content.
+
+---
+
+### Video Embed
+
+Embeds a video hosted on YouTube, Vimeo, or Loom (as opposed to `clip`'s self-hosted file). `src` is the video's ordinary public page URL, in whatever shape a reader would paste from their browser (`youtube.com/watch?v=...`, `youtu.be/...`, `vimeo.com/...`, `loom.com/share/...`). An unrecognized host, or a URL with no extractable video ID, falls back to a link-out card instead of a broken embed.
+
+```markdown
+{% videoEmbed src="https://youtu.be/dQw4w9WgXcQ" title="Product walkthrough" /%}
+```
+
+**Attributes:** `src` (URL, required), `title` (text, rendered as a caption below the embed), `alt` (text, overrides the accessible label — otherwise the provider name or `title` is used), `thumbnail` (asset path — only used on the fallback link-out card, when `src` isn't a recognized provider), `aspectRatio` (e.g. `"4 / 3"`, `"9 / 16"` — overrides the default 16:9 box; mainly needed for Loom). Self-closing — no body content.
+
+---
+
+### Accordion and Accordions
+
+`accordion` is a single collapsible section: `title` drives the clickable header, and the body accepts the same broad content model as `section` (headings, paragraphs, lists, code blocks, images, other tags — even a nested accordion).
+
+```markdown
+{% accordion title="What is Mordoc?" %}
+Body text here.
+{% /accordion %}
+```
+
+**`accordion` attributes:** `title` (text, required), `defaultOpen` (boolean, default `false` — written unquoted, e.g. `defaultOpen=true`).
+
+`accordion` works standalone, or grouped inside `accordions` for a visually connected block with coordinated open/close behavior:
+
+```markdown
+{% accordions %}
+{% accordion title="First question" %}
+Answer.
+{% /accordion %}
+{% accordion title="Second question" %}
+Answer.
+{% /accordion %}
+{% /accordions %}
+```
+
+`accordions` has no attributes — it always makes the group exclusive, closing any other open item when one opens.
+
+---
+
+### Column and Columns
+
+`columns` lays out its `column` children side by side, equal width, collapsing to a single stacked column on narrow viewports. It's an ordinary block-level tag — normal content, then a `columns` block, then normal content again, all work.
+
+```markdown
+{% columns divider=true %}
+{% column %}
+Left column content.
+{% /column %}
+{% column %}
+Right column content.
+{% /column %}
+{% /columns %}
+```
+
+**`columns` attributes:** `divider` (boolean, default `false` — written unquoted, draws a vertical rule between columns). Column count follows however many `column` children are nested; there's no `cols` attribute to keep in sync.
+**`column` attributes:** none — body accepts the same broad content model as `section`/`accordion`.
+
+---
+
 ## Diagrams (`sequence-diagram` code blocks)
 
 Fenced blocks tagged `sequence-diagram` hold diagram DSL, not literal code.
@@ -181,11 +254,32 @@ Depending on the project, navigation files may include:
 - `config/navigation/sidenav.yaml` — single site-wide sidebar (used when `topnav.yaml` does **not** exist)
 - `config/navigation/topnav.yaml` — optional; when present, replaces `sidenav.yaml` with per-area sidenav files
 - `config/navigation/headernav.yaml` — optional header links
+- `config/navigation/footer.yaml` — optional footer columns (see Footer, below)
 - Custom per-area sidenav files referenced from `topnav.yaml` (e.g., `config/navigation/field-manual.yaml`, `config/navigation/ship-systems.yaml`)
 
 When `topnav.yaml` exists there is **no** `sidenav.yaml` — labels live in `topnav.yaml` and all custom sidenav files it references via the `sidenav:` field.
 
 Each navigation entry has a `label` (display text), `path` (route), and may have `variant` or `expanded` flags.
+
+## Footer
+
+`config/navigation/footer.yaml` is optional. When absent, Mordoc renders its own built-in default footer (a single "Powered by Mordoc" attribution line). When present, it replaces that default with up to three named columns, each an ordered list of lines:
+
+```yaml
+start:
+  - "[Privacy policy](/privacy)"
+  - Powered by [Mordoc](https://mordoc.dev)
+center:
+  - "[Support](/support)"
+end:
+  - "© 2026 Acme Inc."
+```
+
+**Keys:** `start`, `center`, `end` — all optional, rendered left-to-right in that order as stacked columns (writing-direction-relative, not `left`/`right`). An explicit empty file, or a file with no/all-empty zones, means the author wants no footer at all — distinct from the file being absent.
+
+**Line syntax:** each line is plain text, optionally containing one `[text](url)` link run — everything outside the brackets renders as plain text, the bracketed part as a link. External URLs (`http://`, `https://`, `//`) open in a new tab; anything else is treated as an internal route. A line starting with an unquoted `[` must be quoted (`- "[text](url)"`) since YAML would otherwise read it as a list.
+
+Footer lines are translated the same way navigation labels are — see `TRANSLATE.md`.
 
 ## Languages
 

@@ -82,4 +82,4 @@ A `config/styles/callout.css` that sets every token on this page, for both light
 
 ## Next step
 
-- [Style cards and card grids](/customization/advanced/cards).
+- [Style accordions](/customization/advanced/accordions).

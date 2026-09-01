@@ -38,12 +38,20 @@
       path: /writing-content/links
     - label: Images
       path: /writing-content/images
+    - label: Clips
+      path: /writing-content/clip
+    - label: Video Embeds
+      path: /writing-content/video-embed
     - label: Callouts
       path: /writing-content/callouts
     - label: Tables
       path: /writing-content/tables
     - label: Cards and Card Grids
       path: /writing-content/cards-and-card-grids
+    - label: Columns
+      path: /writing-content/columns
+    - label: Accordions
+      path: /writing-content/accordions
     - label: Landing Pages
       path: /writing-content/landing-pages
 
@@ -66,6 +74,8 @@
       path: /configuration/top-navigation
     - label: Header Links
       path: /configuration/header-links
+    - label: Footer
+      path: /configuration/footer
     - label: Languages
       path: /configuration/languages
     - label: Navigation Translations
@@ -116,6 +126,8 @@
           path: /customization/advanced/table-of-contents
         - label: Callouts
           path: /customization/advanced/callouts
+        - label: Accordions
+          path: /customization/advanced/accordions
         - label: Cards and Card Grids
           path: /customization/advanced/cards
         - label: Code Blocks

@@ -69,6 +69,23 @@ Create a Project: Creer un projet
 
 If a label is missing from the translation file, Mordoc can still show the original label.
 
+## Translate footer lines
+
+If you've configured a [Footer](/configuration/footer), its lines are translated in this same file, using the same key-value format. Key on the exact line from `footer.yaml`, including any `[text](url)` link syntax:
+
+```yaml
+"Powered by [Mordoc](https://mordoc.dev)": "Bereitgestellt von [Mordoc](https://mordoc.dev)"
+"[Privacy policy](/privacy)": "[Datenschutzrichtlinie](/privacy)"
+```
+
+Quote both sides when the line contains a link — the same reason `footer.yaml` itself needs quoting: an unquoted leading `[` reads as a YAML list.
+
+Unlike sidenav and topnav paths, which Mordoc prefixes with the language code automatically, a footer line's path is part of the translated string itself. Prefix it by hand for an internal link:
+
+```yaml
+"[Privacy policy](/privacy)": "[Politique de confidentialité](/fr/privacy)"
+```
+
 ## Start with languages first
 
 Navigation translations make the most sense after your site has more than one language folder, such as:

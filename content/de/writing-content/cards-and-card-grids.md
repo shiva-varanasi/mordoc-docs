@@ -220,4 +220,4 @@ Kartentext sollte Lesern bei der Wahl helfen. Ein kurzer Satz ist in der Regel a
 
 ## Nächster Schritt
 
-* [Landing-Pages erstellen](/de/writing-content/landing-pages).
+* [Spalten anordnen](/de/writing-content/columns).

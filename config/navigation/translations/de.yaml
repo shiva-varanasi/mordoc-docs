@@ -18,9 +18,13 @@ Writing Content: Inhalte schreiben
 Markdown Basics: Markdown-Grundlagen
 Links: Links
 Images: Bilder
+Clips: Clips
+Video Embeds: Video-Einbettungen
 Callouts: Callouts
 Tables: Tabellen
 Cards and Card Grids: Karten und Karten-Raster
+Columns: Spalten
+Accordions: Accordions
 Landing Pages: Landing-Pages
 
 Creating Diagrams: Diagramme erstellen
@@ -32,6 +36,7 @@ Site Configuration: Website-Konfiguration
 Side Navigation: Seitennavigation
 Top Navigation: Obere Navigation
 Header Links: Header-Links
+Footer: Footer
 Languages: Sprachen
 Navigation Translations: Navigationsübersetzungen
 Variables: Variablen

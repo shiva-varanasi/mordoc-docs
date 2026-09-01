@@ -74,4 +74,4 @@ If your local server is running, check the header area of the site and make sure
 
 ## Next step
 
-[Configure languages](/configuration/languages).
+[Configure the footer](/configuration/footer).

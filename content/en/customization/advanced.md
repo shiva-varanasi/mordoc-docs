@@ -27,7 +27,7 @@ The pages are ordered to match how Mordoc's own UI is put together, zooming in o
 2. **[App Layout](/customization/advanced/app-layout)**: the three boxes every page is built from: the header, the side navigation, and the content area.
 3. **Header, and everything inside it**: the header's own skeleton, then each piece it's made of: header links, top navigation, the language picker, the theme toggle, and search.
 4. **Side Navigation**: the sidebar box next to it.
-5. **Content, and everything inside it**: the content area's own skeleton, then the article page, table of contents, and every component you can place in a Markdown page: callouts, cards, code blocks, diagrams, images, and the landing-page pieces (hero, sections, buttons).
+5. **Content, and everything inside it**: the content area's own skeleton, then the article page, table of contents, and every component you can place in a Markdown page: callouts, accordions, cards, code blocks, diagrams, images, and the landing-page pieces (hero, sections, buttons).
 
 You don't need to read every page. Jump straight to the one part of the UI you want to change. Its page lists only the tokens that apply to it.
 
