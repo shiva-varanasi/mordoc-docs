@@ -37,4 +37,4 @@ Sometimes an image's source should come from a reusable value instead of being w
 
 ## Next step
 
-- [Use callouts](/writing-content/callouts).
+- [Add clips](/writing-content/clip).
