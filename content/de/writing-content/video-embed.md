@@ -16,7 +16,7 @@ Mordoc unterstützt einen nativen Video-Einbettungsplayer für YouTube, Vimeo un
 /%}
 ```
 
-** So sieht das aus **
+**So sieht das aus**
 
 {% videoEmbed 
   src="https://www.youtube.com/watch?v=AF8d72mA41M" 
