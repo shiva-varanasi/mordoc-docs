@@ -11,20 +11,18 @@ A GIF autoplays with no way to pause it, which is both distracting and an access
 
 ```markdown
 {% clip 
-  src="/clips/sample-clip.mp4" 
-  thumbnail="/images/content-images/clip-thumbnail.png" 
-  title="Sample clip" 
-  alt="Sample clip" 
+  src="/clips/animated-dinosaur.mp4" 
+  title="Animated Dinosaur" 
+  alt="Animated Dinosaur" 
 /%}
 ```
 
 **How it renders**
 
 {% clip 
-  src="/clips/sample-clip.mp4" 
-  thumbnail="/images/content-images/clip-thumbnail.png" 
-  title="Sample clip" 
-  alt="Sample clip"
+  src="/clips/animated-dinosaur.mp4" 
+  title="Animated Dinosaur" 
+  alt="Animated Dinosaur"
 /%}
 
 

@@ -11,20 +11,18 @@ Ein GIF spielt automatisch ab, ohne Möglichkeit, es zu pausieren, was sowohl ab
 
 ```markdown
 {% clip 
-  src="/clips/sample-clip.mp4" 
-  thumbnail="/images/content-images/clip-thumbnail.png" 
-  title="Sample clip" 
-  alt="Sample clip" 
+  src="/clips/animated-dinosaur.mp4" 
+  title="Animated Dinosaur" 
+  alt="Animated Dinosaur" 
 /%}
 ```
 
 **So sieht das aus**
 
 {% clip 
-  src="/clips/sample-clip.mp4" 
-  thumbnail="/images/content-images/clip-thumbnail.png" 
-  title="Beispiel-Clip" 
-  alt="Beispiel-Clip"
+  src="/clips/animated-dinosaur.mp4" 
+  title="Animierter Dinosaurier" 
+  alt="Animierter Dinosaurier"
 /%}
 
 
